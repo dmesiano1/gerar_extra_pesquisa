@@ -160,24 +160,27 @@
             color: #555;
         }
 
-        /* Estilos para a Logo */
-        #logo-container { /* Novo contêiner para a logo */
-            background-color: #f4f4f4; /* Cor de fundo da área da logo, igual ao body */
-            padding: 20px 0 0 0; /* Ajuste o padding superior e inferior conforme necessário */
-            text-align: center; /* Centraliza a logo */
-            position: sticky; /* Torna a logo estática */
-            top: 0; /* Fixa no topo */
-            z-index: 1000; /* Garante que a logo fique acima de outros elementos ao rolar */
-            width: 100%; /* Ocupa a largura total */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave */
+        /* Novo contêiner para a Logo e Menu juntos */
+        #header-fixed {
+            background-color: #264653; /* Fundo que abrange logo e menu */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* Espaça logo e menu */
+            align-items: center; /* Centraliza verticalmente */
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Garante que fique acima de tudo ao rolar */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 0 0 8px 8px; /* Arredonda só a parte inferior */
         }
 
+        /* Estilos para a Logo */
         #logo-link { 
             display: block; 
-            margin: 0 auto; /* Centraliza a logo horizontalmente */
-            width: 200px; /* Defina uma largura fixa para a logo, ajuste conforme necessário */
+            width: 150px; /* Ajuste a largura da logo conforme necessário */
             height: auto;
             text-decoration: none;
+            margin-right: 20px; /* Espaçamento entre a logo e o menu */
         }
         #logo {
             display: block; 
@@ -200,29 +203,30 @@
 
         /* --- Estilos para o Menu de Navegação --- */
         .navbar {
-            background-color: #264653; /* Cor de fundo original: azul escuro da logo */
-            padding: 10px 20px; /* Padding vertical original: 10px */
-            margin-bottom: 20px; 
-            display: flex; 
-            justify-content: space-around; 
-            align-items: center; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky; /* Torna o menu estático */
-            top: 0; /* Fixa no topo (vai ficar logo abaixo da logo) */
-            z-index: 999; /* Garante que o menu fique acima de outros elementos ao rolar */
-            border-radius: 8px; 
+            background-color: transparent; /* Fundo transparente pois o #header-fixed já tem fundo */
+            padding: 0; /* Remove padding duplicado */
+            margin-bottom: 0; /* Remove margem duplicada */
+            display: flex; /* Mantém flex para itens do menu */
+            flex-grow: 1; /* Ocupa o espaço restante */
+            justify-content: flex-end; /* Alinha o menu à direita da logo */
+            align-items: center;
+            box-shadow: none; /* Remove sombra duplicada */
+            position: static; /* Não é mais sticky individualmente, o pai é sticky */
+            top: auto; 
+            z-index: auto; 
+            border-radius: 0; /* Remove arredondamento duplicado */
         }
         .nav-links {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex; 
-            flex-grow: 1; 
-            justify-content: space-around; 
+            /* flex-grow: 1; Removido, não é mais necessário aqui */
+            /* justify-content: space-around; Removido, ajuste direto no #header-fixed */
         }
         .nav-links li {
             position: relative; 
-            margin-right: 0; 
+            margin-right: 15px; /* Espaçamento entre os itens do menu */
         }
         .nav-links li:last-child {
             margin-right: 0;
@@ -280,7 +284,7 @@
             flex-direction: column;
             cursor: pointer;
             padding: 10px;
-            margin-left: auto; 
+            /* margin-left: auto; */ /* Removido, ajustado no media query */
         }
         .menu-toggle .bar {
             width: 25px;
@@ -292,23 +296,30 @@
 
         /* Responsividade para telas menores */
         @media (max-width: 768px) {
-            #logo-container {
-                position: static; /* Remove sticky em telas menores para melhor fluxo */
-                padding-bottom: 0; /* Ajuste o padding */
-                box-shadow: none; /* Remove a sombra em telas menores */
+            #header-fixed {
+                flex-direction: column; /* Empilha logo e menu */
+                align-items: flex-start; /* Alinha à esquerda */
+                padding: 10px;
+                border-radius: 0; /* Remove arredondamento em mobile */
             }
-
+            #logo-link {
+                margin-right: 0;
+                margin-bottom: 10px; /* Espaço entre logo e menu empilhados */
+                width: 120px; /* Ajuste o tamanho da logo no mobile */
+                align-self: center; /* Centraliza a logo no mobile */
+            }
             .navbar {
                 flex-direction: column; 
                 align-items: flex-start; 
-                padding: 10px; 
-                position: static; /* Remove sticky em telas menores para melhor fluxo */
+                padding: 0; 
+                width: 100%; /* Ocupa toda a largura */
+                /* position: static; */ /* Já está static, não precisa repetir */
             }
             .nav-links {
                 display: none; 
                 flex-direction: column;
                 width: 100%; 
-                background-color: #264653; /* Fundo do menu quando aberto no mobile original: azul escuro */
+                background-color: #264653; 
             }
             .nav-links.active {
                 display: flex; 
@@ -362,31 +373,31 @@
     </style>
 </head>
 <body>
-    <div id="logo-container">
+    <header id="header-fixed">
         <a id="logo-link" href="index.html">
             <img id="logo" src="images/logo.png" alt="Logo do Site - Renda Extra .App">
         </a>
-    </div>
 
-    <nav class="navbar">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Renda Extra &#9662;</a> <ul class="submenu">
-                    <li><a href="ganhar-dinheiro-pesquisas.html">Ganhe dinheiro Respondendo pesquisas</a></li>
-                    <li><a href="exemplo2.html">Exemplo 2</a></li>
-                    <li><a href="exemplo3.html">Exemplo 3</a></li>
-                </ul>
-            </li>
-            <li><a href="empregos.html">Empregos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Renda Extra &#9662;</a> <ul class="submenu">
+                        <li><a href="ganhar-dinheiro-pesquisas.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                        <li><a href="exemplo2.html">Exemplo 2</a></li>
+                        <li><a href="exemplo3.html">Exemplo 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="empregos.html">Empregos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="container">
         <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
