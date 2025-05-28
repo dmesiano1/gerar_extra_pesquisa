@@ -53,9 +53,8 @@
         li {
             margin-bottom: 10px;
         }
-        /* AGORA VERDE: Mantenha o verde da logo para destaque de texto forte */
         strong {
-            color: #2a9d8f; /* Substituindo o laranja pelo verde da logo */
+            color: #2a9d8f; /* Cor verde da logo para destaque de texto forte */
         }
         .highlight {
             background-color: #e8f5e9; /* Um verde bem suave para o fundo do highlight */
@@ -158,30 +157,39 @@
         }
 
         /* Estilos para a Logo */
-        #logo {
-            display: block;
-            margin: 20px auto; /* Centraliza a logo */
-            max-width: 300px; /* Ajuste o tamanho conforme necessário */
+        /* Removendo display e margin da logo e aplicando ao link para centralizar */
+        #logo-link { /* Novo ID para o link que envolve a logo */
+            display: block; /* Ocupa a largura total para centralizar */
+            margin: 20px auto; /* Centraliza o link (e a logo dentro dele) */
+            max-width: 300px; /* Limita a largura do link, consequentemente da logo */
             height: auto;
-        }    
+            text-decoration: none; /* Remove o sublinhado padrão do link */
+        }
+        #logo {
+            display: block; /* Garante que a imagem seja um bloco dentro do link */
+            width: 100%; /* Faz a imagem preencher a largura máxima do seu contêiner (o link) */
+            height: auto;
+        }
         
         /* Estilos para o contador regressivo no pop-up */
         #popupCountdown {
             font-size: 1.4em; /* Fonte maior para maior destaque */
             font-weight: bold;
-            color: #2a9d8f; /* AGORA VERDE: Cor do contador regressivo, alinhado com o verde da logo */
+            color: #2a9d8f; /* Cor do contador regressivo, alinhado com o verde da logo */
             margin-top: 20px;
             text-align: center;
             padding: 5px;
-            background-color: #e8f5e9; /* AGORA VERDE: Um fundo suave para o contador, complementando o verde */
+            background-color: #e8f5e9; /* Um fundo suave para o contador, complementando o verde */
             border-radius: 5px;
-            border: 1px solid #2a9d8f; /* AGORA VERDE: Borda com a cor verde da logo */
+            border: 1px solid #2a9d8f; /* Borda com a cor verde da logo */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img id="logo" src="images/logo.png" alt="Logo do Site - Renda Extra .App">
+        <a id="logo-link" href="index.html">
+            <img id="logo" src="images/logo.png" alt="Logo do Site - Renda Extra .App">
+        </a>
 
         <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
         <p>A dúvida é comum: dá para realmente <strong>ganhar dinheiro respondendo pesquisas online</strong>? A resposta curta é <strong>sim, é possível</strong>, mas é crucial ter expectativas realistas.</p>
