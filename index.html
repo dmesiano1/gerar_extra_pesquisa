@@ -20,6 +20,9 @@
             padding: 20px; /* Mantém o padding do corpo para o conteúdo geral */
             background-color: #f4f4f4;
             color: #333;
+            display: flex; /* Adicionado para layout de rodapé fixo */
+            flex-direction: column; /* Adicionado para layout de rodapé fixo */
+            min-height: 100vh; /* Adicionado para layout de rodapé fixo */
         }
         .container {
             max-width: 800px;
@@ -28,6 +31,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex-grow: 1; /* Adicionado para layout de rodapé fixo */
         }
         
         /* Ajuste de cores para harmonizar com a logo */
@@ -315,6 +319,28 @@
                 padding: 10px 30px; 
             }
         }
+
+        /* --- Estilos para o Rodapé --- */
+        .footer {
+            background-color: #264653; /* Mesmo azul escuro do menu */
+            color: #f4f4f4; /* Cor do texto (cinza claro) */
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px; /* Espaço entre o conteúdo e o rodapé */
+            border-top: 1px solid #aec6cf; /* Linha sutil no topo */
+            border-radius: 8px 8px 0 0; /* Bordas arredondadas apenas no topo */
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #2a9d8f; /* Cor verde da logo para os links no rodapé */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -426,6 +452,12 @@
             <p id="popupCountdown"></p> 
         </div>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Renda Extra .App. Todos os direitos reservados.</p>
+        <p>Desenvolvido por [Seu Nome ou Nome da Empresa]</p>
+        <p><a href="contato.html">Entre em contato</a></p>
+    </footer>
 
     <script>
         // Função para o menu responsivo
