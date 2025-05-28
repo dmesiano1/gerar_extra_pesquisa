@@ -158,7 +158,7 @@
         #logo {
             display: block;
             margin: 20px auto; /* Centraliza a logo */
-            max-width: 200px; /* Ajuste o tamanho conforme necessário */
+            max-width: 300px; /* Ajuste o tamanho conforme necessário */
             height: auto;
         }
     </style>
@@ -194,8 +194,6 @@
             <p>Seu anúncio aparecerá aqui.</p>
         </div>
 
-        ---
-
         <h2>Sites Confiáveis para Pesquisas Online e Como Identificar Golpes</h2>
         <p>A internet está cheia de oportunidades de <strong>renda extra</strong>, mas também de armadilhas. Saiba como se proteger ao buscar <strong>sites para ganhar dinheiro respondendo pesquisas</strong>:</p>
         <div class="warning">
@@ -208,7 +206,6 @@
         </div>
         <p>Para sua segurança, sempre <strong>pesquise a reputação</strong> da empresa em sites como Reclame Aqui e confira avaliações de outros usuários antes de se cadastrar em qualquer <strong>plataforma de pesquisas pagas</strong>.</p>
 
-        ---
 
         <h3>Melhores Sites de Pesquisas Remuneradas Confiáveis:</h3>
         <ul>
@@ -222,7 +219,6 @@
             <li><a href="https://www.thepanelstation.com/br" class="site-link" target="_blank" rel="noopener noreferrer"><strong>The Panel Station:</strong></a> Oferece pesquisas sobre diversos temas para <strong>ganhar dinheiro extra</strong>.</li>
         </ul>
 
-        ---
 
         <h2>Dicas Essenciais para Maximizar Seus Ganhos com Pesquisas Online</h2>
         <div class="highlight">
@@ -254,21 +250,66 @@
         </div>
     </div>
 
-    <script>
-        // Função para mostrar o pop-up
-        function showPopup() {
-            document.getElementById('adPopupOverlay').classList.add('active');
-        }
+   <script>
+    let popupClosable = false; // Variável para controlar se o pop-up pode ser fechado
+    let countdownInterval; // Variável para armazenar o ID do intervalo da contagem regressiva
 
-        // Função para fechar o pop-up
-        function closePopup() {
+    // Função para mostrar o pop-up
+    function showPopup() {
+        const popupOverlay = document.getElementById('adPopupOverlay');
+        const closeButton = document.querySelector('.popup-close'); // Seleciona o botão de fechar
+        const countdownDisplay = document.getElementById('countdown'); // Elemento para a contagem regressiva
+
+        popupOverlay.classList.add('active'); // Mostra o pop-up
+
+        // Desabilita o botão de fechar inicialmente
+        closeButton.style.pointerEvents = 'none'; // Impede cliques
+        closeButton.style.opacity = '0.5'; // Diminui opacidade para indicar desativado
+        closeButton.style.cursor = 'not-allowed'; // Muda o cursor
+
+        // Inicia a contagem regressiva
+        let timeLeft = 10; // Tempo inicial em segundos
+        if (countdownDisplay) { // Garante que o elemento existe
+            countdownDisplay.textContent = `Aguarde ${timeLeft} segundos...`;
+            countdownDisplay.style.display = 'block'; // Mostra o contador
+        }
+        
+        countdownInterval = setInterval(() => {
+            timeLeft--;
+            if (countdownDisplay) {
+                countdownDisplay.textContent = `Aguarde ${timeLeft} segundos...`;
+            }
+
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval); // Para a contagem regressiva
+                popupClosable = true; // Permite fechar o pop-up
+                closeButton.style.pointerEvents = 'auto'; // Habilita cliques
+                closeButton.style.opacity = '1'; // Restaura opacidade
+                closeButton.style.cursor = 'pointer'; // Restaura cursor
+                if (countdownDisplay) {
+                    countdownDisplay.textContent = 'Você já pode fechar.'; // Mensagem final
+                    // Opcional: esconder o contador após um pequeno atraso ou deixar visível
+                    // setTimeout(() => { countdownDisplay.style.display = 'none'; }, 2000); 
+                }
+            }
+        }, 1000); // Atualiza a cada 1 segundo (1000 milissegundos)
+    }
+
+    // Função para fechar o pop-up
+    function closePopup() {
+        // Só permite fechar se popupClosable for true
+        if (popupClosable) {
             document.getElementById('adPopupOverlay').classList.remove('active');
+        } else {
+            // Opcional: alertar o usuário que ainda não pode fechar
+            // alert('Aguarde o tempo mínimo antes de fechar!');
         }
+    }
 
-        // Mostrar o pop-up após 30 segundos (30000 milissegundos)
-        window.onload = function() {
-            setTimeout(showPopup, 30000);
-        };
-    </script>
+    // Mostrar o pop-up após 15 segundos (15000 milissegundos) do carregamento da página
+    window.onload = function() {
+        setTimeout(showPopup, 15000);
+    };
+</script>
 </body>
 </html>
