@@ -151,10 +151,20 @@
             font-size: 0.9em;
             color: #555;
         }
+
+        /* Estilos para a Logo */
+        #logo {
+            display: block;
+            margin: 20px auto; /* Centraliza a logo */
+            max-width: 200px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <img id="logo" src="http://googleusercontent.com/generated_image_content/0" alt="Logo do Site - Ganhe Dinheiro com Pesquisas Online">
+
         <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
         <p>A dúvida é comum: dá para realmente <strong>ganhar dinheiro respondendo pesquisas online</strong>? A resposta curta é <strong>sim, é possível</strong>, mas é crucial ter expectativas realistas.</p>
 
@@ -255,9 +265,9 @@
             document.getElementById('adPopupOverlay').classList.remove('active');
         }
 
-        // Mostrar o pop-up após 15 segundos (15000 milissegundos)
+        // Mostrar o pop-up após 30 segundos (30000 milissegundos)
         window.onload = function() {
-            setTimeout(showPopup, 15000);
+            setTimeout(showPopup, 30000);
         };
     </script>
 </body>
