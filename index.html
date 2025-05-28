@@ -159,7 +159,7 @@
         /* Estilos para a Logo */
         #logo-link { 
             display: block; 
-            margin: 20px 0 20px 0; /* Ajuste: margem superior e inferior de 20px, e margem esquerda de 0 */
+            margin: 20px 0 20px 0; /* Margem superior e inferior de 20px, e margem esquerda de 0 */
             width: 200px; /* Defina uma largura fixa para a logo, ajuste conforme necessário */
             height: auto;
             text-decoration: none;
@@ -175,7 +175,7 @@
             font-size: 1.4em; 
             font-weight: bold;
             color: #2a9d8f; 
-            margin-top: 15px; /* Ajustei um pouco a margem para ficar mais compacto */
+            margin-top: 15px; 
             text-align: center;
             padding: 5px;
             background-color: #e8f5e9; 
@@ -188,66 +188,70 @@
             background-color: #264653; /* Fundo do menu (azul escuro da logo) */
             padding: 10px 20px;
             margin-bottom: 20px; /* Espaço entre o menu e o conteúdo */
-            display: flex; /* Para alinhar itens na horizontal */
-            justify-content: space-between; /* Espaça itens na horizontal */
-            align-items: center; /* Alinha verticalmente */
+            display: flex; 
+            /* Modificado: Distribui os links uniformemente com espaço entre eles */
+            justify-content: space-around; 
+            align-items: center; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky; /* Menu fixo no topo ao rolar */
+            position: sticky; 
             top: 0;
-            z-index: 999; /* Garante que o menu fique acima de outros elementos */
+            z-index: 999; 
+            border-radius: 8px; /* Adicionado: Bordas arredondadas ao menu */
         }
         .nav-links {
             list-style: none;
             margin: 0;
             padding: 0;
-            display: flex; /* Para itens do menu principal na horizontal */
+            display: flex; 
+            flex-grow: 1; /* Permite que a lista de links ocupe o espaço disponível */
+            justify-content: space-around; /* Distribui os links dentro da ul */
         }
         .nav-links li {
-            position: relative; /* Necessário para o submenu flutuante */
-            margin-right: 25px; /* Espaçamento entre itens do menu principal */
+            position: relative; 
+            margin-right: 0; /* Removido o margin-right fixo para que space-around funcione */
         }
         .nav-links li:last-child {
             margin-right: 0;
         }
         .nav-links a {
-            color: #f4f4f4; /* Cor do texto dos links (cinza claro) */
+            color: #f4f4f4; 
             text-decoration: none;
-            padding: 8px 0;
+            padding: 8px 15px; /* Adicionado padding horizontal para melhor área de clique */
             display: block;
             font-weight: bold;
             transition: color 0.3s ease;
         }
         .nav-links a:hover {
-            color: #2a9d8f; /* Cor verde da logo ao passar o mouse */
+            color: #2a9d8f; 
         }
 
         /* Estilos do Submenu */
         .submenu {
-            display: none; /* Esconde o submenu por padrão */
+            display: none; 
             position: absolute;
-            background-color: #264653; /* Mesmo fundo do menu principal */
-            min-width: 220px; /* Largura mínima do submenu */
+            background-color: #264653; 
+            min-width: 220px; 
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1000;
             list-style: none;
             padding: 10px 0;
             border-radius: 5px;
-            top: 100%; /* Posiciona o submenu abaixo do item pai */
+            top: 100%; 
             left: 0;
         }
         .submenu li {
             margin: 0;
         }
         .submenu a {
-            color: #f4f4f4; /* Cor do texto do submenu */
+            color: #f4f4f4; 
             padding: 10px 20px;
             display: block;
             text-align: left;
-            white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+            white-space: nowrap; 
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .submenu a:hover {
-            background-color: #38a3a5; /* Fundo do item do submenu ao passar o mouse (azul esverdeado) */
+            background-color: #38a3a5; 
             color: #fff;
         }
 
@@ -258,15 +262,17 @@
 
         /* Ícone do menu para telas menores */
         .menu-toggle {
-            display: none; /* Esconde o ícone por padrão em telas grandes */
+            display: none; 
             flex-direction: column;
             cursor: pointer;
             padding: 10px;
+            /* Modificado: Posiciona o ícone de hambúrguer para a direita quando o menu está fechado */
+            margin-left: auto; 
         }
         .menu-toggle .bar {
             width: 25px;
             height: 3px;
-            background-color: #f4f4f4; /* Cor do ícone do menu */
+            background-color: #f4f4f4; 
             margin: 4px 0;
             transition: 0.4s;
         }
@@ -274,42 +280,42 @@
         /* Responsividade para telas menores */
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column; /* Empilha os itens verticalmente */
-                align-items: flex-start; /* Alinha itens à esquerda */
-                padding: 10px 10px;
+                flex-direction: column; 
+                align-items: flex-start; 
+                padding: 10px; /* Reduzi o padding lateral */
             }
             .nav-links {
-                display: none; /* Esconde os links por padrão em telas pequenas */
+                display: none; 
                 flex-direction: column;
-                width: 100%; /* Ocupa a largura total */
-                background-color: #264653; /* Fundo do menu quando aberto */
+                width: 100%; 
+                background-color: #264653; 
             }
             .nav-links.active {
-                display: flex; /* Mostra os links quando o menu está ativo */
+                display: flex; 
             }
             .nav-links li {
-                margin: 0;
-                width: 100%; /* Ocupa a largura total */
-                text-align: center; /* Centraliza o texto no modo mobile */
+                width: 100%; 
+                text-align: center; 
             }
             .nav-links li a {
                 padding: 10px 0;
             }
             .menu-toggle {
-                display: flex; /* Mostra o ícone do menu */
-                align-self: flex-end; /* Alinha o ícone à direita no topo */
-                margin-top: -38px; /* Ajuste para sobrepor o padding do navbar */
+                display: flex; 
+                /* Revertido para o posicionamento padrão no mobile quando o menu está aberto */
+                align-self: flex-end; 
+                margin-top: -38px; 
                 margin-right: 10px;
             }
             .submenu {
-                position: static; /* Submenu aparece abaixo no fluxo normal */
-                width: 100%; /* Ocupa a largura total */
+                position: static; 
+                width: 100%; 
                 box-shadow: none;
                 border-radius: 0;
                 padding: 0;
             }
             .submenu a {
-                padding: 10px 30px; /* Mais padding para itens de submenu no mobile */
+                padding: 10px 30px; 
             }
         }
     </style>
@@ -416,7 +422,8 @@
             <span class="popup-close" onclick="closePopup()">&times;</span>
             <h4>Uma oportunidade imperdível para você!</h4>
             <p>Confira mais esta forma de complementar sua renda:</p>
-            <div id="popup-ad-slot" class="popup-ad-slot"> <strong>Espaço para o anúncio do Pop-up</strong>
+            <div id="popup-ad-slot" class="popup-ad-slot"> 
+                <strong>Espaço para o anúncio do Pop-up</strong>
                 <p>O conteúdo do seu anúncio pop-up aparecerá aqui.</p>
             </div>
             <p id="popupCountdown"></p> 
@@ -430,8 +437,8 @@
             navLinks.classList.toggle('active');
         }
 
-        let popupClosable = false; // Controla se o pop-up pode ser fechado
-        let countdownInterval; // Armazena o ID do intervalo para poder limpá-lo
+        let popupClosable = false; 
+        let countdownInterval; 
 
         // Função para mostrar o pop-up
         function showPopup() {
