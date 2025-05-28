@@ -161,9 +161,20 @@
         }
 
         /* Estilos para a Logo */
+        #logo-container { /* Novo contêiner para a logo */
+            background-color: #f4f4f4; /* Cor de fundo da área da logo, igual ao body */
+            padding: 20px 0 0 0; /* Ajuste o padding superior e inferior conforme necessário */
+            text-align: center; /* Centraliza a logo */
+            position: sticky; /* Torna a logo estática */
+            top: 0; /* Fixa no topo */
+            z-index: 1000; /* Garante que a logo fique acima de outros elementos ao rolar */
+            width: 100%; /* Ocupa a largura total */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Sombra suave */
+        }
+
         #logo-link { 
             display: block; 
-            margin: 20px 0 20px 0; /* Margem superior e inferior de 20px, e margem esquerda de 0 */
+            margin: 0 auto; /* Centraliza a logo horizontalmente */
             width: 200px; /* Defina uma largura fixa para a logo, ajuste conforme necessário */
             height: auto;
             text-decoration: none;
@@ -196,9 +207,9 @@
             justify-content: space-around; 
             align-items: center; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky; 
-            top: 0;
-            z-index: 999; 
+            position: sticky; /* Torna o menu estático */
+            top: 0; /* Fixa no topo (vai ficar logo abaixo da logo) */
+            z-index: 999; /* Garante que o menu fique acima de outros elementos ao rolar */
             border-radius: 8px; 
         }
         .nav-links {
@@ -281,10 +292,17 @@
 
         /* Responsividade para telas menores */
         @media (max-width: 768px) {
+            #logo-container {
+                position: static; /* Remove sticky em telas menores para melhor fluxo */
+                padding-bottom: 0; /* Ajuste o padding */
+                box-shadow: none; /* Remove a sombra em telas menores */
+            }
+
             .navbar {
                 flex-direction: column; 
                 align-items: flex-start; 
                 padding: 10px; 
+                position: static; /* Remove sticky em telas menores para melhor fluxo */
             }
             .nav-links {
                 display: none; 
@@ -344,31 +362,33 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="logo-container">
         <a id="logo-link" href="index.html">
             <img id="logo" src="images/logo.png" alt="Logo do Site - Renda Extra .App">
         </a>
+    </div>
 
-        <nav class="navbar">
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Renda Extra &#9662;</a> <ul class="submenu">
-                        <li><a href="ganhar-dinheiro-pesquisas.html">Ganhe dinheiro Respondendo pesquisas</a></li>
-                        <li><a href="exemplo2.html">Exemplo 2</a></li>
-                        <li><a href="exemplo3.html">Exemplo 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="empregos.html">Empregos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Renda Extra &#9662;</a> <ul class="submenu">
+                    <li><a href="ganhar-dinheiro-pesquisas.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                    <li><a href="exemplo2.html">Exemplo 2</a></li>
+                    <li><a href="exemplo3.html">Exemplo 3</a></li>
+                </ul>
+            </li>
+            <li><a href="empregos.html">Empregos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
+    <div class="container">
         <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
         <p>A dúvida é comum: dá para realmente <strong>ganhar dinheiro respondendo pesquisas online</strong>? A resposta curta é <strong>sim, é possível</strong>, mas é crucial ter expectativas realistas.</p>
 
@@ -455,7 +475,6 @@
 
     <footer class="footer">
         <p>&copy; 2025 Renda Extra .App. Todos os direitos reservados.</p>
-        <p>Desenvolvido por [Seu Nome ou Nome da Empresa]</p>
         <p><a href="contato.html">Entre em contato</a></p>
     </footer>
 
