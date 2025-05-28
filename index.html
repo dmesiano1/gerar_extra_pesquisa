@@ -162,7 +162,7 @@
 
         /* Novo contêiner para a Logo e Menu juntos */
         #header-fixed {
-            background-color: #264653; /* Fundo que abrange logo e menu */
+            background-color: #e0e0e0; /* Um tom de cinza bem claro para o fundo */
             padding: 10px 20px;
             display: flex;
             justify-content: space-between; /* Espaça logo e menu */
@@ -170,7 +170,7 @@
             position: sticky;
             top: 0;
             z-index: 1000; /* Garante que fique acima de tudo ao rolar */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra mais suave */
             border-radius: 0 0 8px 8px; /* Arredonda só a parte inferior */
         }
 
@@ -186,6 +186,7 @@
             display: block; 
             width: 100%; 
             height: auto;
+            /* Se a logo tiver fundo opaco, a imagem deve ser salva com transparência (PNG, SVG, GIF) */
         }
         
         /* Estilos para o contador regressivo no pop-up */
@@ -232,7 +233,7 @@
             margin-right: 0;
         }
         .nav-links a {
-            color: #f4f4f4; /* Cor do texto original: cinza claro */
+            color: #264653; /* Cor do texto do menu para contrastar com o fundo claro */
             text-decoration: none;
             padding: 8px 15px; 
             display: block;
@@ -247,7 +248,7 @@
         .submenu {
             display: none; 
             position: absolute;
-            background-color: #264653; /* Fundo do submenu original: azul escuro */
+            background-color: #f0f0f0; /* Fundo do submenu mais claro */
             min-width: 220px; 
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1000;
@@ -261,7 +262,7 @@
             margin: 0;
         }
         .submenu a {
-            color: #f4f4f4; /* Cor do texto do submenu original: cinza claro */
+            color: #264653; /* Cor do texto do submenu para contrastar com o fundo claro */
             padding: 10px 20px;
             display: block;
             text-align: left;
@@ -269,8 +270,8 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .submenu a:hover {
-            background-color: #38a3a5; /* Fundo do item do submenu ao passar o mouse (azul esverdeado) */
-            color: #fff;
+            background-color: #d0d0d0; /* Fundo do item do submenu ao passar o mouse (um cinza um pouco mais escuro) */
+            color: #264653;
         }
 
         /* Mostra o submenu ao passar o mouse sobre o item pai */
@@ -289,7 +290,7 @@
         .menu-toggle .bar {
             width: 25px;
             height: 3px;
-            background-color: #f4f4f4; /* Cor do ícone do menu original: cinza claro */
+            background-color: #264653; /* Cor do ícone do menu para contrastar com o fundo claro */
             margin: 4px 0;
             transition: 0.4s;
         }
@@ -319,7 +320,7 @@
                 display: none; 
                 flex-direction: column;
                 width: 100%; 
-                background-color: #264653; 
+                background-color: #f0f0f0; /* Fundo do menu mobile mais claro */
             }
             .nav-links.active {
                 display: flex; 
@@ -330,6 +331,7 @@
             }
             .nav-links li a {
                 padding: 10px 0;
+                color: #264653; /* Cor do texto no mobile */
             }
             .menu-toggle {
                 display: flex; 
@@ -337,15 +339,24 @@
                 margin-top: -38px; 
                 margin-right: 10px;
             }
+            .menu-toggle .bar {
+                background-color: #264653; /* Cor do ícone do menu no mobile */
+            }
             .submenu {
                 position: static; 
                 width: 100%; 
                 box-shadow: none;
                 border-radius: 0;
                 padding: 0;
+                background-color: #e0e0e0; /* Fundo do submenu mobile mais claro */
             }
             .submenu a {
                 padding: 10px 30px; 
+                color: #264653; /* Cor do texto do submenu no mobile */
+            }
+            .submenu a:hover {
+                background-color: #d0d0d0; /* Fundo do item do submenu ao passar o mouse no mobile */
+                color: #264653;
             }
         }
 
