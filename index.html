@@ -17,7 +17,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 20px; /* Mantém o padding do corpo para o conteúdo geral */
             background-color: #f4f4f4;
             color: #333;
         }
@@ -157,31 +157,160 @@
         }
 
         /* Estilos para a Logo */
-        /* Removendo display e margin da logo e aplicando ao link para centralizar */
-        #logo-link { /* Novo ID para o link que envolve a logo */
-            display: block; /* Ocupa a largura total para centralizar */
-            margin: 20px auto; /* Centraliza o link (e a logo dentro dele) */
-            max-width: 300px; /* Limita a largura do link, consequentemente da logo */
+        #logo-link { 
+            display: block; 
+            margin: 20px 0 20px 0; /* Ajuste: margem superior e inferior de 20px, e margem esquerda de 0 */
+            width: 200px; /* Defina uma largura fixa para a logo, ajuste conforme necessário */
             height: auto;
-            text-decoration: none; /* Remove o sublinhado padrão do link */
+            text-decoration: none;
         }
         #logo {
-            display: block; /* Garante que a imagem seja um bloco dentro do link */
-            width: 100%; /* Faz a imagem preencher a largura máxima do seu contêiner (o link) */
+            display: block; 
+            width: 100%; 
             height: auto;
         }
         
         /* Estilos para o contador regressivo no pop-up */
         #popupCountdown {
-            font-size: 1.4em; /* Fonte maior para maior destaque */
+            font-size: 1.4em; 
             font-weight: bold;
-            color: #2a9d8f; /* Cor do contador regressivo, alinhado com o verde da logo */
-            margin-top: 20px;
+            color: #2a9d8f; 
+            margin-top: 15px; /* Ajustei um pouco a margem para ficar mais compacto */
             text-align: center;
             padding: 5px;
-            background-color: #e8f5e9; /* Um fundo suave para o contador, complementando o verde */
+            background-color: #e8f5e9; 
             border-radius: 5px;
-            border: 1px solid #2a9d8f; /* Borda com a cor verde da logo */
+            border: 1px solid #2a9d8f; 
+        }
+
+        /* --- Estilos para o Menu de Navegação --- */
+        .navbar {
+            background-color: #264653; /* Fundo do menu (azul escuro da logo) */
+            padding: 10px 20px;
+            margin-bottom: 20px; /* Espaço entre o menu e o conteúdo */
+            display: flex; /* Para alinhar itens na horizontal */
+            justify-content: space-between; /* Espaça itens na horizontal */
+            align-items: center; /* Alinha verticalmente */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; /* Menu fixo no topo ao rolar */
+            top: 0;
+            z-index: 999; /* Garante que o menu fique acima de outros elementos */
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Para itens do menu principal na horizontal */
+        }
+        .nav-links li {
+            position: relative; /* Necessário para o submenu flutuante */
+            margin-right: 25px; /* Espaçamento entre itens do menu principal */
+        }
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+        .nav-links a {
+            color: #f4f4f4; /* Cor do texto dos links (cinza claro) */
+            text-decoration: none;
+            padding: 8px 0;
+            display: block;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #2a9d8f; /* Cor verde da logo ao passar o mouse */
+        }
+
+        /* Estilos do Submenu */
+        .submenu {
+            display: none; /* Esconde o submenu por padrão */
+            position: absolute;
+            background-color: #264653; /* Mesmo fundo do menu principal */
+            min-width: 220px; /* Largura mínima do submenu */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            list-style: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            top: 100%; /* Posiciona o submenu abaixo do item pai */
+            left: 0;
+        }
+        .submenu li {
+            margin: 0;
+        }
+        .submenu a {
+            color: #f4f4f4; /* Cor do texto do submenu */
+            padding: 10px 20px;
+            display: block;
+            text-align: left;
+            white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .submenu a:hover {
+            background-color: #38a3a5; /* Fundo do item do submenu ao passar o mouse (azul esverdeado) */
+            color: #fff;
+        }
+
+        /* Mostra o submenu ao passar o mouse sobre o item pai */
+        .nav-links li:hover > .submenu {
+            display: block;
+        }
+
+        /* Ícone do menu para telas menores */
+        .menu-toggle {
+            display: none; /* Esconde o ícone por padrão em telas grandes */
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #f4f4f4; /* Cor do ícone do menu */
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Empilha os itens verticalmente */
+                align-items: flex-start; /* Alinha itens à esquerda */
+                padding: 10px 10px;
+            }
+            .nav-links {
+                display: none; /* Esconde os links por padrão em telas pequenas */
+                flex-direction: column;
+                width: 100%; /* Ocupa a largura total */
+                background-color: #264653; /* Fundo do menu quando aberto */
+            }
+            .nav-links.active {
+                display: flex; /* Mostra os links quando o menu está ativo */
+            }
+            .nav-links li {
+                margin: 0;
+                width: 100%; /* Ocupa a largura total */
+                text-align: center; /* Centraliza o texto no modo mobile */
+            }
+            .nav-links li a {
+                padding: 10px 0;
+            }
+            .menu-toggle {
+                display: flex; /* Mostra o ícone do menu */
+                align-self: flex-end; /* Alinha o ícone à direita no topo */
+                margin-top: -38px; /* Ajuste para sobrepor o padding do navbar */
+                margin-right: 10px;
+            }
+            .submenu {
+                position: static; /* Submenu aparece abaixo no fluxo normal */
+                width: 100%; /* Ocupa a largura total */
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+            }
+            .submenu a {
+                padding: 10px 30px; /* Mais padding para itens de submenu no mobile */
+            }
         }
     </style>
 </head>
@@ -190,6 +319,26 @@
         <a id="logo-link" href="index.html">
             <img id="logo" src="images/logo.png" alt="Logo do Site - Renda Extra .App">
         </a>
+
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Renda Extra &#9662;</a> <ul class="submenu">
+                        <li><a href="ganhar-dinheiro-pesquisas.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                        <li><a href="exemplo2.html">Exemplo 2</a></li>
+                        <li><a href="exemplo3.html">Exemplo 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="empregos.html">Empregos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
 
         <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
         <p>A dúvida é comum: dá para realmente <strong>ganhar dinheiro respondendo pesquisas online</strong>? A resposta curta é <strong>sim, é possível</strong>, mas é crucial ter expectativas realistas.</p>
@@ -267,8 +416,7 @@
             <span class="popup-close" onclick="closePopup()">&times;</span>
             <h4>Uma oportunidade imperdível para você!</h4>
             <p>Confira mais esta forma de complementar sua renda:</p>
-            <div class="popup-ad-slot">
-                <strong>Espaço para o anúncio do Pop-up</strong>
+            <div id="popup-ad-slot" class="popup-ad-slot"> <strong>Espaço para o anúncio do Pop-up</strong>
                 <p>O conteúdo do seu anúncio pop-up aparecerá aqui.</p>
             </div>
             <p id="popupCountdown"></p> 
@@ -276,6 +424,12 @@
     </div>
 
     <script>
+        // Função para o menu responsivo
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
         let popupClosable = false; // Controla se o pop-up pode ser fechado
         let countdownInterval; // Armazena o ID do intervalo para poder limpá-lo
 
@@ -283,23 +437,19 @@
         function showPopup() {
             const popupOverlay = document.getElementById('adPopupOverlay');
             const closeButton = document.querySelector('.popup-close');
-            const countdownDisplay = document.getElementById('popupCountdown'); // Captura o novo elemento do contador
+            const countdownDisplay = document.getElementById('popupCountdown'); 
 
-            popupOverlay.classList.add('active'); // Mostra o pop-up
+            popupOverlay.classList.add('active');
 
-            // Desabilita o botão de fechar e indica visualmente
             closeButton.style.pointerEvents = 'none';
             closeButton.style.opacity = '0.5';
             closeButton.style.cursor = 'not-allowed';
 
-            let timeLeft = 10; // Tempo em segundos para poder fechar o pop-up
-
-            // Garante que o elemento do contador existe antes de tentar manipulá-lo
+            let timeLeft = 10; 
             if (countdownDisplay) {
                 countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
             }
 
-            // Inicia o contador regressivo
             countdownInterval = setInterval(() => {
                 timeLeft--;
 
@@ -308,31 +458,25 @@
                 }
 
                 if (timeLeft <= 0) {
-                    clearInterval(countdownInterval); // Para o contador
-                    popupClosable = true; // Permite o fechamento
+                    clearInterval(countdownInterval); 
+                    popupClosable = true; 
                     
-                    // Habilita o botão de fechar e restaura o visual
                     closeButton.style.pointerEvents = 'auto';
                     closeButton.style.opacity = '1';
                     closeButton.style.cursor = 'pointer';
                     
                     if (countdownDisplay) {
-                        countdownDisplay.textContent = 'Você já pode fechar!'; // Mensagem final
-                        // Opcional: remover o contador após um breve momento
-                        // setTimeout(() => { countdownDisplay.style.display = 'none'; }, 2000); 
+                        countdownDisplay.textContent = 'Você já pode fechar!'; 
                     }
                 }
-            }, 1000); // Atualiza a cada 1 segundo
+            }, 1000); 
         }
 
         // Função para fechar o pop-up
         function closePopup() {
             if (popupClosable) {
                 document.getElementById('adPopupOverlay').classList.remove('active');
-                clearInterval(countdownInterval); // Limpa o intervalo caso o pop-up seja fechado antes do fim natural
-            } else {
-                // Opcional: Você pode adicionar um pequeno feedback aqui, como um alert
-                // alert('Por favor, aguarde o tempo mínimo antes de fechar.');
+                clearInterval(countdownInterval);
             }
         }
 
