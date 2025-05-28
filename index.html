@@ -251,58 +251,63 @@
     </div>
 
    <script>
-    let popupClosable = false; // Variável para controlar se o pop-up pode ser fechado
-    let countdownInterval; // Variável para armazenar o ID do intervalo da contagem regressiva
+    let popupClosable = false; // Controla se o pop-up pode ser fechado
+    let countdownInterval; // Armazena o ID do intervalo para poder limpá-lo
 
     // Função para mostrar o pop-up
     function showPopup() {
         const popupOverlay = document.getElementById('adPopupOverlay');
-        const closeButton = document.querySelector('.popup-close'); // Seleciona o botão de fechar
-        const countdownDisplay = document.getElementById('countdown'); // Elemento para a contagem regressiva
+        const closeButton = document.querySelector('.popup-close');
+        const countdownDisplay = document.getElementById('popupCountdown'); // Captura o novo elemento do contador
 
         popupOverlay.classList.add('active'); // Mostra o pop-up
 
-        // Desabilita o botão de fechar inicialmente
-        closeButton.style.pointerEvents = 'none'; // Impede cliques
-        closeButton.style.opacity = '0.5'; // Diminui opacidade para indicar desativado
-        closeButton.style.cursor = 'not-allowed'; // Muda o cursor
+        // Desabilita o botão de fechar e indica visualmente
+        closeButton.style.pointerEvents = 'none';
+        closeButton.style.opacity = '0.5';
+        closeButton.style.cursor = 'not-allowed';
 
-        // Inicia a contagem regressiva
-        let timeLeft = 10; // Tempo inicial em segundos
-        if (countdownDisplay) { // Garante que o elemento existe
-            countdownDisplay.textContent = `Aguarde ${timeLeft} segundos...`;
-            countdownDisplay.style.display = 'block'; // Mostra o contador
+        let timeLeft = 10; // Tempo em segundos para poder fechar o pop-up
+
+        // Garante que o elemento do contador existe antes de tentar manipulá-lo
+        if (countdownDisplay) {
+            countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
         }
-        
+
+        // Inicia o contador regressivo
         countdownInterval = setInterval(() => {
             timeLeft--;
+
             if (countdownDisplay) {
-                countdownDisplay.textContent = `Aguarde ${timeLeft} segundos...`;
+                countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
             }
 
             if (timeLeft <= 0) {
-                clearInterval(countdownInterval); // Para a contagem regressiva
-                popupClosable = true; // Permite fechar o pop-up
-                closeButton.style.pointerEvents = 'auto'; // Habilita cliques
-                closeButton.style.opacity = '1'; // Restaura opacidade
-                closeButton.style.cursor = 'pointer'; // Restaura cursor
+                clearInterval(countdownInterval); // Para o contador
+                popupClosable = true; // Permite o fechamento
+                
+                // Habilita o botão de fechar e restaura o visual
+                closeButton.style.pointerEvents = 'auto';
+                closeButton.style.opacity = '1';
+                closeButton.style.cursor = 'pointer';
+                
                 if (countdownDisplay) {
-                    countdownDisplay.textContent = 'Você já pode fechar.'; // Mensagem final
-                    // Opcional: esconder o contador após um pequeno atraso ou deixar visível
+                    countdownDisplay.textContent = 'Você já pode fechar!'; // Mensagem final
+                    // Opcional: remover o contador após um breve momento
                     // setTimeout(() => { countdownDisplay.style.display = 'none'; }, 2000); 
                 }
             }
-        }, 1000); // Atualiza a cada 1 segundo (1000 milissegundos)
+        }, 1000); // Atualiza a cada 1 segundo
     }
 
     // Função para fechar o pop-up
     function closePopup() {
-        // Só permite fechar se popupClosable for true
         if (popupClosable) {
             document.getElementById('adPopupOverlay').classList.remove('active');
+            clearInterval(countdownInterval); // Limpa o intervalo caso o pop-up seja fechado antes do fim natural
         } else {
-            // Opcional: alertar o usuário que ainda não pode fechar
-            // alert('Aguarde o tempo mínimo antes de fechar!');
+            // Opcional: Você pode adicionar um pequeno feedback aqui, como um alert
+            // alert('Por favor, aguarde o tempo mínimo antes de fechar.');
         }
     }
 
