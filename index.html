@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
-     crossorigin="anonymous"></script>
+      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renda Extra .App | Como Ganhar Dinheiro Respondendo Pesquisas Online? Sites Confiáveis e Dicas de Renda Extra</title>
@@ -29,18 +29,20 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+        
+        /* Ajuste de cores para harmonizar com a logo */
         h1, h2, h3 {
-            color: #2c3e50;
+            color: #264653; /* Um tom de azul marinho/escuro para os títulos principais */
             text-align: center;
         }
         h2 {
             margin-top: 30px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #aec6cf; /* Cor mais suave para a linha, um cinza azulado claro */
             padding-bottom: 10px;
         }
         h3 {
             text-align: left;
-            color: #34495e;
+            color: #2a6a82; /* Um azul um pouco mais claro e convidativo para subtítulos */
             margin-top: 25px;
             margin-bottom: 15px;
         }
@@ -52,12 +54,12 @@
             margin-bottom: 10px;
         }
         strong {
-            color: #e67e22;
+            color: #e67e22; /* Mantém o laranja vibrante da logo para destaque de texto forte */
         }
         .highlight {
-            background-color: #ecf0f1;
+            background-color: #e8f5e9; /* Um verde bem suave para o fundo do highlight */
             padding: 15px;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid #2a9d8f; /* Usando um verde mais próximo ao da logo para a borda */
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -70,12 +72,12 @@
         }
         .site-link {
             text-decoration: none;
-            color: #3498db;
+            color: #38a3a5; /* Um azul esverdeado para os links, harmonizando com a logo */
             font-weight: bold;
         }
         .site-link:hover {
             text-decoration: underline;
-            color: #2980b9;
+            color: #217c7e; /* Versão mais escura do azul para hover */
         }
 
         /* Estilos para os espaços de anúncio */
@@ -138,7 +140,7 @@
         }
         .popup-content h4 {
             margin-top: 0;
-            color: #3498db;
+            color: #3498db; /* Cor para o título do pop-up */
             font-size: 1.5em;
         }
         .popup-ad-slot {
@@ -161,16 +163,18 @@
             max-width: 300px; /* Ajuste o tamanho conforme necessário */
             height: auto;
         }    
+        
         /* Estilos para o contador regressivo no pop-up */
         #popupCountdown {
-            font-size: 1.2em; /* Fonte maior, ajuste o valor para o desejado */
-            font-weight: bold; /* Deixa a fonte em negrito */
+            font-size: 1.4em; /* Fonte maior para maior destaque */
+            font-weight: bold;
             color: #e67e22; /* Cor de destaque (o mesmo laranja do seu <strong>) */
-            margin-top: 20px; /* Mais espaço acima para separação */
-            text-align: center; /* Centraliza o texto */
-            padding: 5px; /* Adiciona um pequeno padding interno */
-            background-color: #f9f9f9; /* Um fundo suave para destaque */
-            border-radius: 5px; /* Bordas levemente arredondadas */
+            margin-top: 20px;
+            text-align: center;
+            padding: 5px;
+            background-color: #fdf6e3; /* Um fundo suave para o contador, complementando o laranja */
+            border-radius: 5px;
+            border: 1px solid #e67e22; /* Uma borda sutil com a cor de destaque */
         }
     </style>
 </head>
@@ -258,75 +262,75 @@
                 <strong>Espaço para o anúncio do Pop-up</strong>
                 <p>O conteúdo do seu anúncio pop-up aparecerá aqui.</p>
             </div>
-            <div id="popupCountdown"></div>
+            <p id="popupCountdown"></p> 
         </div>
     </div>
 
-   <script>
-    let popupClosable = false; // Controla se o pop-up pode ser fechado
-    let countdownInterval; // Armazena o ID do intervalo para poder limpá-lo
+    <script>
+        let popupClosable = false; // Controla se o pop-up pode ser fechado
+        let countdownInterval; // Armazena o ID do intervalo para poder limpá-lo
 
-    // Função para mostrar o pop-up
-    function showPopup() {
-        const popupOverlay = document.getElementById('adPopupOverlay');
-        const closeButton = document.querySelector('.popup-close');
-        const countdownDisplay = document.getElementById('popupCountdown'); // Captura o novo elemento do contador
+        // Função para mostrar o pop-up
+        function showPopup() {
+            const popupOverlay = document.getElementById('adPopupOverlay');
+            const closeButton = document.querySelector('.popup-close');
+            const countdownDisplay = document.getElementById('popupCountdown'); // Captura o novo elemento do contador
 
-        popupOverlay.classList.add('active'); // Mostra o pop-up
+            popupOverlay.classList.add('active'); // Mostra o pop-up
 
-        // Desabilita o botão de fechar e indica visualmente
-        closeButton.style.pointerEvents = 'none';
-        closeButton.style.opacity = '0.5';
-        closeButton.style.cursor = 'not-allowed';
+            // Desabilita o botão de fechar e indica visualmente
+            closeButton.style.pointerEvents = 'none';
+            closeButton.style.opacity = '0.5';
+            closeButton.style.cursor = 'not-allowed';
 
-        let timeLeft = 10; // Tempo em segundos para poder fechar o pop-up
+            let timeLeft = 10; // Tempo em segundos para poder fechar o pop-up
 
-        // Garante que o elemento do contador existe antes de tentar manipulá-lo
-        if (countdownDisplay) {
-            countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
-        }
-
-        // Inicia o contador regressivo
-        countdownInterval = setInterval(() => {
-            timeLeft--;
-
+            // Garante que o elemento do contador existe antes de tentar manipulá-lo
             if (countdownDisplay) {
                 countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
             }
 
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval); // Para o contador
-                popupClosable = true; // Permite o fechamento
-                
-                // Habilita o botão de fechar e restaura o visual
-                closeButton.style.pointerEvents = 'auto';
-                closeButton.style.opacity = '1';
-                closeButton.style.cursor = 'pointer';
-                
+            // Inicia o contador regressivo
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+
                 if (countdownDisplay) {
-                    countdownDisplay.textContent = 'Você já pode fechar!'; // Mensagem final
-                    // Opcional: remover o contador após um breve momento
-                    // setTimeout(() => { countdownDisplay.style.display = 'none'; }, 2000); 
+                    countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
                 }
-            }
-        }, 1000); // Atualiza a cada 1 segundo
-    }
 
-    // Função para fechar o pop-up
-    function closePopup() {
-        if (popupClosable) {
-            document.getElementById('adPopupOverlay').classList.remove('active');
-            clearInterval(countdownInterval); // Limpa o intervalo caso o pop-up seja fechado antes do fim natural
-        } else {
-            // Opcional: Você pode adicionar um pequeno feedback aqui, como um alert
-            // alert('Por favor, aguarde o tempo mínimo antes de fechar.');
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval); // Para o contador
+                    popupClosable = true; // Permite o fechamento
+                    
+                    // Habilita o botão de fechar e restaura o visual
+                    closeButton.style.pointerEvents = 'auto';
+                    closeButton.style.opacity = '1';
+                    closeButton.style.cursor = 'pointer';
+                    
+                    if (countdownDisplay) {
+                        countdownDisplay.textContent = 'Você já pode fechar!'; // Mensagem final
+                        // Opcional: remover o contador após um breve momento
+                        // setTimeout(() => { countdownDisplay.style.display = 'none'; }, 2000); 
+                    }
+                }
+            }, 1000); // Atualiza a cada 1 segundo
         }
-    }
 
-    // Mostrar o pop-up após 15 segundos (15000 milissegundos) do carregamento da página
-    window.onload = function() {
-        setTimeout(showPopup, 15000);
-    };
-</script>
+        // Função para fechar o pop-up
+        function closePopup() {
+            if (popupClosable) {
+                document.getElementById('adPopupOverlay').classList.remove('active');
+                clearInterval(countdownInterval); // Limpa o intervalo caso o pop-up seja fechado antes do fim natural
+            } else {
+                // Opcional: Você pode adicionar um pequeno feedback aqui, como um alert
+                // alert('Por favor, aguarde o tempo mínimo antes de fechar.');
+            }
+        }
+
+        // Mostrar o pop-up após 15 segundos (15000 milissegundos) do carregamento da página
+        window.onload = function() {
+            setTimeout(showPopup, 15000);
+        };
+    </script>
 </body>
 </html>
