@@ -185,51 +185,50 @@
 
         /* --- Estilos para o Menu de Navegação --- */
         .navbar {
-            background-color: #264653; /* Fundo do menu (azul escuro da logo) */
-            padding: 10px 20px;
-            margin-bottom: 20px; /* Espaço entre o menu e o conteúdo */
+            background-color: #aec6cf; /* Cor de fundo mais fraca, um azul acinzentado claro */
+            padding: 5px 20px; /* Reduzindo o padding vertical para deixar o menu mais fino */
+            margin-bottom: 20px; 
             display: flex; 
-            /* Modificado: Distribui os links uniformemente com espaço entre eles */
             justify-content: space-around; 
             align-items: center; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky; 
             top: 0;
             z-index: 999; 
-            border-radius: 8px; /* Adicionado: Bordas arredondadas ao menu */
+            border-radius: 8px; 
         }
         .nav-links {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex; 
-            flex-grow: 1; /* Permite que a lista de links ocupe o espaço disponível */
-            justify-content: space-around; /* Distribui os links dentro da ul */
+            flex-grow: 1; 
+            justify-content: space-around; 
         }
         .nav-links li {
             position: relative; 
-            margin-right: 0; /* Removido o margin-right fixo para que space-around funcione */
+            margin-right: 0; 
         }
         .nav-links li:last-child {
             margin-right: 0;
         }
         .nav-links a {
-            color: #f4f4f4; 
+            color: #264653; /* Cor do texto dos links para contrastar com o fundo claro */
             text-decoration: none;
-            padding: 8px 15px; /* Adicionado padding horizontal para melhor área de clique */
+            padding: 8px 15px; 
             display: block;
             font-weight: bold;
             transition: color 0.3s ease;
         }
         .nav-links a:hover {
-            color: #2a9d8f; 
+            color: #2a9d8f; /* Cor verde da logo ao passar o mouse */
         }
 
         /* Estilos do Submenu */
         .submenu {
             display: none; 
             position: absolute;
-            background-color: #264653; 
+            background-color: #aec6cf; /* Mesmo fundo do menu principal para o submenu */
             min-width: 220px; 
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1000;
@@ -243,7 +242,7 @@
             margin: 0;
         }
         .submenu a {
-            color: #f4f4f4; 
+            color: #264653; /* Cor do texto do submenu para contrastar */
             padding: 10px 20px;
             display: block;
             text-align: left;
@@ -251,7 +250,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .submenu a:hover {
-            background-color: #38a3a5; 
+            background-color: #38a3a5; /* Fundo do item do submenu ao passar o mouse (azul esverdeado) */
             color: #fff;
         }
 
@@ -266,13 +265,12 @@
             flex-direction: column;
             cursor: pointer;
             padding: 10px;
-            /* Modificado: Posiciona o ícone de hambúrguer para a direita quando o menu está fechado */
             margin-left: auto; 
         }
         .menu-toggle .bar {
             width: 25px;
             height: 3px;
-            background-color: #f4f4f4; 
+            background-color: #264653; /* Cor do ícone do menu para contrastar com o fundo claro */
             margin: 4px 0;
             transition: 0.4s;
         }
@@ -282,13 +280,13 @@
             .navbar {
                 flex-direction: column; 
                 align-items: flex-start; 
-                padding: 10px; /* Reduzi o padding lateral */
+                padding: 10px; 
             }
             .nav-links {
                 display: none; 
                 flex-direction: column;
                 width: 100%; 
-                background-color: #264653; 
+                background-color: #aec6cf; /* Fundo do menu quando aberto no mobile */
             }
             .nav-links.active {
                 display: flex; 
@@ -302,7 +300,6 @@
             }
             .menu-toggle {
                 display: flex; 
-                /* Revertido para o posicionamento padrão no mobile quando o menu está aberto */
                 align-self: flex-end; 
                 margin-top: -38px; 
                 margin-right: 10px;
