@@ -318,6 +318,35 @@
             transition: 0.4s;
         }
 
+        .section-title {
+            text-align: left; /* Alinha o título à esquerda */
+        }
+
+        .categories-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px; /* Espaço entre a imagem e o texto */
+            margin-top: 20px; /* Adiciona um pouco de espaço acima do container */
+            margin-bottom: 30px; /* Adiciona um pouco de espaço abaixo do container */
+        }
+
+        .image-placeholder {
+            flex-shrink: 0; /* Impede que a imagem encolha demais */
+            width: 300px; /* Largura desejada para a imagem */
+        }
+
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove qualquer espaço extra abaixo da imagem */
+            border-radius: 8px; /* Opcional: para arredondar as bordas da imagem */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: adiciona uma leve sombra */
+        }
+
+        .categories-text {
+            flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+        }
+
         /* Rodapé */
         .footer {
             background-color: #264653; 
@@ -476,16 +505,23 @@
                 </script>
             </div>
 
-            <h2>Explore Nossas Categorias de Renda Extra</h2>
-            <p>Para te ajudar a encontrar a oportunidade perfeita, organizamos as informações em categorias. Clique em uma delas para saber mais:</p>
-            <ul>
-                <li><a href="como-ganhar-dinheiro-respondendo-pesquisas-online-sites-confiaveis-e-dicas-de-renda-extra.html" class="site-link"><strong>Pesquisas Online Remuneradas:</strong></a> Ganhe dinheiro compartilhando sua opinião. Descubra os melhores sites e como evitar golpes.</li>
-                <li><a href="index.html" class="site-link"><strong>Trabalho Freelancer:</strong></a> Use suas habilidades para oferecer serviços online. Opções para redatores, designers, programadores e mais.</li>
-                <li><a href="index.html" class="site-link"><strong>Vendas Online:</strong></a> Aprenda a vender produtos físicos ou digitais, seja em marketplaces ou criando sua própria loja.</li>
-                <li><a href="index.html" class="site-link"><strong>Investimentos Inteligentes:</strong></a> Entenda como seu dinheiro pode trabalhar para você, com dicas de investimentos de baixo e alto risco.</li>
-                <li><a href="index.html" class="site-link"><strong>Monetize suas Habilidades:</strong></a> Transforme hobbies e conhecimentos específicos em fonte de renda.</li>
-            </ul>
-
+            <h2 class="section-title">Explore Nossas Categorias de Renda Extra</h2>
+            <div class="categories-container">
+                <div class="image-placeholder">
+            <img src="categorias-renda-extra.png" alt="Imagem da Categoria de Rendas Extras">
+            </div>
+            <div class="categories-text">
+                <p>Para te ajudar a encontrar a oportunidade perfeita, organizamos as informações em categorias. Clique em uma delas para saber mais:</p>
+                <ul>
+                    <li><a href="como-ganhar-dinheiro-respondendo-pesquisas-online-sites-confiaveis-e-dicas-de-renda-extra.html" class="site-link"><strong>Pesquisas Online Remuneradas:</strong></a> Ganhe dinheiro compartilhando sua opinião. Descubra os melhores sites e como evitar golpes.</li>
+                    <li><a href="index.html" class="site-link"><strong>Trabalho Freelancer:</strong></a> Use suas habilidades para oferecer serviços online. Opções para redatores, designers, programadores e mais.</li>
+                    <li><a href="index.html" class="site-link"><strong>Vendas Online:</strong></a> Aprenda a vender produtos físicos ou digitais, seja em marketplaces ou criando sua própria loja.</li>
+                    <li><a href="index.html" class="site-link"><strong>Investimentos Inteligentes:</strong></a> Entenda como seu dinheiro pode trabalhar para você, com dicas de investimentos de baixo e alto risco.</li>
+                    <li><a href="index.html" class="site-link"><strong>Monetize suas Habilidades:</strong></a> Transforme hobbies e conhecimentos específicos em fonte de renda.</li>
+                </ul>
+    </div>
+</div>
+            
             <div class="highlight">
                 <h3>Dica Essencial para Começar!</h3>
                 <p>Independentemente da forma de renda extra que você escolher, <strong>consistência</strong> e <strong>dedicação</strong> são chaves para o sucesso. Comece pequeno, aprenda e adapte-se. O mais importante é dar o primeiro passo!</p>
