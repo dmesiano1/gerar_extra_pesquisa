@@ -135,13 +135,11 @@
         justify-content: center;
         flex-shrink: 0;
 
-        /* --- NOVO: Faz os anúncios laterais acompanharem a rolagem --- */
         position: -webkit-sticky; /* Para compatibilidade com Safari */
         position: sticky;
-        top: 70px; /* Ajustei para considerar a altura menor do header no mobile */
+        top: 70px; /* Distância do topo (abaixo do header) - Ajuste se necessário */
         align-self: flex-start; /* Garante alinhamento correto no flex container */
         z-index: 5; /* Garante que fique acima do conteúdo se houver sobreposição */
-        /* ----------------------------------------------------------------- */
     }
 
 
@@ -435,19 +433,32 @@
             padding: 10px;
         }
         .container { padding: 20px; }
+        /* Removido do 768px:
         .categories-container {
-            flex-direction: column; /* Empilha a imagem e o texto em telas menores */
+            flex-direction: column;
+            text-align: center;
+        }
+        .image-placeholder {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto 15px;
+        }
+        */
+    }
+
+    /* Nova media query para 600px e abaixo, para quebrar as imagens */
+    @media (max-width: 600px) {
+        .categories-container {
+            flex-direction: column; /* Empilha a imagem e o texto */
             text-align: center; /* Centraliza o texto quando empilhado */
+            gap: 20px; /* Aumentei o gap um pouco para dar mais espaço quando empilhado */
         }
         .image-placeholder {
             width: 80%; /* Permite que a imagem ocupe mais largura */
             max-width: 300px; /* Limita a largura máxima da imagem */
             margin: 0 auto 15px; /* Centraliza a imagem e adiciona margem abaixo */
         }
-    }
 
-    /* Ajustes específicos para telas menores que 580px */
-    @media (max-width: 580px) {
         h1 {
             font-size: 1.8em; /* Diminui o tamanho do título principal */
         }
@@ -492,6 +503,15 @@
             font-size: 0.9em; /* Diminui a fonte do rodapé */
         }
     }
+
+    /* Ajustes específicos para telas menores que 580px (se necessário) - a maioria foi movida para 600px */
+    @media (max-width: 580px) {
+        /* Se houver necessidade de ajustes AINDA mais específicos para 580px, adicione aqui.
+           Caso contrário, esta media query pode ser redundante se a de 600px for suficiente.
+           Por enquanto, as regras mais gerais para elementos de texto já foram tratadas na media de 600px.
+        */
+    }
+
 </style>
     
 </head>
