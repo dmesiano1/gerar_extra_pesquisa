@@ -32,22 +32,22 @@
             align-items: flex-start; 
             padding: 20px 10px; 
             flex-grow: 1; 
-            max-width: 1300px; 
+            max-width: 1300px; /* Definido para centralizar conteúdo em telas grandes */
             margin: 0 auto; 
             flex-wrap: wrap; /* Permite que as colunas quebrem para a linha de baixo no mobile */
         }
 
         /* Container Principal (Conteúdo Central) */
         .container {
+            max-width: 800px; /* Definido para o conteúdo principal em desktop */
             background: #fff;
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             flex-grow: 1; 
             flex-shrink: 1; 
-            flex-basis: 70%; 
+            flex-basis: 70%; /* Base para 70% da largura do main-wrapper */
             z-index: 1; 
-            /* Removido max-width aqui para dar mais flexibilidade no mobile */
         }
         
         /* Ajuste de cores */
@@ -258,7 +258,7 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            display: flex; 
+            display: flex; /* Exibido como flex por padrão em desktop */
         }
         .nav-links li {
             position: relative; 
@@ -281,7 +281,7 @@
 
         /* Submenu */
         .submenu {
-            display: none; 
+            display: none; /* Escondido por padrão em desktop */
             position: absolute;
             background-color: #f0f0f0; 
             min-width: 220px; 
@@ -306,6 +306,7 @@
             background-color: #d0d0d0; 
             color: #264653;
         }
+        /* Exibe submenu ao passar o mouse em desktop */
         .nav-links li:hover > .submenu { display: block; }
 
         /* Menu Toggle (Hamburguer) */
@@ -344,8 +345,7 @@
         .image-placeholder {
             flex-shrink: 0; 
             width: 300px; 
-            /* max-width: 100%; Adicionado para garantir que não exceda o container */
-            max-width: 100%;
+            max-width: 100%; /* Garante que a imagem se ajuste ao container */
         }
 
         .image-placeholder img {
@@ -381,18 +381,20 @@
         }
         .footer a:hover { text-decoration: underline; }
 
-        /* Responsividade */
+        /* Responsividade para telas médias (menor que 1200px) */
         @media (max-width: 1200px) { 
             .adsense-vertical {
-                display: none; 
+                display: none; /* Esconde os anúncios laterais */
             }
             #main-wrapper { 
                 justify-content: center; 
                 padding: 15px; 
+                max-width: 960px; /* Ajuste para telas médias */
             }
             .container { 
-                max-width: 95%; 
+                max-width: 100%; /* Permite que o container ocupe mais largura */
                 padding: 25px; 
+                flex-basis: 100%; /* Ocupa a largura total na área do conteúdo */
             }
             #header-fixed {
                 padding: 10px 15px; 
@@ -409,6 +411,7 @@
             }
         }
 
+        /* Responsividade para dispositivos móveis (menor que 768px) */
         @media (max-width: 768px) {
             #header-fixed {
                 flex-direction: column; 
@@ -460,15 +463,16 @@
                 padding: 12px 0; 
                 color: #264653; 
             }
-            /* Ajuste para submenus no mobile */
+            /* Submenu no mobile */
             .submenu {
                 position: static; /* Submenu estático no mobile */
                 width: 100%; 
                 box-shadow: none;
                 border-radius: 0;
                 padding: 0;
-                background-color: #e8e8e8; /* Cor mais clara para o submenu */
-                border-top: 1px solid #d0d0d0; /* Adiciona uma borda superior para separar do item pai */
+                background-color: #e8e8e8; 
+                border-top: 1px solid #d0d0d0; 
+                display: none; /* Escondido por padrão no mobile */
             }
             .submenu a { 
                 padding: 10px 20px; 
@@ -477,20 +481,20 @@
             .submenu a:hover { 
                 background-color: #d8d8d8; 
             }
-            /* Garante que o submenu seja exibido quando o item pai é clicado */
+            /* Exibe submenu quando o item pai (dropdown) tem a classe 'active' */
             .nav-links li.dropdown.active > .submenu {
-                display: flex; /* Usar flex para empilhar os itens do submenu */
+                display: flex; /* Usar flex para empilhar os itens do submenu verticalmente */
                 flex-direction: column;
             }
             
-            #main-wrapper { padding: 15px; } /* Ajuste de padding para mobile */
+            #main-wrapper { padding: 15px; } 
             .container { 
                 padding: 15px; 
-                width: 100%; /* Garante que o container ocupe toda a largura disponível */
-                max-width: none; /* Remove qualquer max-width que possa restringir */
+                width: 100%; 
+                max-width: none; /* Remove restrições de largura máxima */
             }
             .categories-container {
-                flex-direction: column; /* Imagens e texto em coluna */
+                flex-direction: column; 
                 align-items: center; 
                 gap: 15px; 
             }
@@ -499,9 +503,7 @@
                 max-width: 350px; 
                 order: -1; 
             }
-            .categories-container:nth-of-type(2) .image-placeholder {
-                order: 1; 
-            }
+            /* Removido o order: 1 para o segundo container para manter a consistência com o -1 */
             .categories-text {
                 width: 100%; 
                 min-width: auto; 
@@ -733,9 +735,11 @@
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
-            // Fechar qualquer submenu aberto ao fechar o menu principal
-            const openSubmenus = document.querySelectorAll('.nav-links li.dropdown.active');
-            openSubmenus.forEach(item => item.classList.remove('active'));
+            // Ao fechar o menu principal, fechar qualquer submenu aberto
+            if (!navLinks.classList.contains('active')) {
+                const openSubmenus = document.querySelectorAll('.nav-links li.dropdown.active');
+                openSubmenus.forEach(item => item.classList.remove('active'));
+            }
         }
 
         // Função para alternar submenus em dispositivos móveis
@@ -743,8 +747,11 @@
             // Só ativa o submenu se estiver em modo mobile (menu hamburguer visível)
             const menuToggle = document.querySelector('.menu-toggle');
             if (window.getComputedStyle(menuToggle).display === 'flex') {
+                // Previne que o link principal do dropdown navegue
+                event.preventDefault(); 
                 element.classList.toggle('active');
             }
+            // Em desktop, permite o hover padrão e o clique no link principal
         }
 
         let popupClosable = false; 
@@ -812,15 +819,15 @@
         // Fechamento do window.onload, mantendo a estrutura original
         };
 
-        // Adiciona um listener para fechar o menu ao clicar fora dele (opcional, para melhor UX)
+        // Adiciona um listener para fechar o menu ao clicar fora dele
         document.addEventListener('click', function(event) {
             const navbar = document.querySelector('.navbar');
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
 
-            // Verifica se o clique foi fora do menu e do botão de toggle
+            // Verifica se o clique foi fora do menu e do botão de toggle, e se o menu está aberto
             if (!navbar.contains(event.target) && navLinks.classList.contains('active')) {
-                // E também se o clique não foi no botão de toggle, para evitar fechar imediatamente após abrir
+                // Certifica-se de que o clique não foi no botão de toggle, para evitar fechar imediatamente após abrir
                 if (!menuToggle.contains(event.target)) {
                     navLinks.classList.remove('active');
                     // Fechar qualquer submenu aberto
