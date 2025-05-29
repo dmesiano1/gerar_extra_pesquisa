@@ -17,7 +17,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0; /* Removido padding para body, será controlado por wrappers */
+            padding: 0; 
             background-color: #f4f4f4;
             color: #333;
             display: flex; 
@@ -25,15 +25,15 @@
             min-height: 100vh; 
         }
 
-        /* Novo Wrapper Principal para 3 colunas */
+        /* Wrapper Principal para 3 colunas */
         #main-wrapper {
             display: flex;
-            justify-content: center; /* Centraliza o conteúdo principal */
-            align-items: flex-start; /* Alinha ao topo */
-            padding: 20px 10px; /* Padding nas laterais do wrapper */
-            flex-grow: 1; /* Faz o wrapper crescer para preencher espaço */
-            max-width: 1300px; /* Largura máxima para acomodar 3 colunas */
-            margin: 0 auto; /* Centraliza o wrapper na tela */
+            justify-content: center; 
+            align-items: flex-start; 
+            padding: 20px 10px; 
+            flex-grow: 1; 
+            max-width: 1300px; 
+            margin: 0 auto; 
         }
 
         /* Container Principal (Conteúdo Central) */
@@ -43,12 +43,13 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex-grow: 1; /* Permite que o container cresça se necessário */
-            flex-shrink: 1; /* Permite que encolha */
-            flex-basis: 70%; /* Base de largura, ajustável */
+            flex-grow: 1; 
+            flex-shrink: 1; 
+            flex-basis: 70%; 
+            z-index: 1; /* Garante que fique acima de elementos que possam vazar */
         }
         
-        /* Ajuste de cores para harmonizar com a logo */
+        /* Ajuste de cores */
         h1, h2, h3 {
             color: #264653; 
             text-align: center;
@@ -118,11 +119,11 @@
             margin-bottom: 5px;
         }
 
-        /* NOVO: Estilos para os espaços de anúncio VERTICAL */
+        /* Estilos para os espaços de anúncio VERTICAL */
         .adsense-vertical {
-            width: 160px; /* Largura padrão para ads verticais */
-            min-height: 600px; /* Altura padrão para ads verticais */
-            margin: 0 20px; /* Espaçamento lateral */
+            width: 160px; 
+            min-height: 600px; 
+            margin: 0 20px; 
             background-color: #ecf0f1;
             border: 1px dashed #ccc;
             text-align: center;
@@ -131,7 +132,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0; /* Impede que os anúncios encolham */
+            flex-shrink: 0; 
+            
+            /* --- NOVO: Faz os anúncios laterais acompanharem a rolagem --- */
+            position: -webkit-sticky; /* Para compatibilidade com Safari */
+            position: sticky;
+            top: 90px; /* Distância do topo (abaixo do header) - Ajuste se necessário */
+            align-self: flex-start; /* Garante alinhamento correto no flex container */
+            z-index: 5; /* Garante que fique acima do conteúdo se houver sobreposição */
+            /* ----------------------------------------------------------------- */
         }
 
 
@@ -191,7 +200,7 @@
             color: #555;
         }
 
-        /* Novo contêiner para a Logo e Menu juntos */
+        /* Header fixo */
         #header-fixed {
             background-color: #e0e0e0; 
             padding: 10px 20px;
@@ -200,9 +209,10 @@
             align-items: center; 
             position: sticky;
             top: 0;
-            z-index: 1000; 
+            z-index: 999; /* Garante que fique acima de tudo, exceto pop-up */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
             border-radius: 0 0 8px 8px; 
+            min-height: 60px; /* Define uma altura mínima para ajudar no cálculo do 'top' dos ads */
         }
 
         /* Estilos para a Logo */
@@ -219,7 +229,7 @@
             height: auto;
         }
         
-        /* Estilos para o contador regressivo no pop-up */
+        /* Contador regressivo */
         #popupCountdown {
             font-size: 1.4em; 
             font-weight: bold;
@@ -232,7 +242,7 @@
             border: 1px solid #2a9d8f; 
         }
 
-        /* --- Estilos para o Menu de Navegação --- */
+        /* Menu de Navegação */
         .navbar {
             background-color: transparent; 
             padding: 0; 
@@ -243,9 +253,6 @@
             align-items: center;
             box-shadow: none; 
             position: static; 
-            top: auto; 
-            z-index: auto; 
-            border-radius: 0; 
         }
         .nav-links {
             list-style: none;
@@ -272,7 +279,7 @@
             color: #2a9d8f; 
         }
 
-        /* Estilos do Submenu */
+        /* Submenu */
         .submenu {
             display: none; 
             position: absolute;
@@ -286,9 +293,7 @@
             top: 100%; 
             left: 0;
         }
-        .submenu li {
-            margin: 0;
-        }
+        .submenu li { margin: 0; }
         .submenu a {
             color: #264653; 
             padding: 10px 20px;
@@ -301,19 +306,10 @@
             background-color: #d0d0d0; 
             color: #264653;
         }
+        .nav-links li:hover > .submenu { display: block; }
 
-        /* Mostra o submenu ao passar o mouse sobre o item pai */
-        .nav-links li:hover > .submenu {
-            display: block;
-        }
-
-        /* Ícone do menu para telas menores */
-        .menu-toggle {
-            display: none; 
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
-        }
+        /* Menu Toggle */
+        .menu-toggle { display: none; }
         .menu-toggle .bar {
             width: 25px;
             height: 3px;
@@ -322,39 +318,33 @@
             transition: 0.4s;
         }
 
-        /* --- Estilos para o Rodapé --- */
+        /* Rodapé */
         .footer {
             background-color: #264653; 
             color: #f4f4f4; 
             text-align: center;
             padding: 20px;
-            margin-top: 0; /* Removido margin top, o flex-grow do wrapper já empurra */
+            margin-top: 0; 
             border-top: 1px solid #aec6cf; 
             border-radius: 8px 8px 0 0; 
+            z-index: 10; /* Garante que fique acima dos ads se houver sobreposição no fim */
+            position: relative; /* Necessário para z-index funcionar */
         }
-        .footer p {
-            margin: 5px 0;
-        }
+        .footer p { margin: 5px 0; }
         .footer a {
             color: #2a9d8f; 
             text-decoration: none;
             font-weight: bold;
         }
-        .footer a:hover {
-            text-decoration: underline;
-        }
+        .footer a:hover { text-decoration: underline; }
 
         /* Responsividade */
-        @media (max-width: 1200px) { /* Esconde ads verticais quando não houver espaço */
+        @media (max-width: 1200px) { 
             .adsense-vertical {
-                display: none;
+                display: none; /* Esconde os anúncios laterais */
             }
-            #main-wrapper {
-                justify-content: center; /* Garante que o container centralize */
-            }
-            .container {
-                max-width: 90%; /* Aumenta um pouco para ocupar mais espaço */
-            }
+            #main-wrapper { justify-content: center; }
+            .container { max-width: 90%; }
         }
 
         @media (max-width: 768px) {
@@ -363,6 +353,11 @@
                 align-items: flex-start; 
                 padding: 10px;
                 border-radius: 0; 
+                min-height: auto; /* Remove altura mínima no mobile */
+                position: static; /* Header não será sticky no mobile para simplicidade */
+            }
+            body { /* Adiciona padding ao body no mobile já que header não é sticky */
+                padding-top: 0; 
             }
             #logo-link {
                 margin-right: 0;
@@ -382,25 +377,17 @@
                 width: 100%; 
                 background-color: #f0f0f0; 
             }
-            .nav-links.active {
-                display: flex; 
-            }
-            .nav-links li {
-                width: 100%; 
-                text-align: center; 
-            }
-            .nav-links li a {
-                padding: 10px 0;
-                color: #264653; 
-            }
+            .nav-links.active { display: flex; }
+            .nav-links li { width: 100%; text-align: center; }
+            .nav-links li a { padding: 10px 0; color: #264653; }
             .menu-toggle {
                 display: flex; 
+                flex-direction: column;
+                cursor: pointer;
+                padding: 10px;
                 align-self: flex-end; 
-                margin-top: -38px; 
+                margin-top: -50px; /* Ajuste fino para alinhar com a logo centralizada */
                 margin-right: 10px;
-            }
-            .menu-toggle .bar {
-                background-color: #264653; 
             }
             .submenu {
                 position: static; 
@@ -410,20 +397,10 @@
                 padding: 0;
                 background-color: #e0e0e0; 
             }
-            .submenu a {
-                padding: 10px 30px; 
-                color: #264653; 
-            }
-            .submenu a:hover {
-                background-color: #d0d0d0; 
-                color: #264653;
-            }
-            #main-wrapper { /* Ajusta padding no mobile */
-                padding: 10px;
-            }
-            .container { /* Ajusta padding no mobile */
-                padding: 20px;
-            }
+            .submenu a { padding: 10px 30px; color: #264653; }
+            .submenu a:hover { background-color: #d0d0d0; color: #264653; }
+            #main-wrapper { padding: 10px; }
+            .container { padding: 20px; }
         }
 
     </style>
@@ -455,7 +432,9 @@
         </nav>
     </header>
 
-    <div id="main-wrapper"> <aside id="adsense-left" class="adsense-vertical">
+    <div id="main-wrapper"> 
+
+        <aside id="adsense-left" class="adsense-vertical">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
                  crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
@@ -467,7 +446,8 @@
             <p>Espaço para AdSense Vertical</p>
         </aside>
 
-        <div class="container"> <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
+        <div class="container"> 
+            <h1>Ganhar Dinheiro Respondendo Pesquisas Online: É Realmente Possível?</h1>
             <p>A dúvida é comum: dá para realmente <strong>ganhar dinheiro respondendo pesquisas online</strong> A resposta curta é <strong>sim, é possível</strong>, mas é crucial ter expectativas realistas.</p>
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -535,8 +515,10 @@
                 <li><a href="https://www.myiyo.com/br" class="site-link" target="_blank" rel="noopener noreferrer"><strong>Myiyo:</strong></a> Site com pesquisas remuneradas, disponível em português.</li>
                 <li><a href="https://www.thepanelstation.com/br" class="site-link" target="_blank" rel="noopener noreferrer"><strong>The Panel Station:</strong></a> Oferece pesquisas sobre diversos temas para <strong>ganhar dinheiro extra</strong>.</li>
             </ul>
-    
-    
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
             <h2>Dicas Essenciais para Maximizar Seus Ganhos com Pesquisas Online</h2>
             <div class="highlight">
                 <ul>
@@ -562,7 +544,9 @@
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
             </div>
-        </div> <aside id="adsense-right" class="adsense-vertical">
+        </div> 
+
+        <aside id="adsense-right" class="adsense-vertical">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
                  crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
@@ -574,7 +558,10 @@
             <p>Espaço para AdSense Vertical</p>
         </aside>
 
-    </div> <div id="adPopupOverlay" class="popup-overlay">
+    </div> 
+
+
+    <div id="adPopupOverlay" class="popup-overlay">
         <div class="popup-content">
             <span class="popup-close" onclick="closePopup()">&times;</span>
             <h4>Uma oportunidade imperdível para você!</h4>
@@ -659,9 +646,19 @@
             }
         }
 
-        // Mostrar o pop-up após 5 segundos (5000 milissegundos) do carregamento da página
+        // Mostrar o pop-up após 5 segundos 
         window.onload = function() {
             setTimeout(showPopup, 5000);
+
+            // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
+            const header = document.getElementById('header-fixed');
+            const sideAds = document.querySelectorAll('.adsense-vertical');
+            if (header && sideAds.length > 0 && window.innerWidth > 768) { // Só aplica se header existe, ads existem e não é mobile
+                const headerHeight = header.offsetHeight;
+                sideAds.forEach(ad => {
+                    ad.style.top = (headerHeight + 20) + 'px'; // +20px de margem
+                });
+            }
         };
     </script>
 </body>
