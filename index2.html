@@ -502,6 +502,22 @@
             padding: 15px; /* Reduz o padding do rodapé */
             font-size: 0.9em; /* Diminui a fonte do rodapé */
         }
+        
+        /* Centraliza o parágrafo que contém o botão de pesquisa */
+        p[style="text-align: center; margin-top: 30px;"] {
+            text-align: center !important; /* Garante que sobrescreve o inline style se necessário */
+            width: 100%; /* Ocupa a largura total para centralizar */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+        }
+        .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
+            display: block; /* Transforma o link em bloco para ocupar a largura e permitir margin auto */
+            margin-left: auto; /* Centraliza o bloco */
+            margin-right: auto; /* Centraliza o bloco */
+            max-width: 280px; /* Define uma largura máxima para o botão em mobile */
+            padding: 8px 15px !important; /* Ajusta o padding para telas menores */
+            font-size: 1em !important; /* Ajusta o tamanho da fonte */
+            white-space: normal; /* Permite que o texto quebre linha se for muito longo */
+        }
     }
 
     /* Ajustes específicos para telas menores que 580px (se necessário) - a maioria foi movida para 600px */
