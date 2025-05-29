@@ -588,7 +588,7 @@
 
         <div class="container"> 
             <h1>Como Conquistar Seus Primeiros Trabalhos Freelance</h1>
-            <p>Este guia pratico e resumido que oferece um panorama conciso sobre como iniciar e se destacar no universo do trabalho autônomo <strong>(<a href="" class="site-link">Baixe o relatorio Completo aqui</a>)</strong> , desde a preparação até a formalização.</p>
+            <p>Este guia pratico e resumido que oferece um panorama conciso sobre como iniciar e se destacar no universo do trabalho autônomo <strong>(<a href="javascript:void(0);" onclick="showPopup();" class="site-link">Baixe o relatorio Completo aqui</a>)</strong> , desde a preparação até a formalização.</p>
 
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -721,7 +721,7 @@
             </div>
 
             <p style="text-align: center; margin-top: 30px;">
-                <a href="trabalho-freelancer.html" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Aprofunde-se no Guia Completo!</a>
+                <a href="javascript:void(0);" onclick="showPopup();" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Aprofunde-se no Guia Completo!</a>
             </p>
 
             <div id="adsense-bottom" class="adsense-slot">
@@ -784,6 +784,7 @@
                 </script>
             </div>
             <p id="popupCountdown"></p> 
+            <a href="downloads/guia-para-trabalho-freelance.pdf" id="downloadButton" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9; display: none;" download>Baixar Guia Agora</a>
         </div>
     </div>
     
@@ -803,44 +804,55 @@
         let popupClosable = false; 
         let countdownInterval; 
         
-        // As funções showPopup e closePopup estão comentadas na sua versão original.
-        // Se você quiser que o pop-up funcione, você precisará descomentá-las e o setTimeout dentro do window.onload.
-
-        /*
         // Função para mostrar o pop-up
         function showPopup() {
             const popupOverlay = document.getElementById('adPopupOverlay');
             const closeButton = document.querySelector('.popup-close');
             const countdownDisplay = document.getElementById('popupCountdown'); 
+            const downloadButton = document.getElementById('downloadButton');
 
             popupOverlay.classList.add('active');
 
+            // Initially disable and hide the download button
+            downloadButton.style.pointerEvents = 'none';
+            downloadButton.style.opacity = '0.5';
+            downloadButton.style.cursor = 'not-allowed';
+            downloadButton.style.display = 'none'; // Hide it initially
+
+            // Disable the close button during countdown
             closeButton.style.pointerEvents = 'none';
             closeButton.style.opacity = '0.5';
             closeButton.style.cursor = 'not-allowed';
 
-            let timeLeft = 10; 
+            let timeLeft = 5; // Changed from 10 to 5 seconds
             if (countdownDisplay) {
-                countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+                countdownDisplay.textContent = `Você poderá baixar em ${timeLeft} segundos...`;
             }
 
             countdownInterval = setInterval(() => {
                 timeLeft--;
 
                 if (countdownDisplay) {
-                    countdownDisplay.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+                    countdownDisplay.textContent = `Você poderá baixar em ${timeLeft} segundos...`;
                 }
 
                 if (timeLeft <= 0) {
                     clearInterval(countdownInterval); 
                     popupClosable = true; 
                     
+                    // Enable the close button
                     closeButton.style.pointerEvents = 'auto';
                     closeButton.style.opacity = '1';
                     closeButton.style.cursor = 'pointer';
+
+                    // Enable and show the download button
+                    downloadButton.style.pointerEvents = 'auto';
+                    downloadButton.style.opacity = '1';
+                    downloadButton.style.cursor = 'pointer';
+                    downloadButton.style.display = 'block'; // Show the button
                     
                     if (countdownDisplay) {
-                        countdownDisplay.textContent = 'Você já pode fechar!'; 
+                        countdownDisplay.textContent = 'O download está liberado!'; 
                     }
                 }
             }, 1000); 
@@ -853,12 +865,8 @@
                 clearInterval(countdownInterval);
             }
         }
-        */
-
+        
         window.onload = function() {
-            // Se você quiser que o pop-up apareça automaticamente, descomente a linha abaixo:
-            // setTimeout(showPopup, 5000); 
-
             // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
             const header = document.getElementById('header-fixed');
             const sideAds = document.querySelectorAll('.adsense-vertical');
