@@ -5,378 +5,590 @@
       crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpo do Guia Resumido de Vendas Online</title>
+    <title>Guia Completo para Vendas Online | Renda Extra .App</title>
 
-    <meta name="description" content="Conteúdo principal do guia resumido sobre como trabalhar com vendas online.">
-    <meta name="keywords" content="vendas online, e-commerce, marketing digital, dropshipping, afiliados, produtos digitais, tendências e-commerce, renda extra">
+    <meta name="description" content="Guia completo sobre vendas online: estratégias, ferramentas e tendências para o sucesso digital.">
+    <meta name="keywords" content="vendas online, e-commerce, marketing digital, dropshipping, afiliados, infoprodutos, SEO, IA, social commerce, sustentabilidade, omnichannel">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Renda Extra .App">
-    <link rel="canonical" href="https://www.rendaextra.app.br/vendas-online-body.html"> 
+    <link rel="canonical" href="https://www.rendaextra.app.br/vendas-online.html"> 
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Wrapper Principal para 3 colunas */
+    #main-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 10px;
+        flex-grow: 1;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    /* Container Principal (Conteúdo Central) */
+    .container {
+        max-width: 800px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 70%;
+        z-index: 1; /* Garante que fique acima de elementos que possam vazar */
+    }
+
+    /* Ajuste de cores */
+    h1, h2, h3 {
+        color: #264653;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 30px;
+        border-bottom: 2px solid #aec6cf;
+        padding-bottom: 10px;
+    }
+    h3 {
+        text-align: left;
+        color: #2a6a82;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    strong {
+        color: #2a9d8f;
+    }
+    .highlight {
+        background-color: #e8f5e9;
+        padding: 15px;
+        border-left: 5px solid #2a9d8f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .warning {
+        background-color: #fdeded;
+        padding: 15px;
+        border-left: 5px solid #e74c3c;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .site-link {
+        text-decoration: none;
+        color: #38a3a5;
+        font-weight: bold;
+    }
+    .site-link:hover {
+        text-decoration: underline;
+        color: #217c7e;
+    }
+
+    /* Estilos para os espaços de anúncio HORIZONTAL */
+    .adsense-slot {
+        margin: 30px auto;
+        padding: 15px;
+        background-color: #ecf0f1;
+        border: 1px dashed #ccc;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .adsense-slot strong {
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    /* Estilos para os espaços de anúncio VERTICAL */
+    .adsense-vertical {
+        width: 160px;
+        min-height: 600px;
+        margin: 0 20px;
+        background-color: #ecf0f1;
+        border: 1px dashed #ccc;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        position: -webkit-sticky; /* Para compatibilidade com Safari */
+        position: sticky;
+        top: 70px; /* Distância do topo (abaixo do header) - Ajuste se necessário */
+        align-self: flex-start; /* Garante alinhamento correto no flex container */
+        z-index: 5; /* Garante que fique acima do conteúdo se houver sobreposição */
+    }
+
+
+    /* Estilos para o Pop-up de Anúncio */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-content {
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 90%;
+        width: 500px;
+        position: relative;
+    }
+    .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+    }
+    .popup-content h4 {
+        margin-top: 0;
+        color: #3498db;
+        font-size: 1.5em;
+    }
+    .popup-ad-slot {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px dashed #dcdcdc;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    /* Header fixo */
+    #header-fixed {
+        background-color: #e0e0e0;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999; /* Garante que fique acima de tudo, exceto pop-up */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+        min-height: 50px; /* Reduzi a altura mínima do header */
+    }
+
+    /* Estilos para a Logo */
+    #logo-link {
+        display: block;
+        width: 150px; /* Reduzi o tamanho da logo no mobile */
+        height: auto;
+        text-decoration: none;
+        margin-right: 10px; /* Reduzi a margem direita da logo */
+    }
+    #logo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contador regressivo */
+    #popupCountdown {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #2a9d8f;
+        margin-top: 10px;
+        text-align: center;
+        padding: 5px;
+        background-color: #e8f5e9;
+        border-radius: 5px;
+        border: 1px solid #2a9d8f;
+    }
+
+    /* Menu de Navegação */
+    .navbar {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        box-shadow: none;
+        position: static;
+    }
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .nav-links li {
+        position: relative;
+        margin-right: 10px; /* Reduzi a margem direita dos itens do menu */
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .nav-links a {
+        color: #264653;
+        text-decoration: none;
+        padding: 8px 10px; /* Reduzi o padding dos links do menu */
+        display: block;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        font-size: 0.95em; /* Pequeno ajuste na fonte do menu */
+    }
+    .nav-links a:hover {
+        color: #2a9d8f;
+    }
+
+    /* Submenu */
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f0f0f0;
+        min-width: 200px; /* Reduzi a largura mínima do submenu */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1000;
+        list-style: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        top: 100%;
+        left: 0;
+    }
+    .submenu li { margin: 0; }
+    .submenu a {
+        color: #264653;
+        padding: 8px 15px; /* Reduzi o padding dos links do submenu */
+        display: block;
+        text-align: left;
+        white-space: nowrap;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 0.9em; /* Pequeno ajuste na fonte do submenu */
+    }
+    .submenu a:hover {
+        background-color: #d0d0d0;
+        color: #264653;
+    }
+    .nav-links li:hover > .submenu { display: block; }
+
+    /* Menu Toggle */
+    .menu-toggle { display: none; }
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #264653;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    .section-title {
+        text-align: left; /* Alinha o título à esquerda */
+    }
+
+    .categories-container {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Reduzi o espaço entre a imagem e o texto */
+        margin-top: 20px; /* Adiciona um pouco de espaço acima do container */
+        margin-bottom: 25px; /* Adiciona um pouco de espaço abaixo do container */
+    }
+
+    .image-placeholder {
+        flex-shrink: 0; /* Impede que a imagem encolha demais */
+        width: 200px; /* Reduzi a largura da imagem */
+    }
+
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Remove qualquer espaço extra abaixo da imagem */
+        border-radius: 8px; /* Opcional: para arredondar as bordas da imagem */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opcional: adiciona uma leve sombra */
+    }
+
+    .categories-text {
+        flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    }
+
+    /* Rodapé */
+    .footer {
+        background-color: #264653;
+        color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+        margin-top: 0;
+        border-top: 1px solid #aec6cf;
+        border-radius: 8px 8px 0 0;
+        z-index: 10; /* Garante que fique acima dos ads se houver sobreposição no fim */
+        position: relative; /* Necessário para z-index funcionar */
+    }
+    .footer p { margin: 5px 0; }
+    .footer a {
+        color: #2a9d8f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .footer a:hover { text-decoration: underline; }
+
+    /* Responsividade */
+    @media (max-width: 1200px) {
+        .adsense-vertical {
+            display: none; /* Esconde os anúncios laterais */
+        }
+        #main-wrapper { justify-content: center; }
+        .container { max-width: 95%; } /* Aumentei um pouco a largura do container */
+    }
+
+    @media (max-width: 768px) {
+        #header-fixed {
+            flex-direction: column;
+            align-items: center; /* Centralizei os itens no header */
+            padding: 10px;
+            border-radius: 0;
+            min-height: auto; /* Remove altura mínima no mobile */
+            position: static; /* Header não será sticky no mobile para simplicidade */
+        }
+        body { /* Adiciona padding ao body no mobile já que header não é sticky */
+            padding-top: 0;
+        }
+        #logo-link {
+            margin-right: 0;
+            margin-bottom: 10px;
+            width: 200px; /* Logo 200px quando o menu hamburguer aparece */
+            align-self: center;
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: center; /* Centralizei o menu */
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            width: 100%;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #f0f0f0;
+        }
+        .nav-links.active { display: flex; }
+        .nav-links li { width: 100%; text-align: center; }
+        .nav-links li a { padding: 10px 0; color: #264653; }
+        .menu-toggle {
             display: flex;
             flex-direction: column;
-            /* min-height: 100vh; */ /* Removido para não depender da altura total da viewport */
+            cursor: pointer;
+            padding: 10px;
+            align-self: flex-end;
+            margin-top: -45px; /* Ajuste fino para alinhar com a logo centralizada */
+            margin-right: 10px;
         }
-
-        /* Wrapper Principal para 3 colunas - Ajustado para ser apenas o container central */
+        .submenu {
+            position: static;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+        }
+        .submenu a { padding: 10px 30px; color: #264653; }
+        .submenu a:hover { background-color: #d0d0d0; color: #264653; }
         #main-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 20px 10px;
-            flex-grow: 1;
-            max-width: 1300px;
-            margin: 0 auto;
-            width: 100%; /* Garante que o wrapper ocupe a largura total */
+            padding: 10px;
+        }
+        .container { padding: 20px; }
+    }
+
+    /* Nova media query para 600px e abaixo, para quebrar as imagens */
+    @media (max-width: 600px) {
+        .categories-container {
+            flex-direction: column; /* Empilha a imagem e o texto */
+            text-align: center; /* Centraliza o texto quando empilhado */
+            gap: 20px; /* Aumentei o gap um pouco para dar mais espaço quando empilhado */
+        }
+        .image-placeholder {
+            width: 80%; /* Permite que a imagem ocupe mais largura */
+            max-width: 300px; /* Limita a largura máxima da imagem */
+            margin: 0 auto 15px; /* Centraliza a imagem e adiciona margem abaixo */
         }
 
-        /* Container Principal (Conteúdo Central) */
-        .container {
-            max-width: 800px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: 70%;
-            z-index: 1;
-            width: 100%; /* Garante que o container ocupe a largura disponível */
-        }
-
-        /* Ajuste de cores */
-        h1, h2, h3 {
-            color: #264653;
-            text-align: center;
+        h1 {
+            font-size: 1.8em; /* Diminui o tamanho do título principal */
         }
         h2 {
-            margin-top: 30px;
-            border-bottom: 2px solid #aec6cf;
-            padding-bottom: 10px;
+            font-size: 1.5em; /* Diminui o tamanho dos subtítulos */
         }
         h3 {
-            text-align: left;
-            color: #2a6a82;
-            margin-top: 25px;
-            margin-bottom: 15px;
+            font-size: 1.2em;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        .container {
+            padding: 15px; /* Reduz o padding do container para ocupar menos espaço */
         }
-        li {
-            margin-bottom: 10px;
+        #logo-link {
+            width: 200px; /* Logo 200px quando o menu hamburguer aparece */
+            margin-bottom: 5px; /* Ajuste de margem */
         }
-        strong {
-            color: #2a9d8f;
+        .menu-toggle {
+            margin-top: -35px; /* Ajuste fino para telas menores */
+            margin-right: 5px;
         }
-        .highlight {
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-left: 5px solid #2a9d8f;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        .warning {
-            background-color: #fdeded;
-            padding: 15px;
-            border-left: 5px solid #e74c3c;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        .nav-links li a {
+            font-size: 0.9em; /* Menor fonte nos links do menu */
+            padding: 8px 0; /* Padding vertical nos links do menu */
         }
         .site-link {
-            text-decoration: none;
-            color: #38a3a5;
-            font-weight: bold;
+            font-size: 1em; /* Ajuste para links */
         }
-        .site-link:hover {
-            text-decoration: underline;
-            color: #217c7e;
-        }
-
-        /* Estilos para os espaços de anúncio HORIZONTAL */
         .adsense-slot {
-            margin: 30px auto;
-            padding: 15px;
-            background-color: #ecf0f1;
-            border: 1px dashed #ccc;
-            text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .adsense-slot strong {
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        /* Removido estilos para .adsense-vertical pois os elementos foram removidos */
-        /* Estilos para o Pop-up de Anúncio - Mantidos, mas o elemento foi removido */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .popup-overlay.active {
-            opacity: 1;
-            visibility: visible;
+            margin: 20px auto; /* Reduce a margem dos blocos de anúncio */
+            padding: 10px;
+            min-height: 80px; /* Altura mínima para o anúncio */
         }
         .popup-content {
-            background: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            max-width: 90%;
-            width: 500px;
-            position: relative;
-        }
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 24px;
-            cursor: pointer;
-            color: #888;
-        }
-        .popup-content h4 {
-            margin-top: 0;
-            color: #3498db;
-            font-size: 1.5em;
+            padding: 15px; /* Reduz padding do pop-up */
+            width: 95%; /* Ocupa mais largura em telas muito pequenas */
         }
         .popup-ad-slot {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px dashed #dcdcdc;
-            min-height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9em;
-            color: #555;
+            min-height: 120px; /* Ajuste da altura do slot de anúncio do pop-up */
         }
+        .footer {
+            padding: 15px; /* Reduz o padding do rodapé */
+            font-size: 0.9em; /* Diminui a fonte do rodapé */
+        }
+        
+        /* Centraliza o parágrafo que contém o botão de pesquisa */
+        p[style="text-align: center; margin-top: 30px;"] {
+            text-align: center !important; /* Garante que sobrescreve o inline style se necessário */
+            width: 100%; /* Ocupa a largura total para centralizar */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+        }
+        .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
+            display: block; /* Transforma o link em bloco para ocupar a largura e permitir margin auto */
+            margin-left: auto; /* Centraliza o bloco */
+            margin-right: auto; /* Centraliza o bloco */
+            max-width: 280px; /* Define uma largura máxima para o botão em mobile */
+            padding: 8px 15px !important; /* Ajusta o padding para telas menores */
+            font-size: 1em !important; /* Ajusta o tamanho da fonte */
+            white-space: normal; /* Permite que o texto quebre linha se for muito longo */
+        }
+    }
 
-        /* Removido estilos para Header fixo */
-        /* Removido estilos para Logo */
-        /* Removido estilos para Contador regressivo */
-        /* Removido estilos para Menu de Navegação */
-        /* Removido estilos para Submenu */
-        /* Removido estilos para Menu Toggle */
+    /* Ajustes específicos para telas menores que 580px (se necessário) - a maioria foi movida para 600px */
+    @media (max-width: 580px) {
+        /* Se houver necessidade de ajustes AINDA mais específicos para 580px, adicione aqui.
+           Caso contrário, esta media query pode ser redundante se a de 600px for suficiente.
+           Por enquanto, as regras mais gerais para elementos de texto já foram tratadas na media de 600px.
+        */
+    }
 
-        .section-title {
-            text-align: left;
-        }
-
-        .categories-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-
-        .image-placeholder {
-            flex-shrink: 0;
-            width: 200px;
-        }
-
-        .image-placeholder img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .categories-text {
-            flex-grow: 1;
-        }
-
-        /* Removido estilos para Rodapé */
-
-        /* Responsividade */
-        @media (max-width: 1200px) {
-            /* .adsense-vertical { display: none; } */ /* Já removidos */
-            #main-wrapper { justify-content: center; }
-            .container { max-width: 95%; }
-        }
-
-        @media (max-width: 768px) {
-            /* Removido estilos para header-fixed, logo-link, navbar, nav-links, menu-toggle, submenu */
-            body {
-                padding-top: 0;
-            }
-            #main-wrapper {
-                padding: 10px;
-            }
-            .container { padding: 20px; }
-        }
-
-        @media (max-width: 600px) {
-            .categories-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .image-placeholder {
-                width: 80%;
-                max-width: 300px;
-                margin: 0 auto 15px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            h3 {
-                font-size: 1.2em;
-            }
-            .container {
-                padding: 15px;
-            }
-            /* Removido estilos para logo-link, menu-toggle, nav-links li a */
-            .site-link {
-                font-size: 1em;
-            }
-            .adsense-slot {
-                margin: 20px auto;
-                padding: 10px;
-                min-height: 80px;
-            }
-            .popup-content {
-                padding: 15px;
-                width: 95%;
-            }
-            .popup-ad-slot {
-                min-height: 120px;
-            }
-            /* Removido estilos para footer */
-            
-            p[style="text-align: center; margin-top: 30px;"] {
-                text-align: center !important;
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 280px;
-                padding: 8px 15px !important;
-                font-size: 1em !important;
-                white-space: normal;
-            }
-        }
-
-        @media (max-width: 580px) {
-            /* Seções de conteúdo */
-            .stat-card {
-                padding: 1rem;
-            }
-            .stat-value {
-                font-size: 1.8rem;
-            }
-            .stat-label {
-                font-size: 0.8rem;
-            }
-            .chart-container {
-                height: 250px;
-                max-height: 300px;
-            }
-            h2 {
-                font-size: 1.4em;
-            }
-            h3 {
-                font-size: 1.1em;
-            }
-            p {
-                font-size: 0.95em;
-            }
-            .custom-bullet li {
-                font-size: 0.95em;
-            }
-            .highlight, .warning {
-                padding: 10px;
-            }
-        }
-
-        /* Chart-specific styles */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 350px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-                max-height: 400px;
-            }
-        }
-        .stat-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            text-align: center;
-        }
-        .stat-value {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #0D9488;
-        }
-        .stat-label {
-            font-size: 0.875rem;
-            color: #57534E;
-            margin-top: 0.5rem;
-        }
-        .custom-bullet li::before {
-            content: "✓";
-            color: #0D9488;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-    </style>
+</style>
+    
 </head>
 <body>
+    <header id="header-fixed">
+        <a id="logo-link" href="index.html">
+            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
+        </a>
+
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Renda Extra &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="como-ganhar-dinheiro-respondendo-pesquisas-online-sites-confiaveis-e-dicas-de-renda-extra.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                        <li><a href="trabalho-freelancer.html">Trabalho Freelancer</a></li>
+                        <li><a href="vendas-online.html">Vendas Online</a></li>
+                        <li><a href="investimentos-inteligentes.html">Investimentos Inteligentes</a></li>
+                        <li><a href="monetize-habilidades.html">Monetize suas Habilidades</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Ferramentas &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="gerador-validador-cpf-cnpj.html">Gerador / Validador de CPF / CNPJ</a></li>
+                        <li><a href="gerador-numero-aleatorio.html">Gerador de número aleatório</a></li>
+                        <li><a href="sorteador-numero.html">Sorteador de número</a></li>
+                        <li><a href="calculo-rescisao-trabalhista.html">Cálculo de Rescisão Trabalhista</a></li>
+                        <li><a href="numero-bancos.html">Consultar numero de Banco</a></li>
+                    </ul>
+                </li>
+                <li><a href="empregos.html">Empregos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div id="main-wrapper"> 
+
+        <aside id="adsense-left" class="adsense-vertical">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                    style="display:block;width:160px;height:600px;"
+                    data-ad-client="ca-pub-9170718554447056"
+                    data-ad-slot="SEU_SLOT_VERTICAL_AQUI"></ins> 
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                  style="display:block"
+                  data-ad-client="ca-pub-9170718554447056"
+                  data-ad-slot="4808234819"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"></ins>
+            <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+
         <div class="container"> 
-            <h1 class="text-4xl font-bold text-teal-700 mb-4">Guia Resumido de Vendas Online</h1>
-            <p class="text-lg text-stone-700 leading-relaxed">
-                Este guia apresenta um panorama conciso sobre como trabalhar com vendas online, abordando modelos de negócio, marketing, operações, desafios e tendências.
-            </p>
+            <h1>Guia Completo para Trabalhar com Vendas Online</h1>
+            <p>Este guia aborda o cenário dinâmico das vendas online, oferecendo estratégias, ferramentas e tendências para o sucesso digital. O e-commerce no Brasil continua em crescimento robusto, com projeções de faturamento que ultrapassam os R$ 224 bilhões em 2025. A ascensão das vendas online reflete uma profunda transformação no comportamento do consumidor, que valoriza a conveniência e a facilidade de comparação de preços.</p>
 
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -392,72 +604,27 @@
                 </script>
             </div>
 
-            <section id="visao-geral" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Visão Geral do E-commerce</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    Explore o dinâmico mercado de e-commerce, seu crescimento e a importância do mobile. Entenda por que empreender digitalmente é uma oportunidade promissora.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="stat-card">
-                        <div id="faturamento-ecommerce" class="stat-value">R$0B</div>
-                        <div class="stat-label">Projeção Faturamento E-commerce Brasil 2025</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="mcommerce-share" class="stat-value">0%</div>
-                        <div class="stat-label">M-commerce (% Transações Nuvemshop)</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="comparacao-preco-online" class="stat-value">0%</div>
-                        <div class="stat-label">Consumidores compram online por comparação de preços</div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-stone-700 mb-4">Participação do M-Commerce</h3>
-                    <div class="chart-container mx-auto">
-                        <canvas id="mcommerceChart"></canvas>
-                    </div>
-                    <p class="text-sm text-stone-600 mt-4 text-center">O comércio móvel domina as transações, exigindo foco em estratégias mobile.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-stone-700 mb-2">Por que Vender Online?</h3>
-                    <p class="text-stone-600 mb-4">O ambiente digital oferece flexibilidade, alcance global e mercado em expansão. A chave é entender o consumidor digital, que valoriza conveniência, variedade e preços competitivos.</p>
-                </div>
-            </section>
+            <h2>Modelos de Negócio no E-commerce</h2>
+            <p>A escolha do modelo de negócio é a primeira decisão estratégica. Conheça os principais:</p>
+            <ul>
+                <li><strong>E-commerce Tradicional (B2C, B2B, D2C):</strong> Venda direta ao consumidor final (B2C), para outras empresas (B2B) ou direto da fábrica (D2C).</li>
+                <li><strong>Dropshipping:</strong> Venda de produtos de terceiros sem a necessidade de estoque físico. O fornecedor envia diretamente ao cliente. Baixo custo de entrada, mas exige responsabilidade pelo atendimento.</li>
+                <li><strong>Marketing de Afiliados:</strong> Promoção de produtos ou serviços de outras marcas por meio de um link exclusivo, recebendo comissão por venda. Fácil de começar e baixo custo inicial.</li>
+                <li><strong>Venda de Produtos Digitais (Infoprodutos):</strong> Criação e venda de conteúdos digitais como cursos online, e-books e softwares. Alto potencial de escalabilidade e controle total sobre o produto.</li>
+                <li><strong>Outros Modelos:</strong> Incluem C2C (consumidor-consumidor), M-commerce (mobile), Social Commerce (redes sociais), Voice Commerce (comandos de voz), T-Commerce (televisão) e Marketplaces.</li>
+            </ul>
 
-            <section id="modelos-negocio" class="space-y-6 mb-12">
-                 <h2 class="text-3xl font-semibold text-stone-700 mb-6">Modelos de Negócio Online</h2>
-                 <p class="text-lg text-stone-700 leading-relaxed">
-                    Compare os modelos de negócio: E-commerce Tradicional, Dropshipping, Marketing de Afiliados e Venda de Produtos Digitais. Entenda suas características, vantagens e desafios para escolher o ideal.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-2">E-commerce Tradicional</h3>
-                        <p class="text-sm text-stone-600 mb-1">Venda direta. Alto controle sobre produto/marca. Exige estoque e envio. Alto investimento, alto lucro potencial. Ex: Shopify, VTEX.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Dropshipping</h3>
-                        <p class="text-sm text-stone-600 mb-1">Venda sem estoque, fornecedor envia. Médio controle de marca. Baixo investimento, médio lucro. Ex: Doba, Modalyst.</p>
-                         <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Baixo custo inicial, mas forte gestão de fornecedores e atendimento são cruciais.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Marketing de Afiliados</h3>
-                        <p class="text-sm text-stone-600 mb-1">Promove produtos de terceiros por comissão. Baixo controle. Muito baixo investimento, médio lucro. Ex: Amazon Afiliados, Hotmart.</p>
-                         <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Fácil de começar, mas exige construção de audiência e diversificação.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Venda de Produtos Digitais</h3>
-                        <p class="text-sm text-stone-600 mb-1">Criação e venda de cursos, e-books. Alto controle. Médio investimento, muito alto lucro. Ex: Hotmart, Eduzz.</p>
-                        <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Alta escalabilidade, mas exige qualidade de conteúdo e forte marketing.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-stone-700 mb-4">Comparativo Visual: Investimento vs. Lucro</h3>
-                    <div class="chart-container mx-auto" style="height: 350px; max-height: 400px;">
-                        <canvas id="modelosComparativoChart"></canvas>
-                    </div>
-                    <p class="text-sm text-stone-600 mt-4 text-center">Gráfico compara investimento inicial e potencial de lucro dos modelos.</p>
-                </div>
-            </section>
+            <div class="highlight">
+                <h3>Dica Importante: Planejamento e Nicho</h3>
+                <p>O planejamento estratégico e a definição de um nicho de mercado são cruciais. Identifique necessidades não atendidas e combine-as com sua afinidade pessoal para construir uma marca autêntica e relevante.</p>
+            </div>
+
+            <h2>Primeiros Passos para Começar a Vender Online</h2>
+            <p>Para iniciar seu negócio digital com o pé direito:</p>
+            <ul>
+                <li><strong>Formalização do Negócio (MEI/CNPJ):</strong> Registrar seu negócio (como MEI no Brasil) é fundamental para evitar problemas futuros, construir credibilidade e acessar melhores soluções de pagamento e fornecedores.</li>
+                <li><strong>Escolha da Plataforma Ideal:</strong> A plataforma é sua "vitrine virtual". Considere integração com outros sistemas, suporte, segurança, escalabilidade, personalização e parceiros de pagamento. Exemplos incluem Shopify, WooCommerce, VTEX, Nuvemshop e Linx Commerce.</li>
+            </ul>
 
             <div id="adsense-middle" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -472,174 +639,38 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+            
+            <h2>Estratégias Essenciais de Marketing Digital</h2>
+            <p>O marketing digital é o motor das vendas online:</p>
+            <ul>
+                <li><strong>SEO (Search Engine Optimization):</strong> Técnicas para aumentar a visibilidade orgânica do seu site em buscadores como o Google.</li>
+                <li><strong>Mídia Paga (Anúncios Online):</strong> Campanhas pagas em Google Ads e redes sociais (Facebook, Instagram, TikTok) para resultados rápidos e segmentação de público.</li>
+                <li><strong>Marketing de Conteúdo:</strong> Criação de conteúdo relevante (blogs, vídeos, descrições de produtos) para atrair, engajar e educar a audiência.</li>
+                <li><strong>Email Marketing:</strong> Canal direto e eficiente para comunicação, segmentação e personalização (boas-vindas, recuperação de carrinho, promoções).</li>
+                <li><strong>Social Media Marketing:</strong> Uso de redes sociais para construir reconhecimento de marca, gerar tráfego e impulsionar vendas, aproveitando funcionalidades de social commerce.</li>
+            </ul>
 
-            <section id="primeiros-passos" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Primeiros Passos para Vender Online</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    Planeje seu negócio, defina seu nicho, formalize-se e escolha a plataforma ideal. Estes são os passos cruciais para construir uma base sólida para seu e-commerce.
-                </p>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">1. Planejamento Estratégico e Definição de Nicho</h3>
-                    <p class="text-stone-600 mb-2">Estude mercado, concorrentes e público-alvo. Combine paixão pessoal com demanda de mercado e identifique necessidades não atendidas. Monitore tendências.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Paixão e demanda de mercado devem andar juntas para um negócio autêntico e lucrativo.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">2. Formalização do Negócio (MEI/CNPJ)</h3>
-                    <p class="text-stone-600 mb-2">Legalize seu negócio para evitar problemas e garantir sustentabilidade. O MEI é uma opção simplificada via Portal do Empreendedor (gov.br).</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Formalizar é construir credibilidade e acessar melhores condições de pagamento e crédito.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">3. Escolha da Plataforma Ideal</h3>
-                    <p class="text-stone-600 mb-2">Sua vitrine virtual impacta usabilidade, personalização e segurança. Considere integração, suporte, segurança, escalabilidade, personalização e parceiros de pagamento. Ex: Shopify, Nuvemshop.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Plataformas "fáceis" exigem aprendizado contínuo para otimização e escalabilidade.</p>
-                </div>
-            </section>
+            <div class="warning">
+                <h3>Atenção: Gestão Operacional e Atendimento</h3>
+                <p>A eficiência na gestão de estoque, logística e pagamentos, juntamente com um atendimento ao cliente de alta qualidade, são pilares para a satisfação do consumidor e a reputação da sua marca.</p>
+            </div>
 
-            <section id="marketing-digital" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Estratégias Essenciais de Marketing Digital</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    O marketing digital impulsiona vendas. Conheça as estratégias essenciais: SEO para visibilidade, Mídia Paga para resultados rápidos, Marketing de Conteúdo para engajamento, Email Marketing para relacionamento e Social Media para comunidade e vendas.
-                </p>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">A. SEO (Search Engine Optimization)</h3>
-                    <p class="text-stone-600 mb-2">Aumenta a visibilidade orgânica nos buscadores. Técnicas: pesquisa de palavras-chave, otimização on-page e técnica, link building.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Investimento de longo prazo para tráfego sustentável.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">B. Mídia Paga (Anúncios Online)</h3>
-                    <p class="text-stone-600 mb-2">Publicidade em canais digitais para resultados rápidos. Canais: Google Ads, Social Ads (Facebook, Instagram, TikTok), Remarketing.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Valida ofertas e segmentações rapidamente, crucial para aprendizado ágil.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">C. Marketing de Conteúdo</h3>
-                    <p class="text-stone-600 mb-2">Atrai e retém público com conteúdo relevante. Formatos: blogs, vídeos (91% consomem), descrições de produtos, posts sociais.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Constrói autoridade e diferencia a marca, transformando vendas em confiança.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">D. Email Marketing</h3>
-                    <p class="text-stone-600 mb-2">Canal direto e eficiente (ROI US$45:US$1). Estratégias: captura de leads, segmentação, emails de boas-vindas, recuperação de carrinho, nutrição, transacionais, promocionais, automação.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Fundamental para retenção, personalização e maximização do LTV.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">E. Social Media Marketing</h3>
-                    <p class="text-stone-600 mb-2">Constrói relacionamentos e impulsiona vendas. Objetivos: reconhecimento, tráfego, vendas, suporte. Estratégias: escolha de plataformas, conteúdo com storytelling, influenciadores, social commerce.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Redes sociais são ecossistemas de compra; integre entretenimento e comunidade.</p>
-                </div>
-            </section>
+            <h2>Habilidades Essenciais e Desafios Comuns</h2>
+            <p>Para ter sucesso no e-commerce, é preciso desenvolver habilidades em marketing digital, análise de dados, UX/UI, inteligência emocional e adaptabilidade. Os desafios incluem sites lentos, desconfiança do cliente, logística, concorrência e abandono de carrinho, que devem ser superados com estratégias proativas.</p>
 
-            <section id="operacoes-cliente" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Gestão Operacional e Atendimento ao Cliente</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    Eficiência operacional e atendimento de excelência são cruciais. Gerencie estoque e logística, garanta pagamentos seguros e ofereça atendimento e pós-venda para fidelizar clientes.
-                </p>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">A. Gestão de Estoque e Logística</h3>
-                    <p class="text-stone-600 mb-2">Do armazenamento à entrega. Elementos: controle de estoque (ERP), preparação de pedidos, envio, rastreamento, logística reversa. Escolha transportadora confiável.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Logística eficiente é investimento na experiência do cliente, gerando lealdade.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow mb-4">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">B. Gestão de Pagamentos</h3>
-                    <p class="text-stone-600 mb-2">Essencial para conversão e segurança. Elementos: gateways, processadores, contas de comerciante, prevenção de fraudes, conformidade (LGPD). Soluções: Link de Pagamento, Cielo Checkout, Split de Pagamento.</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Pagamentos sem atrito, com múltiplas opções e segurança robusta, otimizam o checkout.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-2">C. Atendimento ao Cliente e Pós-Venda</h3>
-                    <p class="text-stone-600 mb-2">Diferencial crucial. Estratégias: pesquisas de satisfação (NPS), cross-selling/upselling, logística reversa eficiente, remarketing, benefícios, script de comunicação pós-venda, canais eficientes (chatbots, FAQ).</p>
-                    <p class="mt-2 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Atendimento é motor de fidelização; experiências positivas atraem novos clientes.</p>
-                </div>
-            </section>
+            <h2>Tendências Atuais e Futuras em Vendas Online</h2>
+            <p>O cenário digital está em constante evolução:</p>
+            <ul>
+                <li><strong>Inteligência Artificial (IA) e Hiperpersonalização:</strong> IA otimiza recomendações, atendimento (chatbots) e análise preditiva, criando experiências de compra altamente personalizadas.</li>
+                <li><strong>Social Commerce e Live Shopping:</strong> Redes sociais se tornam hubs de compra, com transmissões ao vivo que combinam entretenimento e vendas, impulsionando engajamento e conversões.</li>
+                <li><strong>Comércio Sustentável:</strong> Crescente demanda por práticas sustentáveis, embalagens ecológicas e cadeias de suprimentos transparentes.</li>
+                <li><strong>Omnichannel e Experiência Integrada:</strong> A distinção entre online e offline se desfaz, exigindo uma jornada do cliente fluida e consistente em todos os pontos de contato.</li>
+                <li><strong>Modelos de Assinatura e Programas de Fidelidade:</strong> Crescimento de serviços de assinatura e programas de fidelidade para fomentar relacionamentos de longo prazo e incentivar compras repetidas.</li>
+            </ul>
 
-            <section id="desafios-habilidades" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Habilidades Essenciais e Desafios Comuns</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    O sucesso online exige habilidades diversas e a capacidade de superar desafios. Conheça as competências essenciais e os obstáculos comuns do e-commerce.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-3">Habilidades Essenciais</h3>
-                        <ul class="space-y-2 text-stone-600 custom-bullet pl-4">
-                            <li>Marketing Digital (SEO, mídia paga).</li>
-                            <li>Análise de Dados (Google Analytics).</li>
-                            <li>UX/UI Design (otimizar experiência).</li>
-                            <li>Inteligência Emocional (gerenciar emoções).</li>
-                            <li>Ambição Orientada por Dados (guiar estratégias).</li>
-                            <li>Identificação de Necessidades do Cliente (personalizar).</li>
-                            <li>Habilidade Técnica em Vendas (upselling, cross-selling).</li>
-                            <li>Adaptabilidade (ajustar estratégias).</li>
-                            <li>Aprendizado Contínuo (manter-se atualizado).</li>
-                        </ul>
-                        <p class="mt-3 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Empreendedor digital de sucesso é um "generalista estratégico" com visão holística.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow">
-                        <h3 class="text-xl font-semibold text-teal-600 mb-3">Desafios Comuns e Como Superá-los</h3>
-                        <ul class="space-y-2 text-stone-600">
-                            <li><strong>Sites pesados:</strong> <span class="text-teal-700">Solução:</span> Plataformas com boa usabilidade.</li>
-                            <li><strong>Desconfiança:</strong> <span class="text-teal-700">Solução:</span> Transparência, segurança.</li>
-                            <li><strong>Atendimento ruim:</strong> <span class="text-teal-700">Solução:</span> Chatbots, FAQ, canais eficientes.</li>
-                            <li><strong>Logística:</strong> <span class="text-teal-700">Solução:</span> Entrega confiável, rastreamento.</li>
-                            <li><strong>Promoção:</strong> <span class="text-teal-700">Solução:</span> Estratégia de marketing digital consistente.</li>
-                            <li><strong>Concorrência:</strong> <span class="text-teal-700">Solução:</span> Inovação, diferencial competitivo.</li>
-                            <li><strong>Segurança de dados:</strong> <span class="text-teal-700">Solução:</span> Protocolos rígidos (LGPD), selos, antifraude.</li>
-                            <li><strong>Adaptação mobile:</strong> <span class="text-teal-700">Solução:</span> Estratégia mobile first.</li>
-                            <li><strong>Abandono de carrinho:</strong> <span class="text-teal-700">Solução:</span> Otimizar frete/prazo, recuperação.</li>
-                            <li><strong>Baixa conversão:</strong> <span class="text-teal-700">Solução:</span> Descontos, frete grátis, avaliações.</li>
-                        </ul>
-                        <p class="mt-3 text-xs text-amber-700 bg-amber-100 p-2 rounded"><strong>Insight:</strong> Desafios são oportunidades de otimização e diferenciação.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="tendencias" class="space-y-6 mb-12">
-                 <h2 class="text-3xl font-semibold text-stone-700 mb-6">Tendências Atuais e Futuras em Vendas Online</h2>
-                 <p class="text-lg text-stone-700 leading-relaxed">
-                    Mantenha-se competitivo compreendendo as tendências: IA e hiperpersonalização, Social Commerce e Live Shopping, Comércio Sustentável, experiência Omnichannel e Modelos de Assinatura/Fidelidade.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     <div class="stat-card">
-                        <div id="social-commerce-market" class="stat-value">$0T</div>
-                        <div class="stat-label">Projeção Mercado Social Commerce 2025</div>
-                    </div>
-                    <div class="stat-card">
-                        <div id="live-shopping-market" class="stat-value">$0B</div>
-                        <div class="stat-label">Projeção Mercado Live Shopping EUA 2026</div>
-                    </div>
-                     <div class="stat-card">
-                        <div id="sustainable-payment" class="stat-value">0%</div>
-                        <div class="stat-label">Consumidores dispostos a pagar mais por produtos sustentáveis</div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-semibold text-md text-teal-600 mb-1">Inteligência Artificial (IA) e Hiperpersonalização</h4>
-                        <p class="text-sm text-stone-600">IA otimiza processos e personaliza a experiência (71% esperam). Aplicações: recomendações, chatbots, análise preditiva. Futuro: interfaces de voz, provadores virtuais.</p>
-                    </div>
-                     <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-semibold text-md text-teal-600 mb-1">Social Commerce e Live Shopping</h4>
-                        <p class="text-sm text-stone-600">Redes sociais como hubs de e-commerce. Live shopping combina vídeo, interação e compra. Benefícios: engajamento, conversão, experiência divertida.</p>
-                    </div>
-                     <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-semibold text-md text-teal-600 mb-1">Comércio Sustentável</h4>
-                        <p class="text-sm text-stone-600">Consumidores exigem práticas sustentáveis (66% pagam mais). Estratégias: redução pegada de carbono, embalagens eco, eficiência de inventário.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-lg shadow">
-                        <h4 class="font-semibold text-md text-teal-600 mb-1">Omnichannel e Experiência Integrada</h4>
-                        <p class="text-sm text-stone-600">Jornada do cliente fluida em todos os canais. Empresas omnichannel: +10% retenção. AR integrada (>85% marcas até 2025).</p>
-                    </div>
-                     <div class="bg-white p-4 rounded-lg shadow col-span-1 md:col-span-2">
-                        <h4 class="font-semibold text-md text-teal-600 mb-1">Modelos de Assinatura e Programas de Fidelidade</h4>
-                        <p class="text-sm text-stone-600">Assinaturas expandem para bens de consumo (US$60bi até 2025). Fidelização é estratégica: clientes recorrentes são mais lucrativos. Foco na retenção e LTV.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-stone-700 mb-4">Crescimento do Social Commerce e Live Shopping</h3>
-                    <div class="chart-container mx-auto">
-                        <canvas id="tendenciasChart"></canvas>
-                    </div>
-                    <p class="text-sm text-stone-600 mt-4 text-center">Gráfico ilustra o crescimento exponencial do Social Commerce e Live Shopping.</p>
-                </div>
-            </section>
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="#" id="downloadPdfButton" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Baixar Guia Completo em PDF</a>
+            </p>
 
             <div id="adsense-bottom" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -654,254 +685,146 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-
-            <section id="recomendacoes" class="space-y-6 mb-12">
-                <h2 class="text-3xl font-semibold text-stone-700 mb-6">Conclusões e Recomendações Finais</h2>
-                <p class="text-lg text-stone-700 leading-relaxed">
-                    Concluímos nosso guia com as principais recomendações para o sucesso em vendas online. Siga estas diretrizes para construir um negócio digital próspero e resiliente.
-                </p>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold text-teal-600 mb-4">Recomendações para o Sucesso em Vendas Online:</h3>
-                    <ol class="space-y-3 text-stone-700">
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">1.</span>
-                            <span><strong>Planejamento e Nicho:</strong> Planeje, defina público e nicho com paixão e demanda.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">2.</span>
-                            <span><strong>Formalização:</strong> Formalize o negócio para credibilidade e oportunidades.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">3.</span>
-                            <span><strong>Plataforma:</strong> Escolha plataforma alinhada e invista em aprendizado contínuo.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">4.</span>
-                            <span><strong>Marketing Integrado:</strong> Combine SEO, mídia paga, conteúdo, email e redes sociais.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">5.</span>
-                            <span><strong>Operação e Atendimento:</strong> Invista em logística eficiente, pagamentos seguros e atendimento humanizado.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">6.</span>
-                            <span><strong>Adaptação e Inovação:</strong> Monitore tendências (IA, social commerce) e adapte-se.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-teal-600 font-bold mr-2">7.</span>
-                            <span><strong>Foco na Fidelização:</strong> Priorize a retenção com programas de fidelidade e ofertas personalizadas.</span>
-                        </li>
-                    </ol>
-                    <p class="mt-6 text-md font-medium text-stone-700">
-                        Vender online exige visão estratégica, execução disciplinada e aprendizado contínuo para construir negócios resilientes e prósperos.
-                    </p>
-                </div>
-            </section>
-
             </div> 
+
+        <aside id="adsense-right" class="adsense-vertical">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                    style="display:block;width:160px;height:600px;"
+                    data-ad-client="ca-pub-9170718554447056"
+                    data-ad-slot="SEU_SLOT_VERTICAL_AQUI_2"></ins> 
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                  style="display:block"
+                  data-ad-client="ca-pub-9170718554447056"
+                  data-ad-slot="4808234819"
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"></ins>
+            <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+
     </div> 
 
+
+    <div id="adPopupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h4>Seu download será liberado em instantes!</h4>
+            <p>Enquanto aguarda, confira esta oportunidade:</p>
+            <div id="popup-ad-slot" class="popup-ad-slot"> 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                      style="display:block"
+                      data-ad-client="ca-pub-9170718554447056"
+                      data-ad-slot="1769098387"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"></ins>
+                <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <p id="popupCountdown"></p> 
+            <a href="downloads/vendas-online-guia-completo.pdf" id="actualDownloadLink" download style="display:none;">Clique aqui para iniciar o download</a>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <p>&copy; 2025 Renda Extra .App. Todos os direitos reservados.</p>
+        <p><a href="contato.html">Entre em contato</a></p>
+    </footer>
+
     <script>
-        // Funções de animação de valor e gráficos Chart.js
-        function animateValue(obj, start, end, duration, isCurrency = false, suffix = '', precision = 0) {
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                let currentValue = progress * (end - start) + start;
-                currentValue = parseFloat(currentValue.toFixed(precision));
-                obj.innerHTML = isCurrency ? `R$${currentValue.toLocaleString('pt-BR')}${suffix}` : `${currentValue.toLocaleString('pt-BR')}${suffix}`;
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
-            };
-            window.requestAnimationFrame(step);
+        // Função para o menu responsivo
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         }
 
-        const faturamentoEcommerceEl = document.getElementById('faturamento-ecommerce');
-        const mcommerceShareEl = document.getElementById('mcommerce-share');
-        const comparacaoPrecoOnlineEl = document.getElementById('comparacao-preco-online');
+        let popupClosable = false; 
+        let countdownInterval; 
+        const downloadButton = document.getElementById('downloadPdfButton');
+        const actualDownloadLink = document.getElementById('actualDownloadLink');
+        const popupOverlay = document.getElementById('adPopupOverlay');
+        const closeButton = document.querySelector('.popup-close');
+        const countdownDisplay = document.getElementById('popupCountdown'); 
 
-        animateValue(faturamentoEcommerceEl, 0, 224, 2000, true, 'B');
-        animateValue(mcommerceShareEl, 0, 78.1, 2000, false, '%', 1);
-        animateValue(comparacaoPrecoOnlineEl, 0, 49, 2000, false, '%');
-        
-        const socialCommerceMarketEl = document.getElementById('social-commerce-market');
-        const liveShoppingMarketEl = document.getElementById('live-shopping-market');
-        const sustainablePaymentEl = document.getElementById('sustainable-payment');
+        // Função para mostrar o pop-up
+        function showDownloadPopup() {
+            popupOverlay.classList.add('active');
 
-        animateValue(socialCommerceMarketEl, 0, 1.2, 2000, true, 'T', 1);
-        animateValue(liveShoppingMarketEl, 0, 67.8, 2000, true, 'B', 1);
-        animateValue(sustainablePaymentEl, 0, 66, 2000, false, '%');
+            // Desabilita o botão de fechar e o link de download inicialmente
+            closeButton.style.pointerEvents = 'none';
+            closeButton.style.opacity = '0.5';
+            closeButton.style.cursor = 'not-allowed';
+            actualDownloadLink.style.display = 'none';
+            actualDownloadLink.style.pointerEvents = 'none';
 
+            let timeLeft = 5; // Contador de 5 segundos
+            if (countdownDisplay) {
+                countdownDisplay.textContent = `Seu download será liberado em ${timeLeft} segundos...`;
+            }
 
-        const mcommerceCtx = document.getElementById('mcommerceChart').getContext('2d');
-        new Chart(mcommerceCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['M-Commerce', 'Outros Canais'],
-                datasets: [{
-                    label: 'Participação M-Commerce',
-                    data: [78.1, 21.9],
-                    backgroundColor: ['#0D9488', '#FDBA74'],
-                    borderColor: ['#FFFFFF', '#FFFFFF'],
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return `${context.label}: ${context.raw}%`;
-                            }
-                        }
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+
+                if (countdownDisplay) {
+                    countdownDisplay.textContent = `Seu download será liberado em ${timeLeft} segundos...`;
+                }
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval); 
+                    popupClosable = true; 
+                    
+                    // Habilita o botão de fechar e o link de download
+                    closeButton.style.pointerEvents = 'auto';
+                    closeButton.style.opacity = '1';
+                    closeButton.style.cursor = 'pointer';
+                    actualDownloadLink.style.display = 'block'; // Mostra o link de download
+                    actualDownloadLink.style.pointerEvents = 'auto';
+
+                    if (countdownDisplay) {
+                        countdownDisplay.textContent = 'Clique no link abaixo para iniciar o download!'; 
                     }
                 }
-            }
-        });
+            }, 1000); 
+        }
 
-        const modelosCtx = document.getElementById('modelosComparativoChart').getContext('2d');
-        const investmentLevels = { 'Muito Baixo': 1, 'Baixo': 2, 'Médio': 3, 'Alto': 4 };
-        const profitPotentials = { 'Médio': 2, 'Alto': 3, 'Muito Alto': 4 };
+        // Função para fechar o pop-up
+        function closePopup() {
+            if (popupClosable) {
+                popupOverlay.classList.remove('active');
+                clearInterval(countdownInterval);
+            }
+        }
 
-        new Chart(modelosCtx, {
-            type: 'bar',
-            data: {
-                labels: ['E-commerce Trad.', 'Dropshipping', 'Marketing Afiliados', 'Produtos Digitais'],
-                datasets: [
-                    {
-                        label: 'Investimento Inicial (Nível)',
-                        data: [
-                            investmentLevels['Alto'], 
-                            investmentLevels['Baixo'], 
-                            investmentLevels['Muito Baixo'], 
-                            investmentLevels['Médio']
-                        ],
-                        backgroundColor: '#FDBA74',
-                        borderColor: '#FDBA74',
-                        borderWidth: 1
-                    },
-                    {
-                        label: 'Potencial de Lucro (Nível)',
-                        data: [
-                            profitPotentials['Alto'],
-                            profitPotentials['Médio'],
-                            profitPotentials['Médio'],
-                            profitPotentials['Muito Alto']
-                        ],
-                        backgroundColor: '#0D9488',
-                        borderColor: '#0D9488',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1,
-                            callback: function(value) {
-                                const levels = ['N/A', 'Muito Baixo/Baixo', 'Médio', 'Alto', 'Muito Alto'];
-                                return levels[value] || '';
-                            }
-                        },
-                        title: {
-                            display: true,
-                            text: 'Nível Estimado'
-                        }
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                         callbacks: {
-                            label: function(context) {
-                                let label = context.dataset.label || '';
-                                if (label) {
-                                    label += ': ';
-                                }
-                                const value = context.parsed.y;
-                                const levels = ['N/A', 'Muito Baixo/Baixo', 'Médio', 'Alto', 'Muito Alto'];
-                                label += levels[value] || '';
-                                return label;
-                            }
-                        }
-                    }
-                }
+        // Adiciona o event listener ao botão de download
+        if (downloadButton) {
+            downloadButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Impede o comportamento padrão do link
+                showDownloadPopup();
+            });
+        }
+
+        window.onload = function() {
+            // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
+            const header = document.getElementById('header-fixed');
+            const sideAds = document.querySelectorAll('.adsense-vertical');
+            if (header && sideAds.length > 0 && window.innerWidth > 768) { 
+                const headerHeight = header.offsetHeight;
+                sideAds.forEach(ad => {
+                    ad.style.top = (headerHeight + 20) + 'px'; 
+                });
             }
-        });
-        
-        const tendenciasCtx = document.getElementById('tendenciasChart').getContext('2d');
-        new Chart(tendenciasCtx, {
-            type: 'line',
-            data: {
-                labels: ['2023', '2025', '2026'],
-                datasets: [
-                    {
-                        label: 'Social Commerce Global (US$ Trilhões)',
-                        data: [0.571, 1.2, null],
-                        borderColor: '#0D9488',
-                        backgroundColor: 'rgba(13, 148, 136, 0.1)',
-                        fill: true,
-                        tension: 0.1,
-                        spanGaps: true
-                    },
-                    {
-                        label: 'Live Shopping EUA (US$ Bilhões)',
-                        data: [31.7, null, 67.8],
-                        borderColor: '#FDBA74',
-                        backgroundColor: 'rgba(253, 186, 116, 0.1)',
-                        fill: true,
-                        tension: 0.1,
-                        yAxisID: 'y1',
-                        spanGaps: true
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        type: 'linear',
-                        display: true,
-                        position: 'left',
-                        title: {
-                            display: true,
-                            text: 'Valor (US$ Trilhões)'
-                        }
-                    },
-                    y1: {
-                        beginAtZero: true,
-                        type: 'linear',
-                        display: true,
-                        position: 'right',
-                        title: {
-                            display: true,
-                            text: 'Valor (US$ Bilhões)'
-                        },
-                        grid: {
-                            drawOnChartArea: false,
-                        },
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                    }
-                }
-            }
-        });
+        };
     </script>
 </body>
 </html>
