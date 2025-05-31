@@ -542,6 +542,20 @@
             white-space: normal; 
         }
     }
+
+    @media (max-width: 650px) {
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    /* Mantenha a regra de font-size e padding da tabela dentro desta ou da 750px */
+    table {
+        font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
+    }
+    table th, table td {
+        padding: 6px;
+    }
+}
 </style>
     
 </head>
@@ -643,41 +657,42 @@
             </div>
             
             <h3>Perfis de Investidor e Suas Características</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Perfil de Investidor</th>
-                        <th>Prioridade Principal</th>
-                        <th>Tolerância ao Risco</th>
-                        <th>Objetivo Principal</th>
-                        <th>Investimentos Comuns</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Conservador</strong></td>
-                        <td>Segurança e Preservação de Capital </td>
-                        <td>Baixa </td>
-                        <td>Estabilidade e Previsibilidade </td>
-                        <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Moderado</strong></td>
-                        <td>Equilíbrio entre Segurança e Rentabilidade </td>
-                        <td>Média </td>
-                        <td>Crescimento Sustentável </td>
-                        <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arrojado (Agressivo)</strong></td>
-                        <td>Maximização de Lucros </td>
-                        <td>Alta </td>
-                        <td>Alto Potencial de Retorno no Longo Prazo </td>
-                        <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais </td>
-                    </tr>
-                </tbody>
-            </table>
-            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Perfil de Investidor</th>
+                            <th>Prioridade Principal</th>
+                            <th>Tolerância ao Risco</th>
+                            <th>Objetivo Principal</th>
+                            <th>Investimentos Comuns</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Conservador</strong></td>
+                            <td>Segurança e Preservação de Capital </td>
+                            <td>Baixa </td>
+                            <td>Estabilidade e Previsibilidade </td>
+                            <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moderado</strong></td>
+                            <td>Equilíbrio entre Segurança e Rentabilidade </td>
+                            <td>Média </td>
+                            <td>Crescimento Sustentável </td>
+                            <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arrojado (Agressivo)</strong></td>
+                            <td>Maximização de Lucros </td>
+                            <td>Alta </td>
+                            <td>Alto Potencial de Retorno no Longo Prazo </td>
+                            <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="highlight">
                 <h3>O Tripé Fundamental: Risco, Retorno e Liquidez</h3>
                 <p>Todo investimento envolve um balanço entre esses três elementos. 
@@ -755,66 +770,68 @@
             </ul>
 
             <h3>Comparativo de Investimentos para Iniciantes</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Característica</th>
-                        <th>Poupança</th>
-                        <th>CDB</th>
-                        <th>LCI/LCA</th>
-                        <th>Tesouro Direto</th>
-                        <th>Fundos de Investimento</th>
-                        <th>Previdência Privada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Nível de Risco</strong></td>
-                        <td>Baixo</td>
-                        <td>Baixo</td>
-                        <td>Baixo</td>
-                        <td>Muito Baixo</td>
-                        <td>Variável</td>
-                        <td>Variável</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Liquidez</strong></td>
-                        <td>Diária</td>
-                        <td>Diária ou no Vencimento</td>
-                        <td>No Vencimento (com carência)</td>
-                        <td>Diária</td>
-                        <td>Variável</td>
-                        <td>Restrita</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Proteção FGC</strong></td>
-                        <td>Sim</td>
-                        <td>Sim</td>
-                        <td>Sim</td>
-                        <td>Tesouro Nacional (garantia soberana)</td>
-                        <td>Não (maioria)</td>
-                        <td>Segregação Patrimonial (SUSEP)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Isenção de IR (PF)</strong></td>
-                        <td>Sim</td>
-                        <td>Não</td>
-                        <td>Sim</td>
-                        <td>Não</td>
-                        <td>Não (exceto alguns)</td>
-                        <td>VGBL (sobre rendimento); PGBL (dedução)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Come-Cotas</strong></td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Sim (maioria)</td>
-                        <td>Não</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Poupança</th>
+                            <th>CDB</th>
+                            <th>LCI/LCA</th>
+                            <th>Tesouro Direto</th>
+                            <th>Fundos de Investimento</th>
+                            <th>Previdência Privada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nível de Risco</strong></td>
+                            <td>Baixo</td>
+                            <td>Baixo</td>
+                            <td>Baixo</td>
+                            <td>Muito Baixo</td>
+                            <td>Variável</td>
+                            <td>Variável</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Liquidez</strong></td>
+                            <td>Diária</td>
+                            <td>Diária ou no Vencimento</td>
+                            <td>No Vencimento (com carência)</td>
+                            <td>Diária</td>
+                            <td>Variável</td>
+                            <td>Restrita</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proteção FGC</strong></td>
+                            <td>Sim</td>
+                            <td>Sim</td>
+                            <td>Sim</td>
+                            <td>Tesouro Nacional (garantia soberana)</td>
+                            <td>Não (maioria)</td>
+                            <td>Segregação Patrimonial (SUSEP)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Isenção de IR (PF)</strong></td>
+                            <td>Sim</td>
+                            <td>Não</td>
+                            <td>Sim</td>
+                            <td>Não</td>
+                            <td>Não (exceto alguns)</td>
+                            <td>VGBL (sobre rendimento); PGBL (dedução)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Come-Cotas</strong></td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Sim (maioria)</td>
+                            <td>Não</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <p class="small-text"><em>Fonte: Adaptado de </em></p>
 
             <h2>Capítulo 3: Entendendo os Riscos e Evitando Armadilhas</h2>
@@ -880,17 +897,21 @@
             <p>Custos que impactam a rentabilidade líquida. </p>
             <h3>Tributação em Renda Fixa (CDB, Tesouro, Fundos RF)</h3>
             <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto). IOF pode incidir em resgates antes de 30 dias. </p>
-            <table>
-                <thead>
-                    <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Até 180 dias</td><td>22,5%</td></tr>
-                    <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
-                    <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
-                    <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
-                </tbody>
-            </table>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Até 180 dias</td><td>22,5%</td></tr>
+                        <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
+                        <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
+                        <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
+                    </tbody>
+                </table>
+            </div>    
+            
             <p class="small-text"><em>Fonte: </em></p>
             <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. </p>
 
