@@ -395,6 +395,18 @@
     }
     .footer a:hover { text-decoration: underline; }
 
+    .table-wrapper {
+    width: 100%; /* Garante que o wrapper ocupe 100% da largura disponível */
+    overflow-x: auto; /* Adiciona rolagem horizontal se o conteúdo for maior que a largura */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
+    margin-bottom: 20px; /* Adiciona um pouco de espaço abaixo da tabela */
+    }
+
+    /* Opcional: Para garantir que a tabela não tenha margem dupla ou padding inesperado */
+    .table-wrapper table {
+        margin: 0; /* Remove a margem padrão da tabela se ela já estiver dentro do wrapper */
+    }
+
     /* Responsividade */
     @media (max-width: 1200px) {
         .adsense-vertical {
@@ -599,7 +611,7 @@
             </ul>
         </nav>
     </header>
-    V1.2
+    V1.3
     <div id="main-wrapper"> 
 
         <aside id="adsense-left" class="adsense-vertical">
@@ -648,7 +660,7 @@
 
             <div class="categories-container">
                 <div class="image-placeholder">
-                    <img src="images/placeholder-perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
+                    <img src="images/perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
                 </div>
                 <div class="categories-text">
                     <h3>Descubra o Seu Perfil de Investidor</h3>
@@ -706,7 +718,7 @@
 
             <div class="categories-container">
                  <div class="image-placeholder">
-                    <img src="images/placeholder-diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
+                    <img src="images/diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
                 </div>
                 <div class="categories-text">
                     <h3>A Magia da Diversificação</h3>
@@ -742,7 +754,7 @@
 
             <div class="categories-container">
                 <div class="image-placeholder">
-                     <img src="images/placeholder-renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
+                     <img src="images/renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
                 </div>
                 <div class="categories-text">
                     <h3>Renda Fixa: Segurança e Previsibilidade</h3>
