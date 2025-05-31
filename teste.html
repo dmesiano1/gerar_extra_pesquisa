@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendas Online: Guia Completo, Estratégias e Ferramentas para Sucesso Digital | Renda Extra .App</title>
+    <title>Investimentos Inteligentes para Leigos: Guia Completo para Iniciantes | Renda Extra .App</title>
 
-    <meta name="description" content="Domine as vendas online com nosso guia definitivo: estratégias de e-commerce, marketing digital, dropshipping, afiliados e infoprodutos para alcançar o sucesso digital.">
-    <meta name="keywords" content="vendas online, e-commerce, marketing digital, dropshipping, afiliados, infoprodutos, SEO, IA, social commerce, sustentabilidade, omnichannel, como vender online, estratégias vendas online, ferramentas e-commerce">
+    <meta name="description" content="Guia completo para iniciantes sobre como começar a investir no Brasil. Aprenda sobre perfil de investidor, renda fixa (CDB, LCI/LCA, Tesouro Direto), fundos, previdência e como evitar erros comuns.">
+    <meta name="keywords" content="investimentos para leigos, como começar a investir, guia de investimentos, renda fixa, tesouro direto, cdb, lci, lca, perfil de investidor, investimentos para iniciantes, educação financeira, renda extra app">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Renda Extra .App">
-    <link rel="canonical" href="https://www.rendaextra.app.br/vendas-online.html"> 
+    <link rel="canonical" href="https://www.rendaextra.app.br/investimentos-inteligentes.html">
 
     <style>
     body {
@@ -142,7 +143,7 @@
     }
 
 
-    /* Estilos para o Pop-up de Anúncio */
+    /* Estilos para o Pop-up de Anúncio/Download */
     .popup-overlay {
         position: fixed;
         top: 0;
@@ -185,12 +186,12 @@
         color: #3498db;
         font-size: 1.5em;
     }
-    .popup-ad-slot {
+    .popup-download-slot { /* Renomeado de popup-ad-slot para clareza */
         margin-top: 15px;
         padding: 10px;
         background-color: #f9f9f9;
         border: 1px dashed #dcdcdc;
-        min-height: 150px;
+        min-height: 50px; /* Ajustado para link de download */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -328,11 +329,15 @@
         gap: 15px; /* Reduzi o espaço entre a imagem e o texto */
         margin-top: 20px; /* Adiciona um pouco de espaço acima do container */
         margin-bottom: 25px; /* Adiciona um pouco de espaço abaixo do container */
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        background-color: #f9f9f9;
     }
 
     .image-placeholder {
         flex-shrink: 0; /* Impede que a imagem encolha demais */
-        width: 200px; /* Reduzi a largura da imagem */
+        width: 150px; /* Reduzi a largura da imagem */
     }
 
     .image-placeholder img {
@@ -345,6 +350,29 @@
 
     .categories-text {
         flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+    }
+    .categories-text h3 {
+        margin-top: 0;
+        color: #2a6a82;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.9em;
+    }
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    table th {
+        background-color: #e9ecef;
+        color: #264653;
+    }
+    table tr:nth-child(even) {
+        background-color: #f8f9fa;
     }
 
     /* Rodapé */
@@ -443,7 +471,7 @@
         }
         .image-placeholder {
             width: 80%; /* Permite que a imagem ocupe mais largura */
-            max-width: 300px; /* Limita a largura máxima da imagem */
+            max-width: 200px; /* Limita a largura máxima da imagem para não ficar tão grande */
             margin: 0 auto 15px; /* Centraliza a imagem e adiciona margem abaixo */
         }
 
@@ -483,46 +511,44 @@
             padding: 15px; /* Reduz padding do pop-up */
             width: 95%; /* Ocupa mais largura em telas muito pequenas */
         }
-        .popup-ad-slot {
-            min-height: 120px; /* Ajuste da altura do slot de anúncio do pop-up */
+        .popup-download-slot { /* Ajustado para popup-download-slot */
+            min-height: 50px;
         }
         .footer {
             padding: 15px; /* Reduz o padding do rodapé */
             font-size: 0.9em; /* Diminui a fonte do rodapé */
         }
+
+        table {
+            font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
+        }
+        table th, table td {
+            padding: 6px;
+        }
         
         /* Centraliza o parágrafo que contém o botão de pesquisa */
-        p[style="text-align: center; margin-top: 30px;"] {
-            text-align: center !important; /* Garante que sobrescreve o inline style se necessário */
-            width: 100%; /* Ocupa a largura total para centralizar */
-            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+        p[style*="text-align: center"] { /* Selecionador mais genérico para pegar o text-align: center */
+            text-align: center !important;
+            width: 100%; 
+            box-sizing: border-box; 
         }
-        .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
-            display: block; /* Transforma o link em bloco para ocupar a largura e permitir margin auto */
-            margin-left: auto; /* Centraliza o bloco */
-            margin-right: auto; /* Centraliza o bloco */
-            max-width: 280px; /* Define uma largura máxima para o botão em mobile */
-            padding: 8px 15px !important; /* Ajusta o padding para telas menores */
-            font-size: 1em !important; /* Ajusta o tamanho da fonte */
-            white-space: normal; /* Permite que o texto quebre linha se for muito longo */
+        .site-link[style*="font-size: 1.2em"] { /* Selecionador mais genérico */
+            display: block; 
+            margin-left: auto; 
+            margin-right: auto; 
+            max-width: 280px; 
+            padding: 8px 15px !important; 
+            font-size: 1em !important; 
+            white-space: normal; 
         }
     }
-
-    /* Ajustes específicos para telas menores que 580px (se necessário) - a maioria foi movida para 600px */
-    @media (max-width: 580px) {
-        /* Se houver necessidade de ajustes AINDA mais específicos para 580px, adicione aqui.
-           Caso contrário, esta media query pode ser redundante se a de 600px for suficiente.
-           Por enquanto, as regras mais gerais para elementos de texto já foram tratadas na media de 600px.
-        */
-    }
-
 </style>
     
 </head>
 <body>
     <header id="header-fixed">
         <a id="logo-link" href="index.html">
-            <img id="logo" src="images/logo1.png" alt="Logo do Site Renda Extra .App">
+            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
         </a>
 
         <nav class="navbar">
@@ -586,9 +612,8 @@
         </aside>
 
         <div class="container"> 
-            v1.0
-            <h1>Guia Completo para Trabalhar com Vendas Online</h1>
-            <p>Este guia aborda o cenário dinâmico das vendas online, oferecendo estratégias, ferramentas e tendências para o sucesso digital. O e-commerce no Brasil continua em crescimento robusto, com projeções de faturamento que ultrapassam os R$ 224 bilhões em 2025. A ascensão das vendas online reflete uma profunda transformação no comportamento do consumidor, que valoriza a conveniência e a facilidade de comparação de preços.</p>
+            <h1>Investimentos Inteligentes para Leigos: Seu Guia Completo</h1>
+            <p>Investir pode parecer complexo, mas é um passo fundamental para construir um futuro financeiro sólido. Este guia simplifica o mundo dos investimentos no Brasil, ajudando você a fazer seu dinheiro trabalhar e transformar sonhos em realidade. </p>
 
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -604,27 +629,84 @@
                 </script>
             </div>
 
-            <h2>Modelos de Negócio no E-commerce</h2>
-            <p>A escolha do modelo de negócio é a primeira decisão estratégica. Conheça os principais:</p>
-            <ul>
-                <li><strong>E-commerce Tradicional (B2C, B2B, D2C):</strong> Venda direta ao consumidor final (B2C), para outras empresas (B2B) ou direto da fábrica (D2C).</li>
-                <li><strong>Dropshipping:</strong> Venda de produtos de terceiros sem a necessidade de estoque físico. O fornecedor envia diretamente ao cliente. Baixo custo de entrada, mas exige responsabilidade pelo atendimento.</li>
-                <li><strong>Marketing de Afiliados:</strong> Promoção de produtos ou serviços de outras marcas por meio de um link exclusivo, recebendo comissão por venda. Fácil de começar e baixo custo inicial.</li>
-                <li><strong>Venda de Produtos Digitais (Infoprodutos):</strong> Criação e venda de conteúdos digitais como cursos online, e-books e softwares. Alto potencial de escalabilidade e controle total sobre o produto.</li>
-                <li><strong>Outros Modelos:</strong> Incluem C2C (consumidor-consumidor), M-commerce (mobile), Social Commerce (redes sociais), Voice Commerce (comandos de voz), T-Commerce (televisão) e Marketplaces.</li>
-            </ul>
+            <h2>Capítulo 1: Os Pilares do Investimento para Iniciantes</h2>
+            <p>Para começar a investir de forma inteligente, é crucial entender alguns pilares essenciais que guiarão suas decisões. </p>
 
+            <div class="categories-container">
+                <div class="image-placeholder">
+                    <img src="images/placeholder-perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
+                </div>
+                <div class="categories-text">
+                    <h3>Descubra o Seu Perfil de Investidor</h3>
+                    <p>Antes de tudo, conheça sua tolerância a riscos, objetivos financeiros e horizonte de tempo.  As instituições financeiras realizam a Análise de Perfil do Investidor (API), obrigatória pela CVM, para classificar você como <strong>Conservador</strong>, <strong>Moderado</strong> ou <strong>Arrojado (Agressivo)</strong>.  Esse perfil não é estático e pode mudar com o tempo e experiência. </p>
+                </div>
+            </div>
+            
+            <h3>Perfis de Investidor e Suas Características</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Perfil de Investidor</th>
+                        <th>Prioridade Principal</th>
+                        <th>Tolerância ao Risco</th>
+                        <th>Objetivo Principal</th>
+                        <th>Investimentos Comuns</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Conservador</strong></td>
+                        <td>Segurança e Preservação de Capital </td>
+                        <td>Baixa </td>
+                        <td>Estabilidade e Previsibilidade </td>
+                        <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moderado</strong></td>
+                        <td>Equilíbrio entre Segurança e Rentabilidade </td>
+                        <td>Média </td>
+                        <td>Crescimento Sustentável </td>
+                        <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Arrojado (Agressivo)</strong></td>
+                        <td>Maximização de Lucros </td>
+                        <td>Alta </td>
+                        <td>Alto Potencial de Retorno no Longo Prazo </td>
+                        <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais </td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <div class="highlight">
-                <h3>Dica Importante: Planejamento e Nicho</h3>
-                <p>O planejamento estratégico e a definição de um nicho de mercado são cruciais. Identifique necessidades não atendidas e combine-as com sua afinidade pessoal para construir uma marca autêntica e relevante.</p>
+                <h3>O Tripé Fundamental: Risco, Retorno e Liquidez</h3>
+                <p>Todo investimento envolve um balanço entre esses três elementos. 
+                <ul>
+                    <li><strong>Risco:</strong> Possibilidade do retorno ser diferente do esperado. Maior risco geralmente implica maior expectativa de retorno. </li>
+                    <li><strong>Retorno:</strong> Ganho ou perda do investimento. Idealmente, deve superar a inflação (IPCA). </li>
+                    <li><strong>Liquidez:</strong> Facilidade de converter o investimento em dinheiro. Alta liquidez é crucial para reservas de emergência. </li>
+                </ul>
+                </p>
             </div>
 
-            <h2>Primeiros Passos para Começar a Vender Online</h2>
-            <p>Para iniciar seu negócio digital com o pé direito:</p>
+            <div class="categories-container">
+                 <div class="image-placeholder">
+                    <img src="images/placeholder-diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
+                </div>
+                <div class="categories-text">
+                    <h3>A Magia da Diversificação</h3>
+                    <p>"Não coloque todos os ovos na mesma cesta."  Diversificar é distribuir seus investimentos em diferentes ativos para aumentar a segurança e potencial de ganhos, reduzindo perdas.  Isso pode ser feito entre classes de ativos, dentro da mesma classe e geograficamente. </p>
+                </div>
+            </div>
+
+            <h3>Horizonte de Tempo</h3>
+            <p>Refere-se ao prazo que você pretende manter o dinheiro aplicado. 
             <ul>
-                <li><strong>Formalização do Negócio (MEI/CNPJ):</strong> Registrar seu negócio (como MEI no Brasil) é fundamental para evitar problemas futuros, construir credibilidade e acessar melhores soluções de pagamento e fornecedores.</li>
-                <li><strong>Escolha da Plataforma Ideal:</strong> A plataforma é sua "vitrine virtual". Considere integração com outros sistemas, suporte, segurança, escalabilidade, personalização e parceiros de pagamento. Exemplos incluem Shopify, WooCommerce, VTEX, Nuvemshop e Linx Commerce.</li>
+                <li><strong>Curto Prazo (até 1 ano):</strong> Para reserva de emergência, metas rápidas. Exige alta liquidez. </li>
+                <li><strong>Médio Prazo (1 a 5 anos):</strong> Compra de carro, cursos. Pode ter risco moderado. </li>
+                <li><strong>Longo Prazo (acima de 5 anos):</strong> Aposentadoria, educação dos filhos. Permite maior volatilidade e potencial de ganho, aproveitando os juros compostos. </li>
             </ul>
+            </p>
 
             <div id="adsense-middle" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -640,36 +722,203 @@
                 </script>
             </div>
             
-            <h2>Estratégias Essenciais de Marketing Digital</h2>
-            <p>O marketing digital é o motor das vendas online:</p>
+            <h2>Capítulo 2: Conheça os Investimentos Mais Acessíveis</h2>
+            <p>Para iniciantes, a renda fixa é o ponto de partida recomendado pela segurança e previsibilidade. </p>
+
+            <div class="categories-container">
+                <div class="image-placeholder">
+                     <img src="images/placeholder-renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
+                </div>
+                <div class="categories-text">
+                    <h3>Renda Fixa: Segurança e Previsibilidade</h3>
+                    <p>As regras de remuneração são definidas na aplicação. </p>
+                    <ul>
+                        <li><strong>Poupança:</strong> Mais tradicional, simples e segura, mas com baixa rentabilidade, muitas vezes perdendo para a inflação.  Ideal como ponto de partida e para reserva de emergência inicial. </li>
+                        <li><strong>CDB (Certificado de Depósito Bancário):</strong> Empréstimo ao banco. Protegido pelo FGC (até R$250 mil por CPF/instituição).  Pode ser Pós-fixado (atrelado ao CDI), Prefixado (taxa fixa) ou Híbrido (taxa fixa + inflação). CDBs com liquidez diária são ótimos para reserva de emergência. </li>
+                        <li><strong>LCI/LCA (Letras de Crédito Imobiliário/Agronegócio):</strong> Isentas de IR para pessoa física e com garantia do FGC.  Geralmente têm baixa liquidez e prazos de carência mais longos, não sendo ideais para reserva de emergência. </li>
+                        <li><strong>Tesouro Direto:</strong> Empréstimo ao Governo Federal, considerado o mais seguro do Brasil.  Acessível (a partir de R$30) e com liquidez diária na maioria dos títulos. 
+                            <ul>
+                                <li><strong>Tesouro Selic:</strong> Ideal para reserva de emergência e curto prazo. </li>
+                                <li><strong>Tesouro IPCA+:</strong> Protege contra inflação, bom para longo prazo. </li>
+                                <li><strong>Tesouro Prefixado:</strong> Taxa fixa, previsibilidade para médio/longo prazo. </li>
+                                <li><strong>Tesouro RendA+ e Educa+:</strong> Para aposentadoria e educação, respectivamente. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>Outras Opções Acessíveis</h3>
             <ul>
-                <li><strong>SEO (Search Engine Optimization):</strong> Técnicas para aumentar a visibilidade orgânica do seu site em buscadores como o Google.</li>
-                <li><strong>Mídia Paga (Anúncios Online):</strong> Campanhas pagas em Google Ads e redes sociais (Facebook, Instagram, TikTok) para resultados rápidos e segmentação de público.</li>
-                <li><strong>Marketing de Conteúdo:</strong> Criação de conteúdo relevante (blogs, vídeos, descrições de produtos) para atrair, engajar e educar a audiência.</li>
-                <li><strong>Email Marketing:</strong> Canal direto e eficiente para comunicação, segmentação e personalização (boas-vindas, recuperação de carrinho, promoções).</li>
-                <li><strong>Social Media Marketing:</strong> Uso de redes sociais para construir reconhecimento de marca, gerar tráfego e impulsionar vendas, aproveitando funcionalidades de social commerce.</li>
+                <li><strong>Fundos de Investimento:</strong> "Condomínio" de investidores com gestão profissional. Permite diversificação com pouco capital, mas não têm FGC na maioria dos casos e possuem taxas (administração, performance) e "come-cotas" (IR semestral). </li>
+                <li><strong>Previdência Privada:</strong> Foco no longo prazo (aposentadoria). Vantagens como ausência de "come-cotas" e tabelas de IR potencialmente mais favoráveis (regressiva até 10%).  Planos PGBL (dedução no IR completo) e VGBL (IR sobre rendimentos na declaração simples). </li>
             </ul>
 
+            <h3>Comparativo de Investimentos para Iniciantes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Poupança</th>
+                        <th>CDB</th>
+                        <th>LCI/LCA</th>
+                        <th>Tesouro Direto</th>
+                        <th>Fundos de Investimento</th>
+                        <th>Previdência Privada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nível de Risco</strong></td>
+                        <td>Baixo</td>
+                        <td>Baixo</td>
+                        <td>Baixo</td>
+                        <td>Muito Baixo</td>
+                        <td>Variável</td>
+                        <td>Variável</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Liquidez</strong></td>
+                        <td>Diária</td>
+                        <td>Diária ou no Vencimento</td>
+                        <td>No Vencimento (com carência)</td>
+                        <td>Diária</td>
+                        <td>Variável</td>
+                        <td>Restrita</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proteção FGC</strong></td>
+                        <td>Sim</td>
+                        <td>Sim</td>
+                        <td>Sim</td>
+                        <td>Tesouro Nacional (garantia soberana)</td>
+                        <td>Não (maioria)</td>
+                        <td>Segregação Patrimonial (SUSEP)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Isenção de IR (PF)</strong></td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Sim</td>
+                        <td>Não</td>
+                        <td>Não (exceto alguns)</td>
+                        <td>VGBL (sobre rendimento); PGBL (dedução)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Come-Cotas</strong></td>
+                        <td>Não</td>
+                        <td>Não</td>
+                        <td>Não</td>
+                        <td>Não</td>
+                        <td>Sim (maioria)</td>
+                        <td>Não</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="small-text"><em>Fonte: Adaptado de </em></p>
+
+            <h2>Capítulo 3: Entendendo os Riscos e Evitando Armadilhas</h2>
+            <p>Compreender e mitigar riscos é crucial para proteger seu patrimônio. </p>
             <div class="warning">
-                <h3>Atenção: Gestão Operacional e Atendimento</h3>
-                <p>A eficiência na gestão de estoque, logística e pagamentos, juntamente com um atendimento ao cliente de alta qualidade, são pilares para a satisfação do consumidor e a reputação da sua marca.</p>
+                <h3>Principais Riscos Gerais</h3>
+                <ul>
+                    <li><strong>Risco de Mercado:</strong> Oscilação de preços devido a fatores econômicos, políticos, etc. </li>
+                    <li><strong>Risco de Crédito:</strong> Possibilidade do emissor não pagar a dívida. </li>
+                    <li><strong>Risco de Liquidez:</strong> Dificuldade de vender um ativo rapidamente sem perdas. </li>
+                    <li><strong>Risco Operacional e Legal:</strong> Falhas em sistemas, erros humanos ou questões jurídicas. </li>
+                </ul>
+                <p><strong>Riscos Específicos:</strong> CDBs (crédito do banco, mitigado pelo FGC), LCI/LCA (liquidez devido a carências), Tesouro Direto (marcação a mercado em vendas antecipadas de títulos prefixados e IPCA+), Fundos (mercado, gestão, sem FGC), Previdência (baixa rentabilidade por taxas altas, má gestão). </p>
             </div>
 
-            <h2>Habilidades Essenciais e Desafios Comuns</h2>
-            <p>Para ter sucesso no e-commerce, é preciso desenvolver habilidades em marketing digital, análise de dados, UX/UI, inteligência emocional e adaptabilidade. Os desafios incluem sites lentos, desconfiança do cliente, logística, concorrência e abandono de carrinho, que devem ser superados com estratégias proativas.</p>
+            <h3>Os 5 Erros Mais Comuns que o Iniciante Deve Evitar </h3>
+            <ol>
+                <li>Não ter uma reserva de emergência. </li>
+                <li>Não conhecer o seu perfil de investidor. </li>
+                <li>Investir sem estudar sobre o assunto (baseado em "dicas"). </li>
+                <li>Não diversificar os investimentos. </li>
+                <li>Ter expectativas irrealistas de retornos rápidos e altos. </li>
+            </ol>
+            
+            <h2>Capítulo 4: Seu Primeiro Passo: Como Começar a Investir</h2>
+            <p>Com os pilares e riscos entendidos, veja como começar na prática. </p>
 
-            <h2>Tendências Atuais e Futuras em Vendas Online</h2>
-            <p>O cenário digital está em constante evolução:</p>
-            <ul>
-                <li><strong>Inteligência Artificial (IA) e Hiperpersonalização:</strong> IA otimiza recomendações, atendimento (chatbots) e análise preditiva, criando experiências de compra altamente personalizadas.</li>
-                <li><strong>Social Commerce e Live Shopping:</strong> Redes sociais se tornam hubs de compra, com transmissões ao vivo que combinam entretenimento e vendas, impulsionando engajamento e conversões.</li>
-                <li><strong>Comércio Sustentável:</strong> Crescente demanda por práticas sustentáveis, embalagens ecológicas e cadeias de suprimentos transparentes.</li>
-                <li><strong>Omnichannel e Experiência Integrada:</strong> A distinção entre online e offline se desfaz, exigindo uma jornada do cliente fluida e consistente em todos os pontos de contato.</li>
-                <li><strong>Modelos de Assinatura e Programas de Fidelidade:</strong> Crescimento de serviços de assinatura e programas de fidelidade para fomentar relacionamentos de longo prazo e incentivar compras repetidas.</li>
-            </ul>
+            <div class="categories-container">
+                <div class="image-placeholder">
+                     <img src="images/placeholder-passos-investir.png" alt="Ícones representando definição de objetivos, escolha de corretora e primeiro investimento">
+                </div>
+                <div class="categories-text">
+                    <h3>Definindo Objetivos e Escolhendo a Corretora</h3>
+                    <p><strong>Defina seus objetivos financeiros:</strong> Curto, médio ou longo prazo (reserva de emergência, compra de carro, aposentadoria).  Isso guiará suas escolhas.
+                    <p><strong>Escolha uma corretora de valores:</strong> Instituições que executam ordens de compra/venda.  Critérios: custos/taxas, diversidade de produtos, usabilidade da plataforma, reputação/regulamentação (CVM, B3, FINRA, SIPC), atendimento e recursos educacionais.  Exemplos no Brasil: Nu Invest, Rico, Inter. Para exterior: Nomad. </p>
+                </div>
+            </div>
+
+            <h3>Passo a Passo para Abrir Conta e Investir (Ex: Tesouro Direto) </h3>
+            <ol>
+                <li>Simule seu investimento. </li>
+                <li>Cadastre-se na corretora e solicite acesso ao Tesouro Direto. </li>
+                <li>Transfira o dinheiro para a corretora. </li>
+                <li>Comece a investir pela plataforma da corretora ou do Tesouro Direto. </li>
+            </ol>
+            <p>Existe também um cadastro rápido para Tesouro Direto via Gov.br e PIX. </p>
+            
+            <h2>Capítulo 5: Construindo e Gerenciando Sua Carteira</h2>
+            <p>Alocar ativos estrategicamente e rebalancear periodicamente são chave. </p>
+            
+            <div class="highlight">
+                <h3>Alocação de Ativos e Rebalanceamento</h3>
+                <p><strong>Alocação:</strong> Distribua o dinheiro entre diferentes classes de ativos conforme seu perfil e objetivos. 
+                    <ul>
+                        <li><strong>Conservador:</strong> Maioria em renda fixa (Ex: 40% CDB liquidez diária, 30% Tesouro IPCA+, 30% LCI/LCA). </li>
+                        <li><strong>Moderado:</strong> Renda fixa com uma parcela em fundos multimercado ou ações. </li>
+                        <li><strong>Arrojado:</strong> Maioria em renda variável (ações, FIIs), com uma base de renda fixa.  A "Pirâmide de Investimentos" é um bom modelo. </li>
+                    </ul>
+                <p><strong>Rebalanceamento:</strong> Ajuste periódico da carteira (ex: a cada 6-12 meses) para manter o alinhamento com seus objetivos, perfil de risco e mudanças na vida.  Pode ser feito usando novos aportes. </p>
+            </div>
+
+            <h2>Capítulo 6: Impostos e Taxas</h2>
+            <p>Custos que impactam a rentabilidade líquida. </p>
+            <h3>Tributação em Renda Fixa (CDB, Tesouro, Fundos RF)</h3>
+            <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto).  IOF pode incidir em resgates antes de 30 dias. </p>
+            <table>
+                <thead>
+                    <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Até 180 dias</td><td>22,5%</td></tr>
+                    <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
+                    <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
+                    <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
+                </tbody>
+            </table>
+            <p class="small-text"><em>Fonte: </em></p>
+            <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. </p>
+
+            <h3>Tributação em Fundos de Investimento</h3>
+            <p>Mesma tabela regressiva de IR no resgate.  Maioria tem "come-cotas" (IR antecipado semestralmente).  Exceções: fundos de ações (15% no resgate), previdência, FIIs. </p>
+
+            <h3>Tributação na Previdência Privada</h3>
+            <p>PGBL (dedução até 12% renda bruta, IR sobre total no resgate) ou VGBL (IR sobre rendimentos).  Regime progressivo ou regressivo (alíquota pode chegar a 10% após 10 anos).  Taxas: carregamento (pode ser zero), administração, saída (pode ser zero), performance. </p>
+
+            <h3>Taxas do Tesouro Direto</h3>
+            <p>Taxa de custódia da B3 (0,2% a.a., isenção até R$10 mil no Tesouro Selic e regras especiais para RendA+/Educa+).  Taxa da instituição financeira (muitas oferecem zero). </p>
+            
+            <div class="highlight">
+                <h3>Conclusão: Sua Jornada Começa Agora!</h3>
+                <p>Investir é acessível e recompensador.  Comece pelo autoconhecimento (perfil, objetivos), explore a renda fixa, diversifique, entenda os riscos e evite erros comuns.  A educação financeira contínua e a paciência são seus maiores aliados. </p>
+                <h4>Próximos Passos Práticos:</h4>
+                <ol>
+                    <li>Forme sua reserva de emergência. </li>
+                    <li>Defina objetivos e faça o teste de perfil. </li>
+                    <li>Explore opções de renda fixa. </li>
+                    <li>Diversifique e rebalanceie sua carteira. </li>
+                    <li>Busque sempre mais conhecimento. </li>
+                    <li>Considere orientação profissional se necessário. </li>
+                </ol>
+            </div>
 
             <p style="text-align: center; margin-top: 30px;">
-                <a href="#" id="downloadPdfButton" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Baixar Guia Completo em PDF</a>
+                <a href="javascript:void(0);" onclick="showDownloadPopup()" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Baixar o Guia Completo em PDF</a>
             </p>
 
             <div id="adsense-bottom" class="adsense-slot">
@@ -713,26 +962,11 @@
     </div> 
 
 
-    <div id="adPopupOverlay" class="popup-overlay">
-        <div class="popup-content">
-            <span class="popup-close" onclick="closePopup()">&times;</span>
-            <h4>Seu download será liberado em instantes!</h4>
-            <p>Enquanto aguarda, confira esta oportunidade:</p>
-            <div id="popup-ad-slot" class="popup-ad-slot"> 
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
-      crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                      style="display:block"
-                      data-ad-client="ca-pub-9170718554447056"
-                      data-ad-slot="1769098387"
-                      data-ad-format="auto"
-                      data-full-width-responsive="true"></ins>
-                <script>
-                      (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+    <div id="downloadPopupOverlay" class="popup-overlay"> <div class="popup-content">
+            <span class="popup-close" onclick="closeDownloadPopup()">&times;</span> <h4>Download do Guia Completo</h4>
+            <p>Seu guia "Investimentos Inteligentes para Leigos" está quase pronto para download!</p>
+            <div id="popup-download-area" class="popup-download-slot"> </div>
             <p id="popupCountdown"></p> 
-            <a href="downloads/vendas-online-guia-completo.pdf" id="actualDownloadLink" download style="display:none;">Clique aqui para iniciar o download</a>
         </div>
     </div>
     
@@ -749,31 +983,31 @@
             navLinks.classList.toggle('active');
         }
 
-        let popupClosable = false; 
-        let countdownInterval; 
-        const downloadButton = document.getElementById('downloadPdfButton');
-        const actualDownloadLink = document.getElementById('actualDownloadLink');
-        const popupOverlay = document.getElementById('adPopupOverlay');
-        const closeButton = document.querySelector('.popup-close');
-        const countdownDisplay = document.getElementById('popupCountdown'); 
-
-        // Função para mostrar o pop-up
+        let downloadPopupClosable = false; 
+        let downloadCountdownInterval; 
+        
+        // Função para mostrar o pop-up de DOWNLOAD
         function showDownloadPopup() {
+            const popupOverlay = document.getElementById('downloadPopupOverlay');
+            const closeButton = popupOverlay.querySelector('.popup-close'); // Busca dentro do overlay correto
+            const countdownDisplay = document.getElementById('popupCountdown'); 
+            const downloadArea = document.getElementById('popup-download-area');
+
+            downloadArea.innerHTML = 'Aguarde...'; // Mensagem inicial
             popupOverlay.classList.add('active');
 
-            // Desabilita o botão de fechar e o link de download inicialmente
+            // Desabilitar botão de fechar inicialmente
             closeButton.style.pointerEvents = 'none';
             closeButton.style.opacity = '0.5';
             closeButton.style.cursor = 'not-allowed';
-            actualDownloadLink.style.display = 'none';
-            actualDownloadLink.style.pointerEvents = 'none';
+            downloadPopupClosable = false;
 
-            let timeLeft = 5; // Contador de 5 segundos
+            let timeLeft = 10; // Contador de 10 segundos (pode ajustar para 5)
             if (countdownDisplay) {
                 countdownDisplay.textContent = `Seu download será liberado em ${timeLeft} segundos...`;
             }
 
-            countdownInterval = setInterval(() => {
+            downloadCountdownInterval = setInterval(() => {
                 timeLeft--;
 
                 if (countdownDisplay) {
@@ -781,39 +1015,30 @@
                 }
 
                 if (timeLeft <= 0) {
-                    clearInterval(countdownInterval); 
-                    popupClosable = true; 
+                    clearInterval(downloadCountdownInterval); 
+                    downloadPopupClosable = true; 
                     
-                    // Habilita o botão de fechar e o link de download
                     closeButton.style.pointerEvents = 'auto';
                     closeButton.style.opacity = '1';
                     closeButton.style.cursor = 'pointer';
-                    actualDownloadLink.style.display = 'block'; // Mostra o link de download
-                    actualDownloadLink.style.pointerEvents = 'auto';
-
+                    
                     if (countdownDisplay) {
-                        countdownDisplay.textContent = 'Clique no link abaixo para iniciar o download!'; 
+                        countdownDisplay.textContent = 'Download Liberado!'; 
                     }
+                    // Adiciona o link de download
+                    downloadArea.innerHTML = '<a href="downloads/investimentos-inteligentes-para-leigos.pdf" download="investimentos-inteligentes-para-leigos.pdf" class="site-link" style="font-size: 1.1em; padding: 8px 15px; border: 1px solid #2a9d8f; border-radius: 5px; background-color: #d4edda;">Clique aqui para Baixar o PDF</a>';
                 }
             }, 1000); 
         }
 
-        // Função para fechar o pop-up
-        function closePopup() {
-            if (popupClosable) {
-                popupOverlay.classList.remove('active');
-                clearInterval(countdownInterval);
+        // Função para fechar o pop-up de DOWNLOAD
+        function closeDownloadPopup() {
+            if (downloadPopupClosable) {
+                document.getElementById('downloadPopupOverlay').classList.remove('active');
+                clearInterval(downloadCountdownInterval);
             }
         }
-
-        // Adiciona o event listener ao botão de download
-        if (downloadButton) {
-            downloadButton.addEventListener('click', function(event) {
-                event.preventDefault(); // Impede o comportamento padrão do link
-                showDownloadPopup();
-            });
-        }
-
+        
         window.onload = function() {
             // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
             const header = document.getElementById('header-fixed');
