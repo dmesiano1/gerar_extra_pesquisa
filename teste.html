@@ -407,6 +407,38 @@
         margin: 0; /* Remove a margem padrão da tabela se ela já estiver dentro do wrapper */
     }
 
+    /* Estilos para o conteúdo em texto mobile (padrão: oculto) */
+    .table-text-mobile {
+        display: none;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .table-text-mobile h3, .table-text-mobile h4 {
+        color: #2a6a82;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    .table-text-mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .table-text-mobile li {
+        margin-bottom: 5px;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    .table-text-mobile hr {
+        border: 0;
+        border-top: 1px dashed #ccc;
+        margin: 20px 0;
+    }
+
+
     /* Responsividade */
     @media (max-width: 1200px) {
         .adsense-vertical {
@@ -556,16 +588,30 @@
     }
 
     @media (max-width: 650px) {
-        table {
-            font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
-        }
-         table th, table td {
-            padding: 6px;
-        }
+        /* Oculta as tabelas originais */
         .table-wrapper {
-            display: none; Isso ocultará todas as tabelas
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            display: none;
+        }
+        /* Mostra o conteúdo em texto formatado para mobile */
+        .table-text-mobile {
+            display: block; /* Garante que seja visível */
+        }
+
+        /* Ajustes específicos para a versão de texto no mobile */
+        .table-text-mobile h3 {
+            font-size: 1.3em;
+        }
+        .table-text-mobile h4 {
+            font-size: 1.1em;
+        }
+        .table-text-mobile ul {
+            padding-left: 15px; /* Adiciona um pequeno padding para listas */
+        }
+        .table-text-mobile li {
+            font-size: 0.85em; /* Reduz a fonte dos itens da lista */
+        }
+        .table-text-mobile hr {
+            margin: 15px 0; /* Ajusta a margem da linha divisória */
         }
     }
 </style>
@@ -611,7 +657,7 @@
             </ul>
         </nav>
     </header>
-    V1.5 - testando display none nas tabelas
+    V1.3
     <div id="main-wrapper"> 
 
         <aside id="adsense-left" class="adsense-vertical">
@@ -669,7 +715,7 @@
             </div>
             
             <h3>Perfis de Investidor e Suas Características</h3>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="investor-profile-table">
                 <table>
                     <thead>
                         <tr>
@@ -705,6 +751,35 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="table-text-mobile" id="investor-profile-text">
+                <h4>Perfil de Investidor: Conservador</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Segurança e Preservação de Capital</li>
+                    <li><strong>Tolerância ao Risco:</strong> Baixa</li>
+                    <li><strong>Objetivo Principal:</strong> Estabilidade e Previsibilidade</li>
+                    <li><strong>Investimentos Comuns:</strong> Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa</li>
+                </ul>
+                <hr>
+
+                <h4>Perfil de Investidor: Moderado</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Equilíbrio entre Segurança e Rentabilidade</li>
+                    <li><strong>Tolerância ao Risco:</strong> Média</li>
+                    <li><strong>Objetivo Principal:</strong> Crescimento Sustentável</li>
+                    <li><strong>Investimentos Comuns:</strong> CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela)</li>
+                </ul>
+                <hr>
+
+                <h4>Perfil de Investidor: Arrojado (Agressivo)</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Maximização de Lucros</li>
+                    <li><strong>Tolerância ao Risco:</strong> Alta</li>
+                    <li><strong>Objetivo Principal:</strong> Alto Potencial de Retorno no Longo Prazo</li>
+                    <li><strong>Investimentos Comuns:</strong> Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais</li>
+                </ul>
+            </div>
+
             <div class="highlight">
                 <h3>O Tripé Fundamental: Risco, Retorno e Liquidez</h3>
                 <p>Todo investimento envolve um balanço entre esses três elementos. 
@@ -782,7 +857,7 @@
             </ul>
 
             <h3>Comparativo de Investimentos para Iniciantes</h3>
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="comparativo-investimentos-table">
                 <table>
                     <thead>
                         <tr>
@@ -843,6 +918,69 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="table-text-mobile" id="comparativo-investimentos-texto">
+                <h3>Comparativo Rápido de Investimentos para Iniciantes</h3>
+
+                <h4>1. Poupança</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> Diária</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>2. CDB (Certificado de Depósito Bancário)</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> Diária ou no Vencimento</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>3. LCI/LCA (Letras de Crédito Imobiliário/Agronegócio)</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> No Vencimento (com carência)</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>4. Tesouro Direto</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Muito Baixo (garantia soberana)</li>
+                    <li><strong>Liquidez:</strong> Diária</li>
+                    <li><strong>Proteção FGC:</strong> Tesouro Nacional (garantia soberana)</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>5. Fundos de Investimento</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Variável</li>
+                    <li><strong>Liquidez:</strong> Variável</li>
+                    <li><strong>Proteção FGC:</strong> Não (maioria)</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não (exceto alguns)</li>
+                    <li><strong>Come-Cotas:</strong> Sim (maioria)</li>
+                </ul>
+                <hr>
+
+                <h4>6. Previdência Privada</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Variável</li>
+                    <li><strong>Liquidez:</strong> Restrita</li>
+                    <li><strong>Proteção FGC:</strong> Segregação Patrimonial (SUSEP)</li>
+                    <li><strong>Isenção de IR (PF):</strong> VGBL (sobre rendimento); PGBL (dedução)</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
             </div>
             <p class="small-text"><em>Fonte: Adaptado de </em></p>
 
@@ -910,7 +1048,7 @@
             <h3>Tributação em Renda Fixa (CDB, Tesouro, Fundos RF)</h3>
             <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto). IOF pode incidir em resgates antes de 30 dias. </p>
             
-            <div class="table-wrapper">
+            <div class="table-wrapper" id="tributacao-renda-fixa-table">
                 <table>
                     <thead>
                         <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
@@ -923,6 +1061,17 @@
                     </tbody>
                 </table>
             </div>    
+
+            <div class="table-text-mobile" id="tributacao-renda-fixa-texto">
+                <h4>Tributação em Renda Fixa (Tabela Regressiva de IR)</h4>
+                <ul>
+                    <li><strong>Até 180 dias:</strong> 22,5% de IR</li>
+                    <li><strong>De 181 a 360 dias:</strong> 20,0% de IR</li>
+                    <li><strong>De 361 a 720 dias:</strong> 17,5% de IR</li>
+                    <li><strong>Acima de 720 dias:</strong> 15,0% de IR</li>
+                </ul>
+                <p class="small-text"><em>(Quanto mais tempo, menor o imposto sobre a rentabilidade.)</em></p>
+            </div>
             
             <p class="small-text"><em>Fonte: </em></p>
             <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. </p>
