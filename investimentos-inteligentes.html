@@ -395,6 +395,50 @@
     }
     .footer a:hover { text-decoration: underline; }
 
+    .table-wrapper {
+    width: 100%; /* Garante que o wrapper ocupe 100% da largura disponível */
+    overflow-x: auto; /* Adiciona rolagem horizontal se o conteúdo for maior que a largura */
+    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
+    margin-bottom: 20px; /* Adiciona um pouco de espaço abaixo da tabela */
+    }
+
+    /* Opcional: Para garantir que a tabela não tenha margem dupla ou padding inesperado */
+    .table-wrapper table {
+        margin: 0; /* Remove a margem padrão da tabela se ela já estiver dentro do wrapper */
+    }
+
+    /* Estilos para o conteúdo em texto mobile (padrão: oculto) */
+    .table-text-mobile {
+        display: none;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    .table-text-mobile h3, .table-text-mobile h4 {
+        color: #2a6a82;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+    .table-text-mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .table-text-mobile li {
+        margin-bottom: 5px;
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+    .table-text-mobile hr {
+        border: 0;
+        border-top: 1px dashed #ccc;
+        margin: 20px 0;
+    }
+
+
     /* Responsividade */
     @media (max-width: 1200px) {
         .adsense-vertical {
@@ -462,8 +506,8 @@
         .container { padding: 20px; }
     }
 
-    /* Nova media query para 600px e abaixo, para quebrar as imagens */
-    @media (max-width: 600px) {
+    /* Nova media query para 750px e abaixo, para quebrar as imagens */
+    @media (max-width: 750px) {
         .categories-container {
             flex-direction: column; /* Empilha a imagem e o texto */
             text-align: center; /* Centraliza o texto quando empilhado */
@@ -542,15 +586,43 @@
             white-space: normal; 
         }
     }
+
+    @media (max-width: 650px) {
+        /* Oculta as tabelas originais */
+        .table-wrapper {
+            display: none;
+        }
+        /* Mostra o conteúdo em texto formatado para mobile */
+        .table-text-mobile {
+            display: block; /* Garante que seja visível */
+        }
+
+        /* Ajustes específicos para a versão de texto no mobile */
+        .table-text-mobile h3 {
+            font-size: 1.3em;
+        }
+        .table-text-mobile h4 {
+            font-size: 1.1em;
+        }
+        .table-text-mobile ul {
+            padding-left: 15px; /* Adiciona um pequeno padding para listas */
+        }
+        .table-text-mobile li {
+            font-size: 0.85em; /* Reduz a fonte dos itens da lista */
+        }
+        .table-text-mobile hr {
+            margin: 15px 0; /* Ajusta a margem da linha divisória */
+        }
+    }
 </style>
     
 </head>
+    
 <body>
     <header id="header-fixed">
         <a id="logo-link" href="index.html">
             <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
         </a>
-
         <nav class="navbar">
             <div class="menu-toggle" onclick="toggleMenu()">
                 <div class="bar"></div>
@@ -585,7 +657,6 @@
             </ul>
         </nav>
     </header>
-
     <div id="main-wrapper"> 
 
         <aside id="adsense-left" class="adsense-vertical">
@@ -610,10 +681,10 @@
                   (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </aside>
-
+        
         <div class="container"> 
             <h1>Investimentos Inteligentes para Leigos: Seu Guia Completo</h1>
-            <p>Investir pode parecer complexo, mas é um passo fundamental para construir um futuro financeiro sólido. Este guia simplifica o mundo dos investimentos no Brasil, ajudando você a fazer seu dinheiro trabalhar e transformar sonhos em realidade. [cite: 1, 2, 3, 4]</p>
+            <p>Investir pode parecer complexo, mas é um passo fundamental para construir um futuro financeiro sólido. Este guia simplifica o mundo dos investimentos no Brasil, ajudando você a fazer seu dinheiro trabalhar e transformar sonhos em realidade. </p>
 
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -630,81 +701,111 @@
             </div>
 
             <h2>Capítulo 1: Os Pilares do Investimento para Iniciantes</h2>
-            <p>Para começar a investir de forma inteligente, é crucial entender alguns pilares essenciais que guiarão suas decisões. [cite: 11]</p>
+            <p>Para começar a investir de forma inteligente, é crucial entender alguns pilares essenciais que guiarão suas decisões. </p>
 
             <div class="categories-container">
                 <div class="image-placeholder">
-                    <img src="images/placeholder-perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
+                    <img src="images/perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
                 </div>
                 <div class="categories-text">
                     <h3>Descubra o Seu Perfil de Investidor</h3>
-                    <p>Antes de tudo, conheça sua tolerância a riscos, objetivos financeiros e horizonte de tempo. [cite: 12, 13] As instituições financeiras realizam a Análise de Perfil do Investidor (API), obrigatória pela CVM, para classificar você como <strong>Conservador</strong>, <strong>Moderado</strong> ou <strong>Arrojado (Agressivo)</strong>. [cite: 15, 16, 17, 21] Esse perfil não é estático e pode mudar com o tempo e experiência. [cite: 32]</p>
+                    <p>Antes de tudo, conheça sua tolerância a riscos, objetivos financeiros e horizonte de tempo. As instituições financeiras realizam a Análise de Perfil do Investidor (API), obrigatória pela CVM, para classificar você como <strong>Conservador</strong>, <strong>Moderado</strong> ou <strong>Arrojado (Agressivo)</strong>. Esse perfil não é estático e pode mudar com o tempo e experiência. </p>
                 </div>
             </div>
             
             <h3>Perfis de Investidor e Suas Características</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Perfil de Investidor</th>
-                        <th>Prioridade Principal</th>
-                        <th>Tolerância ao Risco</th>
-                        <th>Objetivo Principal</th>
-                        <th>Investimentos Comuns</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Conservador</strong></td>
-                        <td>Segurança e Preservação de Capital [cite: 21, 36]</td>
-                        <td>Baixa [cite: 36]</td>
-                        <td>Estabilidade e Previsibilidade [cite: 22, 36]</td>
-                        <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa [cite: 24, 36]</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Moderado</strong></td>
-                        <td>Equilíbrio entre Segurança e Rentabilidade [cite: 25, 36]</td>
-                        <td>Média [cite: 36]</td>
-                        <td>Crescimento Sustentável [cite: 36]</td>
-                        <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) [cite: 27, 36]</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arrojado (Agressivo)</strong></td>
-                        <td>Maximização de Lucros [cite: 28, 36]</td>
-                        <td>Alta [cite: 36]</td>
-                        <td>Alto Potencial de Retorno no Longo Prazo [cite: 29, 36]</td>
-                        <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais [cite: 30, 31, 36]</td>
-                    </tr>
-                </tbody>
-            </table>
-            
+            <div class="table-wrapper" id="investor-profile-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Perfil de Investidor</th>
+                            <th>Prioridade Principal</th>
+                            <th>Tolerância ao Risco</th>
+                            <th>Objetivo Principal</th>
+                            <th>Investimentos Comuns</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Conservador</strong></td>
+                            <td>Segurança e Preservação de Capital </td>
+                            <td>Baixa </td>
+                            <td>Estabilidade e Previsibilidade </td>
+                            <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Moderado</strong></td>
+                            <td>Equilíbrio entre Segurança e Rentabilidade </td>
+                            <td>Média </td>
+                            <td>Crescimento Sustentável </td>
+                            <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arrojado (Agressivo)</strong></td>
+                            <td>Maximização de Lucros </td>
+                            <td>Alta </td>
+                            <td>Alto Potencial de Retorno no Longo Prazo </td>
+                            <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-text-mobile" id="investor-profile-text">
+                <h4>Perfil de Investidor: Conservador</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Segurança e Preservação de Capital</li>
+                    <li><strong>Tolerância ao Risco:</strong> Baixa</li>
+                    <li><strong>Objetivo Principal:</strong> Estabilidade e Previsibilidade</li>
+                    <li><strong>Investimentos Comuns:</strong> Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa</li>
+                </ul>
+                <hr>
+
+                <h4>Perfil de Investidor: Moderado</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Equilíbrio entre Segurança e Rentabilidade</li>
+                    <li><strong>Tolerância ao Risco:</strong> Média</li>
+                    <li><strong>Objetivo Principal:</strong> Crescimento Sustentável</li>
+                    <li><strong>Investimentos Comuns:</strong> CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela)</li>
+                </ul>
+                <hr>
+
+                <h4>Perfil de Investidor: Arrojado (Agressivo)</h4>
+                <ul>
+                    <li><strong>Prioridade Principal:</strong> Maximização de Lucros</li>
+                    <li><strong>Tolerância ao Risco:</strong> Alta</li>
+                    <li><strong>Objetivo Principal:</strong> Alto Potencial de Retorno no Longo Prazo</li>
+                    <li><strong>Investimentos Comuns:</strong> Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais</li>
+                </ul>
+            </div>
+
             <div class="highlight">
                 <h3>O Tripé Fundamental: Risco, Retorno e Liquidez</h3>
-                <p>Todo investimento envolve um balanço entre esses três elementos. [cite: 39]
+                <p>Todo investimento envolve um balanço entre esses três elementos. 
                 <ul>
-                    <li><strong>Risco:</strong> Possibilidade do retorno ser diferente do esperado. Maior risco geralmente implica maior expectativa de retorno. [cite: 41, 43]</li>
-                    <li><strong>Retorno:</strong> Ganho ou perda do investimento. Idealmente, deve superar a inflação (IPCA). [cite: 44]</li>
-                    <li><strong>Liquidez:</strong> Facilidade de converter o investimento em dinheiro. Alta liquidez é crucial para reservas de emergência. [cite: 45, 46, 50]</li>
+                    <li><strong>Risco:</strong> Possibilidade do retorno ser diferente do esperado. Maior risco geralmente implica maior expectativa de retorno. </li>
+                    <li><strong>Retorno:</strong> Ganho ou perda do investimento. Idealmente, deve superar a inflação (IPCA). </li>
+                    <li><strong>Liquidez:</strong> Facilidade de converter o investimento em dinheiro. Alta liquidez é crucial para reservas de emergência. </li>
                 </ul>
                 </p>
             </div>
 
             <div class="categories-container">
                  <div class="image-placeholder">
-                    <img src="images/placeholder-diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
+                    <img src="images/diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
                 </div>
                 <div class="categories-text">
                     <h3>A Magia da Diversificação</h3>
-                    <p>"Não coloque todos os ovos na mesma cesta." [cite: 51] Diversificar é distribuir seus investimentos em diferentes ativos para aumentar a segurança e potencial de ganhos, reduzindo perdas. [cite: 52, 53] Isso pode ser feito entre classes de ativos, dentro da mesma classe e geograficamente. [cite: 68, 69, 70, 71]</p>
+                    <p>"Não coloque todos os ovos na mesma cesta." Diversificar é distribuir seus investimentos em diferentes ativos para aumentar a segurança e potencial de ganhos, reduzindo perdas. Isso pode ser feito entre classes de ativos, dentro da mesma classe e geograficamente. </p>
                 </div>
             </div>
 
             <h3>Horizonte de Tempo</h3>
-            <p>Refere-se ao prazo que você pretende manter o dinheiro aplicado. [cite: 75]
+            <p>Refere-se ao prazo que você pretende manter o dinheiro aplicado. 
             <ul>
-                <li><strong>Curto Prazo (até 1 ano):</strong> Para reserva de emergência, metas rápidas. Exige alta liquidez. [cite: 78]</li>
-                <li><strong>Médio Prazo (1 a 5 anos):</strong> Compra de carro, cursos. Pode ter risco moderado. [cite: 79]</li>
-                <li><strong>Longo Prazo (acima de 5 anos):</strong> Aposentadoria, educação dos filhos. Permite maior volatilidade e potencial de ganho, aproveitando os juros compostos. [cite: 80, 85]</li>
+                <li><strong>Curto Prazo (até 1 ano):</strong> Para reserva de emergência, metas rápidas. Exige alta liquidez. </li>
+                <li><strong>Médio Prazo (1 a 5 anos):</strong> Compra de carro, cursos. Pode ter risco moderado. </li>
+                <li><strong>Longo Prazo (acima de 5 anos):</strong> Aposentadoria, educação dos filhos. Permite maior volatilidade e potencial de ganho, aproveitando os juros compostos. </li>
             </ul>
             </p>
 
@@ -723,25 +824,25 @@
             </div>
             
             <h2>Capítulo 2: Conheça os Investimentos Mais Acessíveis</h2>
-            <p>Para iniciantes, a renda fixa é o ponto de partida recomendado pela segurança e previsibilidade. [cite: 91, 93]</p>
+            <p>Para iniciantes, a renda fixa é o ponto de partida recomendado pela segurança e previsibilidade. </p>
 
             <div class="categories-container">
                 <div class="image-placeholder">
-                     <img src="images/placeholder-renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
+                     <img src="images/renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
                 </div>
                 <div class="categories-text">
                     <h3>Renda Fixa: Segurança e Previsibilidade</h3>
-                    <p>As regras de remuneração são definidas na aplicação. [cite: 92]</p>
+                    <p>As regras de remuneração são definidas na aplicação. </p>
                     <ul>
-                        <li><strong>Poupança:</strong> Mais tradicional, simples e segura, mas com baixa rentabilidade, muitas vezes perdendo para a inflação. [cite: 94, 95, 98, 99] Ideal como ponto de partida e para reserva de emergência inicial. [cite: 100]</li>
-                        <li><strong>CDB (Certificado de Depósito Bancário):</strong> Empréstimo ao banco. Protegido pelo FGC (até R$250 mil por CPF/instituição). [cite: 103, 104, 106, 107] Pode ser Pós-fixado (atrelado ao CDI), Prefixado (taxa fixa) ou Híbrido (taxa fixa + inflação). CDBs com liquidez diária são ótimos para reserva de emergência. [cite: 110, 111, 113, 115, 117]</li>
-                        <li><strong>LCI/LCA (Letras de Crédito Imobiliário/Agronegócio):</strong> Isentas de IR para pessoa física e com garantia do FGC. [cite: 121, 122, 124, 125] Geralmente têm baixa liquidez e prazos de carência mais longos, não sendo ideais para reserva de emergência. [cite: 127, 128, 131]</li>
-                        <li><strong>Tesouro Direto:</strong> Empréstimo ao Governo Federal, considerado o mais seguro do Brasil. [cite: 142, 143, 144] Acessível (a partir de R$30) e com liquidez diária na maioria dos títulos. [cite: 146]
+                        <li><strong>Poupança:</strong> Mais tradicional, simples e segura, mas com baixa rentabilidade, muitas vezes perdendo para a inflação. Ideal como ponto de partida e para reserva de emergência inicial. </li>
+                        <li><strong>CDB (Certificado de Depósito Bancário):</strong> Empréstimo ao banco. Protegido pelo FGC (até R$250 mil por CPF/instituição). Pode ser Pós-fixado (atrelado ao CDI), Prefixado (taxa fixa) ou Híbrido (taxa fixa + inflação). CDBs com liquidez diária são ótimos para reserva de emergência. </li>
+                        <li><strong>LCI/LCA (Letras de Crédito Imobiliário/Agronegócio):</strong> Isentas de IR para pessoa física e com garantia do FGC. Geralmente têm baixa liquidez e prazos de carência mais longos, não sendo ideais para reserva de emergência. </li>
+                        <li><strong>Tesouro Direto:</strong> Empréstimo ao Governo Federal, considerado o mais seguro do Brasil. Acessível (a partir de R$30) e com liquidez diária na maioria dos títulos. 
                             <ul>
-                                <li><strong>Tesouro Selic:</strong> Ideal para reserva de emergência e curto prazo. [cite: 148]</li>
-                                <li><strong>Tesouro IPCA+:</strong> Protege contra inflação, bom para longo prazo. [cite: 149, 150]</li>
-                                <li><strong>Tesouro Prefixado:</strong> Taxa fixa, previsibilidade para médio/longo prazo. [cite: 152, 153]</li>
-                                <li><strong>Tesouro RendA+ e Educa+:</strong> Para aposentadoria e educação, respectivamente. [cite: 154, 156, 157]</li>
+                                <li><strong>Tesouro Selic:</strong> Ideal para reserva de emergência e curto prazo. </li>
+                                <li><strong>Tesouro IPCA+:</strong> Protege contra inflação, bom para longo prazo. </li>
+                                <li><strong>Tesouro Prefixado:</strong> Taxa fixa, previsibilidade para médio/longo prazo. </li>
+                                <li><strong>Tesouro RendA+ e Educa+:</strong> Para aposentadoria e educação, respectivamente. </li>
                             </ul>
                         </li>
                     </ul>
@@ -750,97 +851,162 @@
             
             <h3>Outras Opções Acessíveis</h3>
             <ul>
-                <li><strong>Fundos de Investimento:</strong> "Condomínio" de investidores com gestão profissional. Permite diversificação com pouco capital, mas não têm FGC na maioria dos casos e possuem taxas (administração, performance) e "come-cotas" (IR semestral). [cite: 166, 168, 169, 173, 177, 178, 181]</li>
-                <li><strong>Previdência Privada:</strong> Foco no longo prazo (aposentadoria). Vantagens como ausência de "come-cotas" e tabelas de IR potencialmente mais favoráveis (regressiva até 10%). [cite: 186, 187, 196, 198] Planos PGBL (dedução no IR completo) e VGBL (IR sobre rendimentos na declaração simples). [cite: 191, 193]</li>
+                <li><strong>Fundos de Investimento:</strong> "Condomínio" de investidores com gestão profissional. Permite diversificação com pouco capital, mas não têm FGC na maioria dos casos e possuem taxas (administração, performance) e "come-cotas" (IR semestral). </li>
+                <li><strong>Previdência Privada:</strong> Foco no longo prazo (aposentadoria). Vantagens como ausência de "come-cotas" e tabelas de IR potencialmente mais favoráveis (regressiva até 10%). Planos PGBL (dedução no IR completo) e VGBL (IR sobre rendimentos na declaração simples). </li>
             </ul>
 
             <h3>Comparativo de Investimentos para Iniciantes</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Característica</th>
-                        <th>Poupança</th>
-                        <th>CDB</th>
-                        <th>LCI/LCA</th>
-                        <th>Tesouro Direto</th>
-                        <th>Fundos de Investimento</th>
-                        <th>Previdência Privada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Nível de Risco</strong></td>
-                        <td>Baixo</td>
-                        <td>Baixo</td>
-                        <td>Baixo</td>
-                        <td>Muito Baixo</td>
-                        <td>Variável</td>
-                        <td>Variável</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Liquidez</strong></td>
-                        <td>Diária</td>
-                        <td>Diária ou no Vencimento</td>
-                        <td>No Vencimento (com carência)</td>
-                        <td>Diária</td>
-                        <td>Variável</td>
-                        <td>Restrita</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Proteção FGC</strong></td>
-                        <td>Sim</td>
-                        <td>Sim</td>
-                        <td>Sim</td>
-                        <td>Tesouro Nacional (garantia soberana)</td>
-                        <td>Não (maioria)</td>
-                        <td>Segregação Patrimonial (SUSEP)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Isenção de IR (PF)</strong></td>
-                        <td>Sim</td>
-                        <td>Não</td>
-                        <td>Sim</td>
-                        <td>Não</td>
-                        <td>Não (exceto alguns)</td>
-                        <td>VGBL (sobre rendimento); PGBL (dedução)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Come-Cotas</strong></td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Não</td>
-                        <td>Sim (maioria)</td>
-                        <td>Não</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="small-text"><em>Fonte: Adaptado de [cite: 208]</em></p>
+            <div class="table-wrapper" id="comparativo-investimentos-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Poupança</th>
+                            <th>CDB</th>
+                            <th>LCI/LCA</th>
+                            <th>Tesouro Direto</th>
+                            <th>Fundos de Investimento</th>
+                            <th>Previdência Privada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nível de Risco</strong></td>
+                            <td>Baixo</td>
+                            <td>Baixo</td>
+                            <td>Baixo</td>
+                            <td>Muito Baixo</td>
+                            <td>Variável</td>
+                            <td>Variável</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Liquidez</strong></td>
+                            <td>Diária</td>
+                            <td>Diária ou no Vencimento</td>
+                            <td>No Vencimento (com carência)</td>
+                            <td>Diária</td>
+                            <td>Variável</td>
+                            <td>Restrita</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proteção FGC</strong></td>
+                            <td>Sim</td>
+                            <td>Sim</td>
+                            <td>Sim</td>
+                            <td>Tesouro Nacional (garantia soberana)</td>
+                            <td>Não (maioria)</td>
+                            <td>Segregação Patrimonial (SUSEP)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Isenção de IR (PF)</strong></td>
+                            <td>Sim</td>
+                            <td>Não</td>
+                            <td>Sim</td>
+                            <td>Não</td>
+                            <td>Não (exceto alguns)</td>
+                            <td>VGBL (sobre rendimento); PGBL (dedução)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Come-Cotas</strong></td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Não</td>
+                            <td>Sim (maioria)</td>
+                            <td>Não</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-text-mobile" id="comparativo-investimentos-texto">
+                <h3>Comparativo Rápido de Investimentos para Iniciantes</h3>
+
+                <h4>1. Poupança</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> Diária</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>2. CDB (Certificado de Depósito Bancário)</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> Diária ou no Vencimento</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>3. LCI/LCA (Letras de Crédito Imobiliário/Agronegócio)</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Baixo</li>
+                    <li><strong>Liquidez:</strong> No Vencimento (com carência)</li>
+                    <li><strong>Proteção FGC:</strong> Sim</li>
+                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>4. Tesouro Direto</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Muito Baixo (garantia soberana)</li>
+                    <li><strong>Liquidez:</strong> Diária</li>
+                    <li><strong>Proteção FGC:</strong> Tesouro Nacional (garantia soberana)</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+                <hr>
+
+                <h4>5. Fundos de Investimento</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Variável</li>
+                    <li><strong>Liquidez:</strong> Variável</li>
+                    <li><strong>Proteção FGC:</strong> Não (maioria)</li>
+                    <li><strong>Isenção de IR (PF):</strong> Não (exceto alguns)</li>
+                    <li><strong>Come-Cotas:</strong> Sim (maioria)</li>
+                </ul>
+                <hr>
+
+                <h4>6. Previdência Privada</h4>
+                <ul>
+                    <li><strong>Nível de Risco:</strong> Variável</li>
+                    <li><strong>Liquidez:</strong> Restrita</li>
+                    <li><strong>Proteção FGC:</strong> Segregação Patrimonial (SUSEP)</li>
+                    <li><strong>Isenção de IR (PF):</strong> VGBL (sobre rendimento); PGBL (dedução)</li>
+                    <li><strong>Come-Cotas:</strong> Não</li>
+                </ul>
+            </div>
+            <p class="small-text"><em>Fonte: Adaptado de </em></p>
 
             <h2>Capítulo 3: Entendendo os Riscos e Evitando Armadilhas</h2>
-            <p>Compreender e mitigar riscos é crucial para proteger seu patrimônio. [cite: 210, 211]</p>
+            <p>Compreender e mitigar riscos é crucial para proteger seu patrimônio. </p>
             <div class="warning">
                 <h3>Principais Riscos Gerais</h3>
                 <ul>
-                    <li><strong>Risco de Mercado:</strong> Oscilação de preços devido a fatores econômicos, políticos, etc. [cite: 214]</li>
-                    <li><strong>Risco de Crédito:</strong> Possibilidade do emissor não pagar a dívida. [cite: 217]</li>
-                    <li><strong>Risco de Liquidez:</strong> Dificuldade de vender um ativo rapidamente sem perdas. [cite: 220]</li>
-                    <li><strong>Risco Operacional e Legal:</strong> Falhas em sistemas, erros humanos ou questões jurídicas. [cite: 223, 225]</li>
+                    <li><strong>Risco de Mercado:</strong> Oscilação de preços devido a fatores econômicos, políticos, etc. </li>
+                    <li><strong>Risco de Crédito:</strong> Possibilidade do emissor não pagar a dívida. </li>
+                    <li><strong>Risco de Liquidez:</strong> Dificuldade de vender um ativo rapidamente sem perdas. </li>
+                    <li><strong>Risco Operacional e Legal:</strong> Falhas em sistemas, erros humanos ou questões jurídicas. </li>
                 </ul>
-                <p><strong>Riscos Específicos:</strong> CDBs (crédito do banco, mitigado pelo FGC), LCI/LCA (liquidez devido a carências), Tesouro Direto (marcação a mercado em vendas antecipadas de títulos prefixados e IPCA+), Fundos (mercado, gestão, sem FGC), Previdência (baixa rentabilidade por taxas altas, má gestão). [cite: 230, 233, 238, 244, 246]</p>
+                <p><strong>Riscos Específicos:</strong> CDBs (crédito do banco, mitigado pelo FGC), LCI/LCA (liquidez devido a carências), Tesouro Direto (marcação a mercado em vendas antecipadas de títulos prefixados e IPCA+), Fundos (mercado, gestão, sem FGC), Previdência (baixa rentabilidade por taxas altas, má gestão). </p>
             </div>
 
-            <h3>Os 5 Erros Mais Comuns que o Iniciante Deve Evitar [cite: 14, 12, 250, 254, 256, 257, 260]</h3>
+            <h3>Os 5 Erros Mais Comuns que o Iniciante Deve Evitar </h3>
             <ol>
-                <li>Não ter uma reserva de emergência. [cite: 251]</li>
-                <li>Não conhecer o seu perfil de investidor. [cite: 254]</li>
-                <li>Investir sem estudar sobre o assunto (baseado em "dicas"). [cite: 256]</li>
-                <li>Não diversificar os investimentos. [cite: 257]</li>
-                <li>Ter expectativas irrealistas de retornos rápidos e altos. [cite: 260]</li>
+                <li>Não ter uma reserva de emergência. </li>
+                <li>Não conhecer o seu perfil de investidor. </li>
+                <li>Investir sem estudar sobre o assunto (baseado em "dicas"). </li>
+                <li>Não diversificar os investimentos. </li>
+                <li>Ter expectativas irrealistas de retornos rápidos e altos. </li>
             </ol>
             
             <h2>Capítulo 4: Seu Primeiro Passo: Como Começar a Investir</h2>
-            <p>Com os pilares e riscos entendidos, veja como começar na prática. [cite: 265]</p>
+            <p>Com os pilares e riscos entendidos, veja como começar na prática. </p>
 
             <div class="categories-container">
                 <div class="image-placeholder">
@@ -848,72 +1014,87 @@
                 </div>
                 <div class="categories-text">
                     <h3>Definindo Objetivos e Escolhendo a Corretora</h3>
-                    <p><strong>Defina seus objetivos financeiros:</strong> Curto, médio ou longo prazo (reserva de emergência, compra de carro, aposentadoria). [cite: 267, 268] Isso guiará suas escolhas.
-                    <p><strong>Escolha uma corretora de valores:</strong> Instituições que executam ordens de compra/venda. [cite: 274, 275] Critérios: custos/taxas, diversidade de produtos, usabilidade da plataforma, reputação/regulamentação (CVM, B3, FINRA, SIPC), atendimento e recursos educacionais. [cite: 278, 280, 281, 282, 283, 289, 291] Exemplos no Brasil: Nu Invest, Rico, Inter. Para exterior: Nomad. [cite: 293, 294]</p>
+                    <p><strong>Defina seus objetivos financeiros:</strong> Curto, médio ou longo prazo (reserva de emergência, compra de carro, aposentadoria). Isso guiará suas escolhas.
+                    <p><strong>Escolha uma corretora de valores:</strong> Instituições que executam ordens de compra/venda. Critérios: custos/taxas, diversidade de produtos, usabilidade da plataforma, reputação/regulamentação (CVM, B3, FINRA, SIPC), atendimento e recursos educacionais. Exemplos no Brasil: Nu Invest, Rico, Inter. Para exterior: Nomad. </p>
                 </div>
             </div>
 
-            <h3>Passo a Passo para Abrir Conta e Investir (Ex: Tesouro Direto) [cite: 297, 298]</h3>
+            <h3>Passo a Passo para Abrir Conta e Investir (Ex: Tesouro Direto) </h3>
             <ol>
-                <li>Simule seu investimento. [cite: 299]</li>
-                <li>Cadastre-se na corretora e solicite acesso ao Tesouro Direto. [cite: 300, 301]</li>
-                <li>Transfira o dinheiro para a corretora. [cite: 303]</li>
-                <li>Comece a investir pela plataforma da corretora ou do Tesouro Direto. [cite: 304]</li>
+                <li>Simule seu investimento. </li>
+                <li>Cadastre-se na corretora e solicite acesso ao Tesouro Direto. </li>
+                <li>Transfira o dinheiro para a corretora. </li>
+                <li>Comece a investir pela plataforma da corretora ou do Tesouro Direto. </li>
             </ol>
-            <p>Existe também um cadastro rápido para Tesouro Direto via Gov.br e PIX. [cite: 306, 307, 308, 309]</p>
+            <p>Existe também um cadastro rápido para Tesouro Direto via Gov.br e PIX. </p>
             
             <h2>Capítulo 5: Construindo e Gerenciando Sua Carteira</h2>
-            <p>Alocar ativos estrategicamente e rebalancear periodicamente são chave. [cite: 311]</p>
+            <p>Alocar ativos estrategicamente e rebalancear periodicamente são chave. </p>
             
             <div class="highlight">
                 <h3>Alocação de Ativos e Rebalanceamento</h3>
-                <p><strong>Alocação:</strong> Distribua o dinheiro entre diferentes classes de ativos conforme seu perfil e objetivos. [cite: 313]
+                <p><strong>Alocação:</strong> Distribua o dinheiro entre diferentes classes de ativos conforme seu perfil e objetivos. 
                     <ul>
-                        <li><strong>Conservador:</strong> Maioria em renda fixa (Ex: 40% CDB liquidez diária, 30% Tesouro IPCA+, 30% LCI/LCA). [cite: 315, 316, 318, 319, 320]</li>
-                        <li><strong>Moderado:</strong> Renda fixa com uma parcela em fundos multimercado ou ações. [cite: 321, 322, 323]</li>
-                        <li><strong>Arrojado:</strong> Maioria em renda variável (ações, FIIs), com uma base de renda fixa. [cite: 325, 326] A "Pirâmide de Investimentos" é um bom modelo. [cite: 327]</li>
+                        <li><strong>Conservador:</strong> Maioria em renda fixa (Ex: 40% CDB liquidez diária, 30% Tesouro IPCA+, 30% LCI/LCA). </li>
+                        <li><strong>Moderado:</strong> Renda fixa com uma parcela em fundos multimercado ou ações. </li>
+                        <li><strong>Arrojado:</strong> Maioria em renda variável (ações, FIIs), com uma base de renda fixa. A "Pirâmide de Investimentos" é um bom modelo. </li>
                     </ul>
-                <p><strong>Rebalanceamento:</strong> Ajuste periódico da carteira (ex: a cada 6-12 meses) para manter o alinhamento com seus objetivos, perfil de risco e mudanças na vida. [cite: 335, 338, 339, 341] Pode ser feito usando novos aportes. [cite: 344]</p>
+                <p><strong>Rebalanceamento:</strong> Ajuste periódico da carteira (ex: a cada 6-12 meses) para manter o alinhamento com seus objetivos, perfil de risco e mudanças na vida. Pode ser feito usando novos aportes. </p>
             </div>
 
             <h2>Capítulo 6: Impostos e Taxas</h2>
-            <p>Custos que impactam a rentabilidade líquida. [cite: 352]</p>
+            <p>Custos que impactam a rentabilidade líquida. </p>
             <h3>Tributação em Renda Fixa (CDB, Tesouro, Fundos RF)</h3>
-            <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto). [cite: 353, 354] IOF pode incidir em resgates antes de 30 dias. [cite: 358]</p>
-            <table>
-                <thead>
-                    <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Até 180 dias</td><td>22,5%</td></tr>
-                    <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
-                    <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
-                    <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
-                </tbody>
-            </table>
-            <p class="small-text"><em>Fonte: [cite: 355]</em></p>
-            <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. [cite: 362]</p>
+            <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto). IOF pode incidir em resgates antes de 30 dias. </p>
+            
+            <div class="table-wrapper" id="tributacao-renda-fixa-table">
+                <table>
+                    <thead>
+                        <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Até 180 dias</td><td>22,5%</td></tr>
+                        <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
+                        <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
+                        <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
+                    </tbody>
+                </table>
+            </div>    
+
+            <div class="table-text-mobile" id="tributacao-renda-fixa-texto">
+                <h4>Tributação em Renda Fixa (Tabela Regressiva de IR)</h4>
+                <ul>
+                    <li><strong>Até 180 dias:</strong> 22,5% de IR</li>
+                    <li><strong>De 181 a 360 dias:</strong> 20,0% de IR</li>
+                    <li><strong>De 361 a 720 dias:</strong> 17,5% de IR</li>
+                    <li><strong>Acima de 720 dias:</strong> 15,0% de IR</li>
+                </ul>
+                <p class="small-text"><em>(Quanto mais tempo, menor o imposto sobre a rentabilidade.)</em></p>
+            </div>
+            
+            <p class="small-text"><em>Fonte: </em></p>
+            <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. </p>
 
             <h3>Tributação em Fundos de Investimento</h3>
-            <p>Mesma tabela regressiva de IR no resgate. [cite: 364] Maioria tem "come-cotas" (IR antecipado semestralmente). [cite: 367, 368] Exceções: fundos de ações (15% no resgate), previdência, FIIs. [cite: 373]</p>
+            <p>Mesma tabela regressiva de IR no resgate. Maioria tem "come-cotas" (IR antecipado semestralmente). Exceções: fundos de ações (15% no resgate), previdência, FIIs. </p>
 
             <h3>Tributação na Previdência Privada</h3>
-            <p>PGBL (dedução até 12% renda bruta, IR sobre total no resgate) ou VGBL (IR sobre rendimentos). [cite: 377, 379, 380, 381] Regime progressivo ou regressivo (alíquota pode chegar a 10% após 10 anos). [cite: 385, 387] Taxas: carregamento (pode ser zero), administração, saída (pode ser zero), performance. [cite: 389, 391, 392, 393, 394, 395]</p>
+            <p>PGBL (dedução até 12% renda bruta, IR sobre total no resgate) ou VGBL (IR sobre rendimentos). Regime progressivo ou regressivo (alíquota pode chegar a 10% após 10 anos). Taxas: carregamento (pode ser zero), administração, saída (pode ser zero), performance. </p>
 
             <h3>Taxas do Tesouro Direto</h3>
-            <p>Taxa de custódia da B3 (0,2% a.a., isenção até R$10 mil no Tesouro Selic e regras especiais para RendA+/Educa+). [cite: 396, 397, 398, 400, 401] Taxa da instituição financeira (muitas oferecem zero). [cite: 402, 403]</p>
+            <p>Taxa de custódia da B3 (0,2% a.a., isenção até R$10 mil no Tesouro Selic e regras especiais para RendA+/Educa+). Taxa da instituição financeira (muitas oferecem zero). </p>
             
             <div class="highlight">
                 <h3>Conclusão: Sua Jornada Começa Agora!</h3>
-                <p>Investir é acessível e recompensador. [cite: 407] Comece pelo autoconhecimento (perfil, objetivos), explore a renda fixa, diversifique, entenda os riscos e evite erros comuns. [cite: 408, 410, 412, 413] A educação financeira contínua e a paciência são seus maiores aliados. [cite: 415, 418]</p>
+                <p>Investir é acessível e recompensador. Comece pelo autoconhecimento (perfil, objetivos), explore a renda fixa, diversifique, entenda os riscos e evite erros comuns. A educação financeira contínua e a paciência são seus maiores aliados. </p>
                 <h4>Próximos Passos Práticos:</h4>
                 <ol>
-                    <li>Forme sua reserva de emergência. [cite: 419]</li>
-                    <li>Defina objetivos e faça o teste de perfil. [cite: 420]</li>
-                    <li>Explore opções de renda fixa. [cite: 421]</li>
-                    <li>Diversifique e rebalanceie sua carteira. [cite: 422]</li>
-                    <li>Busque sempre mais conhecimento. [cite: 423]</li>
-                    <li>Considere orientação profissional se necessário. [cite: 425]</li>
+                    <li>Forme sua reserva de emergência. </li>
+                    <li>Defina objetivos e faça o teste de perfil. </li>
+                    <li>Explore opções de renda fixa. </li>
+                    <li>Diversifique e rebalanceie sua carteira. </li>
+                    <li>Busque sempre mais conhecimento. </li>
+                    <li>Considere orientação profissional se necessário. </li>
                 </ol>
             </div>
 
