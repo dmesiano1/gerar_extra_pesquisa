@@ -556,18 +556,18 @@
     }
 
     @media (max-width: 650px) {
-    .table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        table {
+            font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
+        }
+         table th, table td {
+            padding: 6px;
+        }
+        .table-wrapper {
+            /*display: none; Isso ocultará todas as tabelas */
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     }
-    /* Mantenha a regra de font-size e padding da tabela dentro desta ou da 750px */
-    table {
-        font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
-    }
-    table th, table td {
-        padding: 6px;
-    }
-}
 </style>
     
 </head>
@@ -611,7 +611,7 @@
             </ul>
         </nav>
     </header>
-    V1.3
+    V1.4
     <div id="main-wrapper"> 
 
         <aside id="adsense-left" class="adsense-vertical">
