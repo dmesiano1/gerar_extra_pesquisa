@@ -5,13 +5,13 @@
       crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investimentos Inteligentes para Leigos: Guia Completo para Iniciantes | Renda Extra .App</title>
+    <title>Guia Completo: Monetizar Ideias | Renda Extra .App</title>
 
-    <meta name="description" content="Guia completo para iniciantes sobre como começar a investir no Brasil. Aprenda sobre perfil de investidor, renda fixa (CDB, LCI/LCA, Tesouro Direto), fundos, previdência e como evitar erros comuns.">
-    <meta name="keywords" content="investimentos para leigos, como começar a investir, guia de investimentos, renda fixa, tesouro direto, cdb, lci, lca, perfil de investidor, investimentos para iniciantes, educação financeira, renda extra app">
+    <meta name="description" content="Transforme suas ideias em negócios lucrativos com nosso guia completo sobre monetização, validação, modelos de receita e financiamento.">
+    <meta name="keywords" content="monetizar ideias, negócios lucrativos, empreendedorismo, modelo de receita, validação de ideias, financiamento, propriedade intelectual, como ganhar dinheiro com ideias, ideias de negócio, estratégias de monetização, plano de negócios, proteção de ideias, captação de recursos">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Renda Extra .App">
-    <link rel="canonical" href="https://www.rendaextra.app.br/investimentos-inteligentes.html">
+    <link rel="canonical" href="https://www.rendaextra.app.br/guia-monetizar-ideias.html"> 
 
     <style>
     body {
@@ -131,8 +131,9 @@
         font-size: 0.9em;
         color: #777;
         display: flex;
+        flex-direction: column; /* Changed to column to stack ads */
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start; /* Align ads to the top */
         flex-shrink: 0;
 
         position: -webkit-sticky; /* Para compatibilidade com Safari */
@@ -141,9 +142,12 @@
         align-self: flex-start; /* Garante alinhamento correto no flex container */
         z-index: 5; /* Garante que fique acima do conteúdo se houver sobreposição */
     }
+     .adsense-vertical .adsbygoogle { /* Style for individual ads within vertical slots */
+        margin-bottom: 15px; /* Space between stacked ads */
+    }
 
 
-    /* Estilos para o Pop-up de Anúncio/Download */
+    /* Estilos para o Pop-up de Anúncio */
     .popup-overlay {
         position: fixed;
         top: 0;
@@ -186,12 +190,12 @@
         color: #3498db;
         font-size: 1.5em;
     }
-    .popup-download-slot { /* Renomeado de popup-ad-slot para clareza */
+    .popup-ad-slot {
         margin-top: 15px;
         padding: 10px;
         background-color: #f9f9f9;
         border: 1px dashed #dcdcdc;
-        min-height: 50px; /* Ajustado para link de download */
+        min-height: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -329,15 +333,11 @@
         gap: 15px; /* Reduzi o espaço entre a imagem e o texto */
         margin-top: 20px; /* Adiciona um pouco de espaço acima do container */
         margin-bottom: 25px; /* Adiciona um pouco de espaço abaixo do container */
-        padding: 15px;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        background-color: #f9f9f9;
     }
 
     .image-placeholder {
         flex-shrink: 0; /* Impede que a imagem encolha demais */
-        width: 150px; /* Reduzi a largura da imagem */
+        width: 200px; /* Reduzi a largura da imagem */
     }
 
     .image-placeholder img {
@@ -350,29 +350,6 @@
 
     .categories-text {
         flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
-    }
-    .categories-text h3 {
-        margin-top: 0;
-        color: #2a6a82;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        font-size: 0.9em;
-    }
-    table th, table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-    table th {
-        background-color: #e9ecef;
-        color: #264653;
-    }
-    table tr:nth-child(even) {
-        background-color: #f8f9fa;
     }
 
     /* Rodapé */
@@ -394,50 +371,6 @@
         font-weight: bold;
     }
     .footer a:hover { text-decoration: underline; }
-
-    .table-wrapper {
-    width: 100%; /* Garante que o wrapper ocupe 100% da largura disponível */
-    overflow-x: auto; /* Adiciona rolagem horizontal se o conteúdo for maior que a largura */
-    -webkit-overflow-scrolling: touch; /* Melhora a rolagem em dispositivos iOS */
-    margin-bottom: 20px; /* Adiciona um pouco de espaço abaixo da tabela */
-    }
-
-    /* Opcional: Para garantir que a tabela não tenha margem dupla ou padding inesperado */
-    .table-wrapper table {
-        margin: 0; /* Remove a margem padrão da tabela se ela já estiver dentro do wrapper */
-    }
-
-    /* Estilos para o conteúdo em texto mobile (padrão: oculto) */
-    .table-text-mobile {
-        display: none;
-        padding: 15px;
-        background-color: #f9f9f9;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        margin-bottom: 25px;
-    }
-    .table-text-mobile h3, .table-text-mobile h4 {
-        color: #2a6a82;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        text-align: left;
-    }
-    .table-text-mobile ul {
-        list-style-type: none;
-        padding-left: 0;
-        margin-left: 0;
-    }
-    .table-text-mobile li {
-        margin-bottom: 5px;
-        font-size: 0.95em;
-        line-height: 1.5;
-    }
-    .table-text-mobile hr {
-        border: 0;
-        border-top: 1px dashed #ccc;
-        margin: 20px 0;
-    }
-
 
     /* Responsividade */
     @media (max-width: 1200px) {
@@ -506,8 +439,8 @@
         .container { padding: 20px; }
     }
 
-    /* Nova media query para 750px e abaixo, para quebrar as imagens */
-    @media (max-width: 750px) {
+    /* Nova media query para 600px e abaixo, para quebrar as imagens */
+    @media (max-width: 600px) {
         .categories-container {
             flex-direction: column; /* Empilha a imagem e o texto */
             text-align: center; /* Centraliza o texto quando empilhado */
@@ -515,7 +448,7 @@
         }
         .image-placeholder {
             width: 80%; /* Permite que a imagem ocupe mais largura */
-            max-width: 200px; /* Limita a largura máxima da imagem para não ficar tão grande */
+            max-width: 300px; /* Limita a largura máxima da imagem */
             margin: 0 auto 15px; /* Centraliza a imagem e adiciona margem abaixo */
         }
 
@@ -555,74 +488,39 @@
             padding: 15px; /* Reduz padding do pop-up */
             width: 95%; /* Ocupa mais largura em telas muito pequenas */
         }
-        .popup-download-slot { /* Ajustado para popup-download-slot */
-            min-height: 50px;
+        .popup-ad-slot {
+            min-height: 120px; /* Ajuste da altura do slot de anúncio do pop-up */
         }
         .footer {
             padding: 15px; /* Reduz o padding do rodapé */
             font-size: 0.9em; /* Diminui a fonte do rodapé */
         }
-
-        table {
-            font-size: 0.8em; /* Diminui a fonte da tabela em telas pequenas */
-        }
-        table th, table td {
-            padding: 6px;
-        }
         
         /* Centraliza o parágrafo que contém o botão de pesquisa */
-        p[style*="text-align: center"] { /* Selecionador mais genérico para pegar o text-align: center */
-            text-align: center !important;
-            width: 100%; 
-            box-sizing: border-box; 
+        p[style="text-align: center; margin-top: 30px;"] {
+            text-align: center !important; /* Garante que sobrescreve o inline style se necessário */
+            width: 100%; /* Ocupa a largura total para centralizar */
+            box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
         }
-        .site-link[style*="font-size: 1.2em"] { /* Selecionador mais genérico */
-            display: block; 
-            margin-left: auto; 
-            margin-right: auto; 
-            max-width: 280px; 
-            padding: 8px 15px !important; 
-            font-size: 1em !important; 
-            white-space: normal; 
-        }
-    }
-
-    @media (max-width: 650px) {
-        /* Oculta as tabelas originais */
-        .table-wrapper {
-            display: none;
-        }
-        /* Mostra o conteúdo em texto formatado para mobile */
-        .table-text-mobile {
-            display: block; /* Garante que seja visível */
-        }
-
-        /* Ajustes específicos para a versão de texto no mobile */
-        .table-text-mobile h3 {
-            font-size: 1.3em;
-        }
-        .table-text-mobile h4 {
-            font-size: 1.1em;
-        }
-        .table-text-mobile ul {
-            padding-left: 15px; /* Adiciona um pequeno padding para listas */
-        }
-        .table-text-mobile li {
-            font-size: 0.85em; /* Reduz a fonte dos itens da lista */
-        }
-        .table-text-mobile hr {
-            margin: 15px 0; /* Ajusta a margem da linha divisória */
+        .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
+            display: block; /* Transforma o link em bloco para ocupar a largura e permitir margin auto */
+            margin-left: auto; /* Centraliza o bloco */
+            margin-right: auto; /* Centraliza o bloco */
+            max-width: 280px; /* Define uma largura máxima para o botão em mobile */
+            padding: 8px 15px !important; /* Ajusta o padding para telas menores */
+            font-size: 1em !important; /* Ajusta o tamanho da fonte */
+            white-space: normal; /* Permite que o texto quebre linha se for muito longo */
         }
     }
-</style>
+    </style>
     
 </head>
-    
 <body>
     <header id="header-fixed">
         <a id="logo-link" href="index.html">
-            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
+            <img id="logo" src="images/logo1.png" alt="Logo do Site Renda Extra App - Guia para Monetizar Ideias">
         </a>
+
         <nav class="navbar">
             <div class="menu-toggle" onclick="toggleMenu()">
                 <div class="bar"></div>
@@ -657,7 +555,7 @@
             </ul>
         </nav>
     </header>
-    V1.3
+
     <div id="main-wrapper"> 
 
         <aside id="adsense-left" class="adsense-vertical">
@@ -670,10 +568,11 @@
             <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+            
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
-      crossorigin="anonymous"></script>
+                    crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
-                  style="display:block"
+                  style="display:block;width:160px;"
                   data-ad-client="ca-pub-9170718554447056"
                   data-ad-slot="4808234819"
                   data-ad-format="auto"
@@ -682,10 +581,10 @@
                   (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </aside>
-        
+
         <div class="container"> 
-            <h1>Investimentos Inteligentes para Leigos: Seu Guia Completo</h1>
-            <p>Investir pode parecer complexo, mas é um passo fundamental para construir um futuro financeiro sólido. Este guia simplifica o mundo dos investimentos no Brasil, ajudando você a fazer seu dinheiro trabalhar e transformar sonhos em realidade. </p>
+            <h1>Guia Completo: Como Transformar Suas Ideias em Negócios Lucrativos</h1>
+            <p>Transformar uma ideia inovadora em uma fonte de receita sustentável é o cerne do empreendedorismo. Este guia explora estratégias e métodos para monetizar suas ideias de forma eficaz.</p>
 
             <div id="adsense-top" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -701,116 +600,48 @@
                 </script>
             </div>
 
-            <h2>Capítulo 1: Os Pilares do Investimento para Iniciantes</h2>
-            <p>Para começar a investir de forma inteligente, é crucial entender alguns pilares essenciais que guiarão suas decisões. </p>
-
+            <h2>O Que Significa Monetizar uma Ideia?</h2>
+            <p>Monetizar uma ideia é o processo estratégico de converter um conceito em um empreendimento economicamente viável e escalável. No mundo digital, isso envolve aproveitar tecnologias para alcançar um público massivo eficientemente. A monetização garante a cobertura de custos, geração de lucro e valida o valor da ideia no mercado.</p>
+            
             <div class="categories-container">
                 <div class="image-placeholder">
-                    <img src="images/perfil-investidor.png" alt="Ilustração simbólica de perfil de investidor com gráficos e lupa">
+                    <img src="images/placeholder_modelo_negocio.png" alt="Ilustração de Modelo de Negócio vs. Modelo de Receita - Entenda as diferenças">
                 </div>
                 <div class="categories-text">
-                    <h3>Descubra o Seu Perfil de Investidor</h3>
-                    <p>Antes de tudo, conheça sua tolerância a riscos, objetivos financeiros e horizonte de tempo. As instituições financeiras realizam a Análise de Perfil do Investidor (API), obrigatória pela CVM, para classificar você como <strong>Conservador</strong>, <strong>Moderado</strong> ou <strong>Arrojado (Agressivo)</strong>. Esse perfil não é estático e pode mudar com o tempo e experiência. </p>
+                    <h3>Diferença entre Modelo de Negócio e Modelo de Receita</h3>
+                    <p>O <strong>Modelo de Negócio</strong> é o plano estratégico de como uma empresa cria, entrega e captura valor para gerar lucro. Já o <strong>Modelo de Receita</strong> detalha especificamente como a empresa monetizará seus produtos ou serviços, incluindo métodos de geração de dinheiro e precificação. Ambos são distintos, mas complementares e interdependentes.</p>
                 </div>
             </div>
-            
-            <h3>Perfis de Investidor e Suas Características</h3>
-            <div class="table-wrapper" id="investor-profile-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Perfil de Investidor</th>
-                            <th>Prioridade Principal</th>
-                            <th>Tolerância ao Risco</th>
-                            <th>Objetivo Principal</th>
-                            <th>Investimentos Comuns</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Conservador</strong></td>
-                            <td>Segurança e Preservação de Capital </td>
-                            <td>Baixa </td>
-                            <td>Estabilidade e Previsibilidade </td>
-                            <td>Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Moderado</strong></td>
-                            <td>Equilíbrio entre Segurança e Rentabilidade </td>
-                            <td>Média </td>
-                            <td>Crescimento Sustentável </td>
-                            <td>CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela) </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Arrojado (Agressivo)</strong></td>
-                            <td>Maximização de Lucros </td>
-                            <td>Alta </td>
-                            <td>Alto Potencial de Retorno no Longo Prazo </td>
-                            <td>Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="table-text-mobile" id="investor-profile-text">
-                <h4>Perfil de Investidor: Conservador</h4>
-                <ul>
-                    <li><strong>Prioridade Principal:</strong> Segurança e Preservação de Capital</li>
-                    <li><strong>Tolerância ao Risco:</strong> Baixa</li>
-                    <li><strong>Objetivo Principal:</strong> Estabilidade e Previsibilidade</li>
-                    <li><strong>Investimentos Comuns:</strong> Tesouro Direto (Selic), CDBs de liquidez diária, LCIs/LCAs, Fundos de Renda Fixa</li>
-                </ul>
-                <hr>
-
-                <h4>Perfil de Investidor: Moderado</h4>
-                <ul>
-                    <li><strong>Prioridade Principal:</strong> Equilíbrio entre Segurança e Rentabilidade</li>
-                    <li><strong>Tolerância ao Risco:</strong> Média</li>
-                    <li><strong>Objetivo Principal:</strong> Crescimento Sustentável</li>
-                    <li><strong>Investimentos Comuns:</strong> CDBs, Tesouro Direto (IPCA+, Prefixado), Fundos Multimercado, Debentures, Ações (pequena parcela)</li>
-                </ul>
-                <hr>
-
-                <h4>Perfil de Investidor: Arrojado (Agressivo)</h4>
-                <ul>
-                    <li><strong>Prioridade Principal:</strong> Maximização de Lucros</li>
-                    <li><strong>Tolerância ao Risco:</strong> Alta</li>
-                    <li><strong>Objetivo Principal:</strong> Alto Potencial de Retorno no Longo Prazo</li>
-                    <li><strong>Investimentos Comuns:</strong> Ações, Fundos de Ações, ETFs, Fundos Multimercado, BDRs, Criptomoedas, Investimentos Internacionais</li>
-                </ul>
-            </div>
-
-            <div class="highlight">
-                <h3>O Tripé Fundamental: Risco, Retorno e Liquidez</h3>
-                <p>Todo investimento envolve um balanço entre esses três elementos. 
-                <ul>
-                    <li><strong>Risco:</strong> Possibilidade do retorno ser diferente do esperado. Maior risco geralmente implica maior expectativa de retorno. </li>
-                    <li><strong>Retorno:</strong> Ganho ou perda do investimento. Idealmente, deve superar a inflação (IPCA). </li>
-                    <li><strong>Liquidez:</strong> Facilidade de converter o investimento em dinheiro. Alta liquidez é crucial para reservas de emergência. </li>
-                </ul>
-                </p>
-            </div>
-
+            <h2>Validando Sua Ideia: O Primeiro Passo para o Sucesso e Monetização</h2>
             <div class="categories-container">
-                 <div class="image-placeholder">
-                    <img src="images/diversificacao.png" alt="Ilustração de ovos em diferentes cestas, simbolizando diversificação de investimentos">
+                 <div class="categories-text">
+                    <h3>A Essência da Validação: Por Que e Como Testar?</h3>
+                    <p>A validação testa se sua ideia resolve um problema real para um público disposto a pagar, maximizando o valor com mínimo investimento e reduzindo riscos. A validação ágil usa ciclos curtos e de baixo custo para obter informações rapidamente.</p>
                 </div>
-                <div class="categories-text">
-                    <h3>A Magia da Diversificação</h3>
-                    <p>"Não coloque todos os ovos na mesma cesta." Diversificar é distribuir seus investimentos em diferentes ativos para aumentar a segurança e potencial de ganhos, reduzindo perdas. Isso pode ser feito entre classes de ativos, dentro da mesma classe e geograficamente. </p>
+                <div class="image-placeholder">
+                    <img src="images/placeholder_validacao_agil.png" alt="Ciclo de Validação Ágil para Ideias de Negócio">
                 </div>
             </div>
 
-            <h3>Horizonte de Tempo</h3>
-            <p>Refere-se ao prazo que você pretende manter o dinheiro aplicado. 
+            <h3>Metodologias e Ferramentas Essenciais de Validação</h3>
+            <p>Diversas ferramentas ajudam a validar sua ideia de negócio:</p>
             <ul>
-                <li><strong>Curto Prazo (até 1 ano):</strong> Para reserva de emergência, metas rápidas. Exige alta liquidez. </li>
-                <li><strong>Médio Prazo (1 a 5 anos):</strong> Compra de carro, cursos. Pode ter risco moderado. </li>
-                <li><strong>Longo Prazo (acima de 5 anos):</strong> Aposentadoria, educação dos filhos. Permite maior volatilidade e potencial de ganho, aproveitando os juros compostos. </li>
+                <li><strong>Lean Startup:</strong> Foca na experimentação rápida e aprendizado com feedback do cliente.</li>
+                <li><strong>MVP (Produto Mínimo Viável):</strong> Protótipo simplificado para testar hipóteses críticas com baixo custo.</li>
+                <li><strong>Validation Board:</strong> Quadro visual para mapear hipóteses e aprendizados.</li>
+                <li><strong>Landing Page:</strong> Página simples para testar a tração da proposta de valor.</li>
+                <li><strong>Questionários:</strong> Coleta direta de feedback sobre a utilidade da ideia.</li>
+                <li><strong>Mágico de Oz:</strong> Simula um processo automatizado manualmente para obter feedback rápido.</li>
             </ul>
-            </p>
+             <div class="image-placeholder" style="margin: 20px auto; width: 60%;">
+                <img src="images/placeholder_ferramentas_validacao.png" alt="Ferramentas Essenciais para Validação de Ideias">
+            </div>
 
-            <div id="adsense-middle" class="adsense-slot">
+            <h3>Análise de Mercado e Definição do Público-Alvo para Monetização</h3>
+            <p>Entenda o potencial de mercado respondendo: quantos consumidores você pode atingir, quanto eles podem gastar e quanto sua empresa pode atender. Defina seu público-alvo por idade, renda, gostos e crie uma persona (representação semifictícia do cliente ideal) para direcionar a comunicação e as estratégias de monetização.</p>
+            
+            <div class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
                        crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
@@ -823,284 +654,187 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            
-            <h2>Capítulo 2: Conheça os Investimentos Mais Acessíveis</h2>
-            <p>Para iniciantes, a renda fixa é o ponto de partida recomendado pela segurança e previsibilidade. </p>
 
+            <h2>Modelos de Monetização: Escolhendo a Estratégia Certa para sua Ideia</h2>
             <div class="categories-container">
                 <div class="image-placeholder">
-                     <img src="images/renda-fixa.png" alt="Ícones representando CDB, LCI/LCA e Tesouro Direto">
+                     <img src="images/placeholder_modelos_receita.png" alt="Diversos Modelos de Receita para Negócios">
                 </div>
                 <div class="categories-text">
-                    <h3>Renda Fixa: Segurança e Previsibilidade</h3>
-                    <p>As regras de remuneração são definidas na aplicação. </p>
+                    <h3>Panorama Geral dos Modelos de Receita</h3>
+                    <p>O modelo de receita define como a empresa gerará lucro. Com a internet, as opções se diversificaram. Alguns comuns incluem:</p>
                     <ul>
-                        <li><strong>Poupança:</strong> Mais tradicional, simples e segura, mas com baixa rentabilidade, muitas vezes perdendo para a inflação. Ideal como ponto de partida e para reserva de emergência inicial. </li>
-                        <li><strong>CDB (Certificado de Depósito Bancário):</strong> Empréstimo ao banco. Protegido pelo FGC (até R$250 mil por CPF/instituição). Pode ser Pós-fixado (atrelado ao CDI), Prefixado (taxa fixa) ou Híbrido (taxa fixa + inflação). CDBs com liquidez diária são ótimos para reserva de emergência. </li>
-                        <li><strong>LCI/LCA (Letras de Crédito Imobiliário/Agronegócio):</strong> Isentas de IR para pessoa física e com garantia do FGC. Geralmente têm baixa liquidez e prazos de carência mais longos, não sendo ideais para reserva de emergência. </li>
-                        <li><strong>Tesouro Direto:</strong> Empréstimo ao Governo Federal, considerado o mais seguro do Brasil. Acessível (a partir de R$30) e com liquidez diária na maioria dos títulos. 
-                            <ul>
-                                <li><strong>Tesouro Selic:</strong> Ideal para reserva de emergência e curto prazo. </li>
-                                <li><strong>Tesouro IPCA+:</strong> Protege contra inflação, bom para longo prazo. </li>
-                                <li><strong>Tesouro Prefixado:</strong> Taxa fixa, previsibilidade para médio/longo prazo. </li>
-                                <li><strong>Tesouro RendA+ e Educa+:</strong> Para aposentadoria e educação, respectivamente. </li>
-                            </ul>
-                        </li>
+                        <li><strong>Markup:</strong> Adicionar margem de lucro ao custo.</li>
+                        <li><strong>Assinaturas:</strong> Receita recorrente por acesso contínuo (ex: Netflix).</li>
+                        <li><strong>Publicidade:</strong> Receita por inclusão de anúncios.</li>
+                        <li><strong>Comissões:</strong> Percentual sobre transações.</li>
+                        <li><strong>Serviços Pagos (Pay-per-use):</strong> Pagar pelo uso efetivo.</li>
                     </ul>
                 </div>
             </div>
-            
-            <h3>Outras Opções Acessíveis</h3>
+
+            <h3>Modelos Específicos por Tipo de Negócio para Monetizar</h3>
+            <p>A escolha do modelo de monetização depende do tipo de negócio:</p>
             <ul>
-                <li><strong>Fundos de Investimento:</strong> "Condomínio" de investidores com gestão profissional. Permite diversificação com pouco capital, mas não têm FGC na maioria dos casos e possuem taxas (administração, performance) e "come-cotas" (IR semestral). </li>
-                <li><strong>Previdência Privada:</strong> Foco no longo prazo (aposentadoria). Vantagens como ausência de "come-cotas" e tabelas de IR potencialmente mais favoráveis (regressiva até 10%). Planos PGBL (dedução no IR completo) e VGBL (IR sobre rendimentos na declaração simples). </li>
+                <li><strong>Produtos e E-commerce:</strong> Venda direta, comissões sobre produtos de terceiros, publicidade, assinaturas.</li>
+                <li><strong>Marketplaces:</strong> Taxa de transação, publicidade, assinatura, Freemium, tarifa por listagem.</li>
+                <li><strong>Conteúdo Digital:</strong> Planos de acesso (assinaturas), publicidade, comissionamento de parceiros, marketing de afiliados, venda de produtos digitais.</li>
+                <li><strong>Aplicativos e Software:</strong> Venda direta, assinaturas, compras in-app, publicidade, Freemium, SaaS (Software as a Service).</li>
+            </ul>
+            <div class="image-placeholder" style="margin: 20px auto; width: 60%;">
+                <img src="images/placeholder_monetizacao_nicho.png" alt="Modelos de Monetização por Nicho de Mercado">
+            </div>
+
+            <h3>Alinhando o Modelo de Monetização ao Valor Entregue</h3>
+            <p>É crucial que a monetização esteja alinhada ao tipo de cliente e ao valor entregue. Se o valor é claro e convincente, clientes pagarão. O modelo de monetização deve fluir naturalmente desse valor.</p>
+
+            <h2>Estruturando Seu Negócio: O Plano para a Receita e Monetização</h2>
+            <div class="categories-container">
+                <div class="categories-text">
+                    <h3>Componentes Essenciais de um Plano de Negócios Focado em Receita</h3>
+                    <p>Um plano de negócios organiza informações, define metas e atrai investimentos. Componentes chave:</p>
+                    <ul>
+                        <li><strong>Sumário Executivo:</strong> Resumo da ideia, mercado, modelo de receita, projeções.</li>
+                        <li><strong>Análise do Cliente e do Mercado:</strong> Segmentação, persona, jornada do cliente, análise de concorrentes.</li>
+                        <li><strong>Plano de Marketing:</strong> 5 Ps (Produto, Preço, Praça, Promoção, Pessoas), canais, fontes de receita.</li>
+                        <li><strong>Plano Operacional:</strong> Processos produtivos e responsabilidades.</li>
+                        <li><strong>Plano Financeiro:</strong> Projeções de receita, custos, fluxo de caixa, ponto de equilíbrio.</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder">
+                    <img src="images/placeholder_plano_negocios.png" alt="Componentes de um Plano de Negócios Abrangente">
+                </div>
+            </div>
+
+            <h3>A Proposta de Valor: Comunicar o Diferencial e Resolver a "Dor do Cliente"</h3>
+            <p>A proposta de valor apresenta de forma clara como seu negócio é relevante para o cliente, resolvendo um problema específico (a "dor do cliente") e destacando benefícios e diferenciais. Deve ser clara, com linguagem adequada, transparente e direcionada.</p>
+            <div class="image-placeholder" style="margin: 20px auto; width: 60%;">
+                 <img src="images/placeholder_proposta_valor.png" alt="Estrutura de uma Proposta de Valor Eficaz">
+            </div>
+            
+            <div class="highlight">
+                <h3>Dica Importante sobre Proposta de Valor</h3>
+                <p>Concentre-se em como sua empresa resolve um problema específico do público, detalhando a solução e destacando os benefícios e diferenciais do seu produto ou serviço em relação à concorrência.</p>
+            </div>
+
+            <h2>Protegendo Sua Ideia: Propriedade Intelectual no Brasil e a Monetização</h2>
+            <div class="categories-container">
+                <div class="image-placeholder">
+                    <img src="images/placeholder_propriedade_intelectual.png" alt="Tipos de Propriedade Intelectual no Brasil">
+                </div>
+                <div class="categories-text">
+                    <h3>Tipos de Propriedade Intelectual (PI)</h3>
+                    <p>A PI protege criações do intelecto, crucial para inovação e competitividade. Principais tipos:</p>
+                    <ul>
+                        <li><strong>Patentes:</strong> Protegem invenções e modelos de utilidade. (PI: 20 anos, MU: 15 anos).</li>
+                        <li><strong>Marcas Registradas:</strong> Protegem nomes e logotipos para distinguir produtos/serviços. Duração indefinida com renovações.</li>
+                        <li><strong>Designs Industriais:</strong> Protegem a aparência externa de produtos (até 25 anos).</li>
+                        <li><strong>Direitos Autorais:</strong> Protegem a expressão de ideias em obras criativas (textos, software). Proteção automática (vida do autor + 70 anos; software: 50 anos).</li>
+                        <li><strong>Segredos Industriais:</strong> Protegem informações confidenciais com valor comercial. Duração indefinida enquanto sigilo mantido.</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Processos de Registro e Proteção no Brasil</h3>
+            <p>No Brasil, o INPI (Instituto Nacional da Propriedade Industrial) é responsável pelo registro de patentes, marcas e desenhos industriais. Para Direitos Autorais, o registro é facultativo, mas recomendado (ex: Biblioteca Nacional para obras literárias, INPI para software). Segredos industriais são protegidos por medidas de sigilo.</p>
+
+            <div class="adsense-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                       crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9170718554447056"
+                     data-ad-slot="3533530217"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <h2>Financiamento: Transformando a Ideia em Realidade Lucrativa</h2>
+            <div class="categories-container">
+                <div class="categories-text">
+                    <h3>Fontes de Aporte de Capital para Monetizar</h3>
+                    <p>O aporte de capital é crucial para expandir operações. Fontes variam conforme o estágio da empresa:</p>
+                    <ul>
+                        <li><strong>Bootstrapping:</strong> Recursos próprios ou de familiares.</li>
+                        <li><strong>Investidores Anjo:</strong> Pessoas físicas experientes que investem capital próprio e oferecem mentoria.</li>
+                        <li><strong>Investimento Seed:</strong> Para empresas iniciais validarem ideias e desenvolverem produtos.</li>
+                        <li><strong>Venture Capital (VC):</strong> Para empresas prontas para escalar rapidamente.</li>
+                        <li><strong>Private Equity (PE):</strong> Foco em empresas maduras para otimização e expansão.</li>
+                        <li><strong>Crowdfunding:</strong> Financiamento coletivo de pequenas quantias.</li>
+                        <li><strong>BNDES:</strong> Apoio governamental com condições favoráveis e programas específicos.</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder">
+                     <img src="images/placeholder_financiamento.png" alt="Fontes de Financiamento para Startups e Negócios">
+                </div>
+            </div>
+
+            <h3>Como Atrair Investidores para sua Ideia</h3>
+            <p>Para atrair investidores, tenha um plano de negócios bem estruturado, documentação financeira organizada e registro legal claro. Estude o mercado, construa networking e fique atento a rodadas de investimento.</p>
+
+            <h2>Fatores Críticos de Sucesso e Desafios Comuns na Monetização</h2>
+             <div class="categories-container">
+                 <div class="image-placeholder">
+                     <img src="images/placeholder_fcs.png" alt="Fatores Críticos de Sucesso (FCS) para Empreendedores">
+                </div>
+                <div class="categories-text">
+                    <h3>Identificando Fatores Críticos para a Monetização Sustentável (FCS)</h3>
+                    <p>FCS são metas de alto nível para alcançar objetivos estratégicos. Exige avaliações constantes e adaptação às mudanças de mercado. Exemplos: desenvolvimento de novos recursos, equipe de vendas robusta, conhecimento do nicho, fidelização de clientes, inovação.</p>
+                </div>
+            </div>
+
+            <h3>Lições Aprendidas de Casos de Sucesso no Brasil</h3>
+            <p>Marcas como Dove, O Boticário, Nubank e Havaianas demonstram a importância de um branding forte, conexão emocional com o cliente e experiência de usuário superior para impulsionar a receita.</p>
+            
+            <h3>Superando Obstáculos e Mantendo a Autenticidade na Monetização</h3>
+            <p>A monetização eficaz exige manutenção da autenticidade. Priorize as necessidades do público, mantenha-se fiel aos valores da marca e garanta que parcerias estejam alinhadas com a essência do negócio.</p>
+
+            <div class="warning">
+                <h3>Atenção à Autenticidade!</h3>
+                <p>O público valoriza criadores fiéis às suas origens. Sacrificar a autenticidade por ganhos de curto prazo pode comprometer a confiança e a receita a longo prazo.</p>
+            </div>
+            
+            <h2>Recursos Adicionais e Próximos Passos para Monetizar suas Ideias</h2>
+            <div class="categories-container">
+                <div class="categories-text">
+                    <h3>Ferramentas e Plataformas para Empreendedores</h3>
+                    <p>Aproveite plataformas para testar, lançar e escalar rapidamente:</p>
+                    <ul>
+                        <li><strong>Monetização de Conteúdo:</strong> YouTube, Twitch, Medium, Substack, Patreon.</li>
+                        <li><strong>E-commerce:</strong> Shopify, Etsy, WooCommerce.</li>
+                        <li><strong>Venda de Produtos Digitais:</strong> Gumroad, Podia, Teachable.</li>
+                        <li><strong>Validação de Ideias:</strong> Business Model Canvas, Golden Circle, Mapa de Empatia.</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder">
+                    <img src="images/placeholder_plataformas_cursos.png" alt="Logos de Plataformas e Cursos de Apoio para Empreendedores">
+                </div>
+            </div>
+            <h3>Cursos e Programas de Apoio para Desenvolver sua Ideia</h3>
+            <p>Busque conhecimento e mentoria em instituições como:</p>
+            <ul>
+                <li><strong>Sebrae:</strong> Oferece cursos online gratuitos (ex: Aprender a Empreender, Marketing Digital) e apoio para startups.</li>
+                <li><strong>BNDES Garagem:</strong> Programa de aceleração para startups.</li>
+                <li><strong>Speed Lab IX (CRITT/UFJF):</strong> Aceleração com capacitações e modelagem de negócios.</li>
             </ul>
 
-            <h3>Comparativo de Investimentos para Iniciantes</h3>
-            <div class="table-wrapper" id="comparativo-investimentos-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Poupança</th>
-                            <th>CDB</th>
-                            <th>LCI/LCA</th>
-                            <th>Tesouro Direto</th>
-                            <th>Fundos de Investimento</th>
-                            <th>Previdência Privada</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Nível de Risco</strong></td>
-                            <td>Baixo</td>
-                            <td>Baixo</td>
-                            <td>Baixo</td>
-                            <td>Muito Baixo</td>
-                            <td>Variável</td>
-                            <td>Variável</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Liquidez</strong></td>
-                            <td>Diária</td>
-                            <td>Diária ou no Vencimento</td>
-                            <td>No Vencimento (com carência)</td>
-                            <td>Diária</td>
-                            <td>Variável</td>
-                            <td>Restrita</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Proteção FGC</strong></td>
-                            <td>Sim</td>
-                            <td>Sim</td>
-                            <td>Sim</td>
-                            <td>Tesouro Nacional (garantia soberana)</td>
-                            <td>Não (maioria)</td>
-                            <td>Segregação Patrimonial (SUSEP)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Isenção de IR (PF)</strong></td>
-                            <td>Sim</td>
-                            <td>Não</td>
-                            <td>Sim</td>
-                            <td>Não</td>
-                            <td>Não (exceto alguns)</td>
-                            <td>VGBL (sobre rendimento); PGBL (dedução)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Come-Cotas</strong></td>
-                            <td>Não</td>
-                            <td>Não</td>
-                            <td>Não</td>
-                            <td>Não</td>
-                            <td>Sim (maioria)</td>
-                            <td>Não</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="table-text-mobile" id="comparativo-investimentos-texto">
-                <h3>Comparativo Rápido de Investimentos para Iniciantes</h3>
-
-                <h4>1. Poupança</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Baixo</li>
-                    <li><strong>Liquidez:</strong> Diária</li>
-                    <li><strong>Proteção FGC:</strong> Sim</li>
-                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
-                    <li><strong>Come-Cotas:</strong> Não</li>
-                </ul>
-                <hr>
-
-                <h4>2. CDB (Certificado de Depósito Bancário)</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Baixo</li>
-                    <li><strong>Liquidez:</strong> Diária ou no Vencimento</li>
-                    <li><strong>Proteção FGC:</strong> Sim</li>
-                    <li><strong>Isenção de IR (PF):</strong> Não</li>
-                    <li><strong>Come-Cotas:</strong> Não</li>
-                </ul>
-                <hr>
-
-                <h4>3. LCI/LCA (Letras de Crédito Imobiliário/Agronegócio)</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Baixo</li>
-                    <li><strong>Liquidez:</strong> No Vencimento (com carência)</li>
-                    <li><strong>Proteção FGC:</strong> Sim</li>
-                    <li><strong>Isenção de IR (PF):</strong> Sim</li>
-                    <li><strong>Come-Cotas:</strong> Não</li>
-                </ul>
-                <hr>
-
-                <h4>4. Tesouro Direto</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Muito Baixo (garantia soberana)</li>
-                    <li><strong>Liquidez:</strong> Diária</li>
-                    <li><strong>Proteção FGC:</strong> Tesouro Nacional (garantia soberana)</li>
-                    <li><strong>Isenção de IR (PF):</strong> Não</li>
-                    <li><strong>Come-Cotas:</strong> Não</li>
-                </ul>
-                <hr>
-
-                <h4>5. Fundos de Investimento</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Variável</li>
-                    <li><strong>Liquidez:</strong> Variável</li>
-                    <li><strong>Proteção FGC:</strong> Não (maioria)</li>
-                    <li><strong>Isenção de IR (PF):</strong> Não (exceto alguns)</li>
-                    <li><strong>Come-Cotas:</strong> Sim (maioria)</li>
-                </ul>
-                <hr>
-
-                <h4>6. Previdência Privada</h4>
-                <ul>
-                    <li><strong>Nível de Risco:</strong> Variável</li>
-                    <li><strong>Liquidez:</strong> Restrita</li>
-                    <li><strong>Proteção FGC:</strong> Segregação Patrimonial (SUSEP)</li>
-                    <li><strong>Isenção de IR (PF):</strong> VGBL (sobre rendimento); PGBL (dedução)</li>
-                    <li><strong>Come-Cotas:</strong> Não</li>
-                </ul>
-            </div>
-            <p class="small-text"><em>Fonte: Adaptado de </em></p>
-
-            <h2>Capítulo 3: Entendendo os Riscos e Evitando Armadilhas</h2>
-            <p>Compreender e mitigar riscos é crucial para proteger seu patrimônio. </p>
-            <div class="warning">
-                <h3>Principais Riscos Gerais</h3>
-                <ul>
-                    <li><strong>Risco de Mercado:</strong> Oscilação de preços devido a fatores econômicos, políticos, etc. </li>
-                    <li><strong>Risco de Crédito:</strong> Possibilidade do emissor não pagar a dívida. </li>
-                    <li><strong>Risco de Liquidez:</strong> Dificuldade de vender um ativo rapidamente sem perdas. </li>
-                    <li><strong>Risco Operacional e Legal:</strong> Falhas em sistemas, erros humanos ou questões jurídicas. </li>
-                </ul>
-                <p><strong>Riscos Específicos:</strong> CDBs (crédito do banco, mitigado pelo FGC), LCI/LCA (liquidez devido a carências), Tesouro Direto (marcação a mercado em vendas antecipadas de títulos prefixados e IPCA+), Fundos (mercado, gestão, sem FGC), Previdência (baixa rentabilidade por taxas altas, má gestão). </p>
-            </div>
-
-            <h3>Os 5 Erros Mais Comuns que o Iniciante Deve Evitar </h3>
+            <h2>Conclusões e Recomendações Finais sobre Monetização de Ideias</h2>
+            <p>Monetizar uma ideia é um processo complexo que exige validação rigorosa, escolha do modelo de receita adequado, plano de negócios sólido, proteção da PI e busca por financiamento. A diversificação de receita e o foco na comunidade são chave para negócios digitais.</p>
+            <h3>Recomendações para Empreendedores:</h3>
             <ol>
-                <li>Não ter uma reserva de emergência. </li>
-                <li>Não conhecer o seu perfil de investidor. </li>
-                <li>Investir sem estudar sobre o assunto (baseado em "dicas"). </li>
-                <li>Não diversificar os investimentos. </li>
-                <li>Ter expectativas irrealistas de retornos rápidos e altos. </li>
+                <li><strong>Validação Contínua:</strong> Teste suas hipóteses rapidamente e com baixo custo.</li>
+                <li><strong>Alinhamento Estratégico:</strong> Modele negócio e receita em conjunto, refletindo o valor entregue.</li>
+                <li><strong>Diversificação de Receita:</strong> Explore múltiplas fontes, especialmente no digital.</li>
+                <li><strong>Proteção da Propriedade Intelectual:</strong> Integre a estratégia de PI desde o início.</li>
+                <li><strong>Busca Inteligente por Financiamento:</strong> Escolha a fonte alinhada ao seu estágio e prepare um plano detalhado.</li>
+                <li><strong>Foco na Experiência e Autenticidade:</strong> Construa uma marca forte e mantenha a autenticidade.</li>
+                <li><strong>Aproveitamento do Ecossistema:</strong> Utilize plataformas, cursos e programas de apoio.</li>
             </ol>
-            
-            <h2>Capítulo 4: Seu Primeiro Passo: Como Começar a Investir</h2>
-            <p>Com os pilares e riscos entendidos, veja como começar na prática. </p>
-
-            <div class="categories-container">
-                <div class="image-placeholder">
-                     <img src="images/placeholder-passos-investir.png" alt="Ícones representando definição de objetivos, escolha de corretora e primeiro investimento">
-                </div>
-                <div class="categories-text">
-                    <h3>Definindo Objetivos e Escolhendo a Corretora</h3>
-                    <p><strong>Defina seus objetivos financeiros:</strong> Curto, médio ou longo prazo (reserva de emergência, compra de carro, aposentadoria). Isso guiará suas escolhas.
-                    <p><strong>Escolha uma corretora de valores:</strong> Instituições que executam ordens de compra/venda. Critérios: custos/taxas, diversidade de produtos, usabilidade da plataforma, reputação/regulamentação (CVM, B3, FINRA, SIPC), atendimento e recursos educacionais. Exemplos no Brasil: Nu Invest, Rico, Inter. Para exterior: Nomad. </p>
-                </div>
-            </div>
-
-            <h3>Passo a Passo para Abrir Conta e Investir (Ex: Tesouro Direto) </h3>
-            <ol>
-                <li>Simule seu investimento. </li>
-                <li>Cadastre-se na corretora e solicite acesso ao Tesouro Direto. </li>
-                <li>Transfira o dinheiro para a corretora. </li>
-                <li>Comece a investir pela plataforma da corretora ou do Tesouro Direto. </li>
-            </ol>
-            <p>Existe também um cadastro rápido para Tesouro Direto via Gov.br e PIX. </p>
-            
-            <h2>Capítulo 5: Construindo e Gerenciando Sua Carteira</h2>
-            <p>Alocar ativos estrategicamente e rebalancear periodicamente são chave. </p>
-            
-            <div class="highlight">
-                <h3>Alocação de Ativos e Rebalanceamento</h3>
-                <p><strong>Alocação:</strong> Distribua o dinheiro entre diferentes classes de ativos conforme seu perfil e objetivos. 
-                    <ul>
-                        <li><strong>Conservador:</strong> Maioria em renda fixa (Ex: 40% CDB liquidez diária, 30% Tesouro IPCA+, 30% LCI/LCA). </li>
-                        <li><strong>Moderado:</strong> Renda fixa com uma parcela em fundos multimercado ou ações. </li>
-                        <li><strong>Arrojado:</strong> Maioria em renda variável (ações, FIIs), com uma base de renda fixa. A "Pirâmide de Investimentos" é um bom modelo. </li>
-                    </ul>
-                <p><strong>Rebalanceamento:</strong> Ajuste periódico da carteira (ex: a cada 6-12 meses) para manter o alinhamento com seus objetivos, perfil de risco e mudanças na vida. Pode ser feito usando novos aportes. </p>
-            </div>
-
-            <h2>Capítulo 6: Impostos e Taxas</h2>
-            <p>Custos que impactam a rentabilidade líquida. </p>
-            <h3>Tributação em Renda Fixa (CDB, Tesouro, Fundos RF)</h3>
-            <p>Segue tabela regressiva de IR sobre a rentabilidade (quanto mais tempo, menor o imposto). IOF pode incidir em resgates antes de 30 dias. </p>
-            
-            <div class="table-wrapper" id="tributacao-renda-fixa-table">
-                <table>
-                    <thead>
-                        <tr><th>Prazo de Aplicação</th><th>Alíquota de IR</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Até 180 dias</td><td>22,5%</td></tr>
-                        <tr><td>De 181 a 360 dias</td><td>20,0%</td></tr>
-                        <tr><td>De 361 a 720 dias</td><td>17,5%</td></tr>
-                        <tr><td>Acima de 720 dias</td><td>15,0%</td></tr>
-                    </tbody>
-                </table>
-            </div>    
-
-            <div class="table-text-mobile" id="tributacao-renda-fixa-texto">
-                <h4>Tributação em Renda Fixa (Tabela Regressiva de IR)</h4>
-                <ul>
-                    <li><strong>Até 180 dias:</strong> 22,5% de IR</li>
-                    <li><strong>De 181 a 360 dias:</strong> 20,0% de IR</li>
-                    <li><strong>De 361 a 720 dias:</strong> 17,5% de IR</li>
-                    <li><strong>Acima de 720 dias:</strong> 15,0% de IR</li>
-                </ul>
-                <p class="small-text"><em>(Quanto mais tempo, menor o imposto sobre a rentabilidade.)</em></p>
-            </div>
-            
-            <p class="small-text"><em>Fonte: </em></p>
-            <p>LCI, LCA, CRI, CRA e Poupança são isentas de IR para PF. </p>
-
-            <h3>Tributação em Fundos de Investimento</h3>
-            <p>Mesma tabela regressiva de IR no resgate. Maioria tem "come-cotas" (IR antecipado semestralmente). Exceções: fundos de ações (15% no resgate), previdência, FIIs. </p>
-
-            <h3>Tributação na Previdência Privada</h3>
-            <p>PGBL (dedução até 12% renda bruta, IR sobre total no resgate) ou VGBL (IR sobre rendimentos). Regime progressivo ou regressivo (alíquota pode chegar a 10% após 10 anos). Taxas: carregamento (pode ser zero), administração, saída (pode ser zero), performance. </p>
-
-            <h3>Taxas do Tesouro Direto</h3>
-            <p>Taxa de custódia da B3 (0,2% a.a., isenção até R$10 mil no Tesouro Selic e regras especiais para RendA+/Educa+). Taxa da instituição financeira (muitas oferecem zero). </p>
-            
-            <div class="highlight">
-                <h3>Conclusão: Sua Jornada Começa Agora!</h3>
-                <p>Investir é acessível e recompensador. Comece pelo autoconhecimento (perfil, objetivos), explore a renda fixa, diversifique, entenda os riscos e evite erros comuns. A educação financeira contínua e a paciência são seus maiores aliados. </p>
-                <h4>Próximos Passos Práticos:</h4>
-                <ol>
-                    <li>Forme sua reserva de emergência. </li>
-                    <li>Defina objetivos e faça o teste de perfil. </li>
-                    <li>Explore opções de renda fixa. </li>
-                    <li>Diversifique e rebalanceie sua carteira. </li>
-                    <li>Busque sempre mais conhecimento. </li>
-                    <li>Considere orientação profissional se necessário. </li>
-                </ol>
-            </div>
 
             <p style="text-align: center; margin-top: 30px;">
-                <a href="javascript:void(0);" onclick="showDownloadPopup()" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Baixar o Guia Completo em PDF</a>
+                <a href="#" id="downloadReportBtn" class="site-link" style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;">Baixar Relatório Completo (PDF)</a>
             </p>
 
             <div id="adsense-bottom" class="adsense-slot">
@@ -1116,7 +850,7 @@
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
-            </div> 
+        </div> 
 
         <aside id="adsense-right" class="adsense-vertical">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -1128,10 +862,11 @@
             <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
+
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
-      crossorigin="anonymous"></script>
+                    crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
-                  style="display:block"
+                  style="display:block;width:160px;"
                   data-ad-client="ca-pub-9170718554447056"
                   data-ad-slot="4808234819"
                   data-ad-format="auto"
@@ -1144,11 +879,26 @@
     </div> 
 
 
-    <div id="downloadPopupOverlay" class="popup-overlay"> <div class="popup-content">
-            <span class="popup-close" onclick="closeDownloadPopup()">&times;</span> <h4>Download do Guia Completo</h4>
-            <p>Seu guia "Investimentos Inteligentes para Leigos" está quase pronto para download!</p>
-            <div id="popup-download-area" class="popup-download-slot"> </div>
+    <div id="adPopupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h4>Seu download está quase pronto!</h4>
+            <p>Aguarde um momento para liberar o download do relatório completo:</p>
+            <div id="popup-ad-slot" class="popup-ad-slot"> 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                      style="display:block"
+                      data-ad-client="ca-pub-9170718554447056"
+                      data-ad-slot="1769098387"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"></ins>
+                <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             <p id="popupCountdown"></p> 
+            <a id="downloadLink" href="downloads/monetizar-ideias-estrategias-e-metodos.pdf" download style="display: none; font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #2a9d8f; color: white; text-decoration: none; margin-top: 20px;">Clique aqui para baixar!</a>
         </div>
     </div>
     
@@ -1165,31 +915,35 @@
             navLinks.classList.toggle('active');
         }
 
-        let downloadPopupClosable = false; 
-        let downloadCountdownInterval; 
+        let popupClosable = false; 
+        let countdownInterval; 
         
-        // Função para mostrar o pop-up de DOWNLOAD
-        function showDownloadPopup() {
-            const popupOverlay = document.getElementById('downloadPopupOverlay');
-            const closeButton = popupOverlay.querySelector('.popup-close'); // Busca dentro do overlay correto
+        // Função para mostrar o pop-up de download
+        document.getElementById('downloadReportBtn').addEventListener('click', function(e) {
+            e.preventDefault(); // Impede o comportamento padrão do link
+            showPopup();
+        });
+
+        function showPopup() {
+            const popupOverlay = document.getElementById('adPopupOverlay');
+            const closeButton = document.querySelector('.popup-close');
             const countdownDisplay = document.getElementById('popupCountdown'); 
-            const downloadArea = document.getElementById('popup-download-area');
+            const downloadLink = document.getElementById('downloadLink');
 
-            downloadArea.innerHTML = 'Aguarde...'; // Mensagem inicial
             popupOverlay.classList.add('active');
+            downloadLink.style.display = 'none'; // Esconde o link de download no início
 
-            // Desabilitar botão de fechar inicialmente
             closeButton.style.pointerEvents = 'none';
             closeButton.style.opacity = '0.5';
             closeButton.style.cursor = 'not-allowed';
-            downloadPopupClosable = false;
+            popupClosable = false; // Reset for each new popup display
 
-            let timeLeft = 10; // Contador de 10 segundos (pode ajustar para 5)
+            let timeLeft = 5; // Countdown for 5 seconds
             if (countdownDisplay) {
                 countdownDisplay.textContent = `Seu download será liberado em ${timeLeft} segundos...`;
             }
 
-            downloadCountdownInterval = setInterval(() => {
+            countdownInterval = setInterval(() => {
                 timeLeft--;
 
                 if (countdownDisplay) {
@@ -1197,35 +951,33 @@
                 }
 
                 if (timeLeft <= 0) {
-                    clearInterval(downloadCountdownInterval); 
-                    downloadPopupClosable = true; 
+                    clearInterval(countdownInterval); 
+                    popupClosable = true; 
                     
                     closeButton.style.pointerEvents = 'auto';
                     closeButton.style.opacity = '1';
                     closeButton.style.cursor = 'pointer';
                     
                     if (countdownDisplay) {
-                        countdownDisplay.textContent = 'Download Liberado!'; 
+                        countdownDisplay.textContent = 'Download liberado! Clique no botão abaixo.'; 
                     }
-                    // Adiciona o link de download
-                    downloadArea.innerHTML = '<a href="downloads/investimentos-inteligentes-para-leigos.pdf" download="investimentos-inteligentes-para-leigos.pdf" class="site-link" style="font-size: 1.1em; padding: 8px 15px; border: 1px solid #2a9d8f; border-radius: 5px; background-color: #d4edda;">Clique aqui para Baixar o PDF</a>';
+                    downloadLink.style.display = 'block'; // Mostra o link de download
                 }
             }, 1000); 
         }
 
-        // Função para fechar o pop-up de DOWNLOAD
-        function closeDownloadPopup() {
-            if (downloadPopupClosable) {
-                document.getElementById('downloadPopupOverlay').classList.remove('active');
-                clearInterval(downloadCountdownInterval);
+        // Função para fechar o pop-up
+        function closePopup() {
+            if (popupClosable) {
+                document.getElementById('adPopupOverlay').classList.remove('active');
+                clearInterval(countdownInterval);
             }
         }
         
         window.onload = function() {
-            // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
             const header = document.getElementById('header-fixed');
             const sideAds = document.querySelectorAll('.adsense-vertical');
-            if (header && sideAds.length > 0 && window.innerWidth > 768) { 
+            if (header && sideAds.length > 0 && window.innerWidth > 1200) { 
                 const headerHeight = header.offsetHeight;
                 sideAds.forEach(ad => {
                     ad.style.top = (headerHeight + 20) + 'px'; 
