@@ -3,6 +3,7 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
       crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -16,7 +17,7 @@
     
     <meta name="author" content="Renda Extra .App">
     
-    <link rel="canonical" href="https://www.rendaextra.app.br/empregos.html"> 
+    <link rel="canonical" href="https://www.rendaextra.app.br/guia-de-emprego-no-brasil.html"> 
 
     <style>
     body {
@@ -191,7 +192,7 @@
         color: #3498db;
     }
 
-    /* Botão de Download */
+    /* Botão de Download (NOVOS ESTILOS) */
     .download-button {
         display: block;
         width: fit-content;
@@ -213,7 +214,7 @@
         background-color: #218838;
     }
 
-    /* Popup para download */
+    /* Popup para download (NOVOS ESTILOS) */
     .popup-overlay {
         display: none; /* Hidden by default */
         position: fixed;
@@ -281,10 +282,10 @@
         font-size: 1.5em;
         cursor: pointer;
         color: #888;
-        display: none; /* Escondido inicialmente */
+        display: none; /* Escondido inicialmente, aparece após countdown */
     }
 
-    /* Responsividade */
+    /* Responsividade - EXATAMENTE COMO NO MODELO.HTML */
     @media (max-width: 992px) {
         .adsense-vertical.right, .adsense-vertical.left {
             display: none; /* Esconde anúncios laterais em telas menores */
@@ -453,6 +454,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // JavaScript para o botão de download e popup
             const downloadButton = document.getElementById('downloadReportButton');
             const popupOverlay = document.getElementById('downloadPopupOverlay');
             const countdownDisplay = document.getElementById('countdown');
@@ -499,16 +501,25 @@
                 }
             });
 
-            // Ajusta a posição 'top' dos anúncios laterais com base na altura real do header
+            // Código do modelo.html para ajustar a posição dos anúncios laterais
+            // Este bloco estava dentro de window.onload no modelo.html, movido para DOMContentLoaded
+            // e adaptado para a altura do header.
             const header = document.getElementById('header-fixed');
             const sideAds = document.querySelectorAll('.adsense-vertical');
-            if (header && sideAds.length > 0 && window.innerWidth > 992) { // Aplica apenas para telas maiores
+            if (header && sideAds.length > 0 && window.innerWidth > 992) { // Usado 992px como breakpoint para anúncios laterais
                 const headerHeight = header.offsetHeight;
                 sideAds.forEach(ad => {
                     ad.style.top = (headerHeight + 20) + 'px'; 
                 });
             }
         });
+
+        // O seu modelo.html tinha um window.onload vazio.
+        // Se houver mais scripts que precisavam ser carregados em window.onload
+        // você pode adicioná-los aqui ou preferencialmente dentro de DOMContentLoaded se possível.
+        // window.onload = function() {
+        //     // Qualquer script adicional que precisa ser carregado após todos os assets estarem prontos.
+        // };
     </script>
 </body>
 </html>
