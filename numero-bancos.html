@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Número de Bancos | Renda Extra .App</title>
+
+    <meta name="description" content="Consulte facilmente o número dos bancos brasileiros. Encontre o código do seu banco de forma rápida e prática.">
+    <meta name="keywords" content="número banco, código banco, consulta banco, bancos brasil, renda extra app">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Renda Extra .App">
+    <link rel="canonical" href="https://www.rendaextra.app.br/consulta-numero-bancos.html">
+
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    #main-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 10px;
+        flex-grow: 1;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 800px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 70%;
+        z-index: 1;
+    }
+
+    h1, h2, h3 {
+        color: #264653;
+        text-align: center;
+    }
+    h2 {
+        margin-top: 30px;
+        border-bottom: 2px solid #aec6cf;
+        padding-bottom: 10px;
+    }
+    h3 {
+        text-align: left;
+        color: #2a6a82;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    strong {
+        color: #2a9d8f;
+    }
+    .highlight {
+        background-color: #e8f5e9;
+        padding: 15px;
+        border-left: 5px solid #2a9d8f;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .warning {
+        background-color: #fdeded;
+        padding: 15px;
+        border-left: 5px solid #e74c3c;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .site-link {
+        text-decoration: none;
+        color: #38a3a5;
+        font-weight: bold;
+    }
+    .site-link:hover {
+        text-decoration: underline;
+        color: #217c7e;
+    }
+
+    .adsense-slot {
+        margin: 30px auto;
+        padding: 15px;
+        background-color: #ecf0f1;
+        border: 1px dashed #ccc;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .adsense-slot strong {
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+
+    .adsense-vertical {
+        width: 160px;
+        min-height: 600px;
+        margin: 0 20px;
+        background-color: #ecf0f1;
+        border: 1px dashed #ccc;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+        display: flex;
+        flex-direction: column; /* Allow multiple ads to stack */
+        align-items: center;
+        justify-content: flex-start; /* Align ads to the top */
+        flex-shrink: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 70px;
+        align-self: flex-start;
+        z-index: 5;
+    }
+     .adsense-vertical .adsbygoogle { /* Ensure ads take available width */
+        width: 100% !important;
+        max-width: 160px; /* As per original adsense-vertical width */
+        margin-bottom: 15px; /* Space between stacked ads */
+    }
+
+
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-content {
+        background: #fff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 90%;
+        width: 500px;
+        position: relative;
+    }
+    .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #888;
+    }
+    .popup-content h4 {
+        margin-top: 0;
+        color: #3498db;
+        font-size: 1.5em;
+    }
+    .popup-ad-slot {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px dashed #dcdcdc;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    #header-fixed {
+        background-color: #e0e0e0;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 0 0 8px 8px;
+        min-height: 50px;
+    }
+
+    #logo-link {
+        display: block;
+        width: 150px;
+        height: auto;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    #logo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #popupCountdown {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #2a9d8f;
+        margin-top: 10px;
+        text-align: center;
+        padding: 5px;
+        background-color: #e8f5e9;
+        border-radius: 5px;
+        border: 1px solid #2a9d8f;
+    }
+
+    .navbar {
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        box-shadow: none;
+        position: static;
+    }
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .nav-links li {
+        position: relative;
+        margin-right: 10px;
+    }
+    .nav-links li:last-child {
+        margin-right: 0;
+    }
+    .nav-links a {
+        color: #264653;
+        text-decoration: none;
+        padding: 8px 10px;
+        display: block;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        font-size: 0.95em;
+    }
+    .nav-links a:hover {
+        color: #2a9d8f;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: #f0f0f0;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1000;
+        list-style: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        top: 100%;
+        left: 0;
+    }
+    .submenu li { margin: 0; }
+    .submenu a {
+        color: #264653;
+        padding: 8px 15px;
+        display: block;
+        text-align: left;
+        white-space: nowrap;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: 0.9em;
+    }
+    .submenu a:hover {
+        background-color: #d0d0d0;
+        color: #264653;
+    }
+    .nav-links li:hover > .submenu { display: block; }
+
+    .menu-toggle { display: none; }
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #264653;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    .section-title {
+        text-align: left;
+    }
+
+    .categories-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .image-placeholder {
+        flex-shrink: 0;
+        width: 200px;
+    }
+
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .categories-text {
+        flex-grow: 1;
+    }
+
+    .footer {
+        background-color: #264653;
+        color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+        margin-top: 0; /* Changed from auto to 0 to avoid double margin with main-wrapper */
+        border-top: 1px solid #aec6cf;
+        border-radius: 8px 8px 0 0;
+        z-index: 10;
+        position: relative;
+    }
+    .footer p { margin: 5px 0; }
+    .footer a {
+        color: #2a9d8f;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .footer a:hover { text-decoration: underline; }
+
+    /* Bank Search Specific Styles */
+    #bankSearchContainer {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #bankSearchInput {
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 70%;
+        max-width: 400px;
+        margin-right: 10px;
+    }
+    #findBankButton {
+        padding: 10px 15px;
+        font-size: 1em;
+        background-color: #2a9d8f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    #findBankButton:hover {
+        background-color: #217c7e;
+    }
+    #bankSuggestions {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        border-top: none;
+        background-color: #fff;
+        width: 70%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+        border-radius: 0 0 4px 4px;
+    }
+    #bankSuggestions div {
+        padding: 10px;
+        cursor: pointer;
+    }
+    #bankSuggestions div:hover {
+        background-color: #f0f0f0;
+    }
+    #bankResult {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e8f5e9;
+        border-left: 5px solid #2a9d8f;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    #allBanksListContainer {
+        margin-top: 30px;
+    }
+    #allBanksListContainer h2 {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    #allBanksTable {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    #allBanksTable th, #allBanksTable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    #allBanksTable th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    @media (max-width: 1200px) {
+        .adsense-vertical {
+            display: none;
+        }
+        #main-wrapper { justify-content: center; }
+        .container { max-width: 95%; }
+    }
+
+    @media (max-width: 768px) {
+        #header-fixed {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border-radius: 0;
+            min-height: auto;
+            position: static;
+        }
+        body {
+            padding-top: 0;
+        }
+        #logo-link {
+            margin-right: 0;
+            margin-bottom: 10px;
+            width: 200px;
+            align-self: center;
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            width: 100%;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #f0f0f0;
+        }
+        .nav-links.active { display: flex; }
+        .nav-links li { width: 100%; text-align: center; }
+        .nav-links li a { padding: 10px 0; color: #264653; }
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            align-self: flex-end;
+            margin-top: -45px;
+            margin-right: 10px;
+        }
+        .submenu {
+            position: static;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+        }
+        .submenu a { padding: 10px 30px; color: #264653; }
+        .submenu a:hover { background-color: #d0d0d0; color: #264653; }
+        #main-wrapper {
+            padding: 10px;
+        }
+        .container { padding: 20px; }
+        #bankSearchInput {
+            width: 60%;
+            margin-right: 5px;
+        }
+        #findBankButton {
+            width: 35%;
+            padding: 10px 5px;
+        }
+        #bankSuggestions {
+             width: calc(95% - 0px); /* Adjust based on input and button */
+        }
+    }
+
+    @media (max-width: 600px) {
+        .categories-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+        .image-placeholder {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto 15px;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+        }
+        .container {
+            padding: 15px;
+        }
+        #logo-link {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+        .menu-toggle {
+            margin-top: -35px;
+            margin-right: 5px;
+        }
+        .nav-links li a {
+            font-size: 0.9em;
+            padding: 8px 0;
+        }
+        .site-link {
+            font-size: 1em;
+        }
+        .adsense-slot {
+            margin: 20px auto;
+            padding: 10px;
+            min-height: 80px;
+        }
+        .popup-content {
+            padding: 15px;
+            width: 95%;
+        }
+        .popup-ad-slot {
+            min-height: 120px;
+        }
+        .footer {
+            padding: 15px;
+            font-size: 0.9em;
+        }
+        
+        p[style="text-align: center; margin-top: 30px;"] {
+            text-align: center !important;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .site-link[style="font-size: 1.2em; padding: 10px 20px; border: 2px solid #2a9d8f; border-radius: 5px; background-color: #e8f5e9;"] {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 280px;
+            padding: 8px 15px !important;
+            font-size: 1em !important;
+            white-space: normal;
+        }
+         #bankSearchContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #bankSearchInput {
+            width: 90%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        #findBankButton {
+            width: 90%;
+        }
+        #bankSuggestions {
+            width: 90%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header id="header-fixed">
+        <a id="logo-link" href="index.html">
+            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
+        </a>
+
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Renda Extra &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="como-ganhar-dinheiro-respondendo-pesquisas-online-sites-confiaveis-e-dicas-de-renda-extra.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                        <li><a href="trabalho-freelancer.html">Trabalho Freelancer</a></li>
+                        <li><a href="vendas-online.html">Vendas Online</a></li>
+                        <li><a href="investimentos-inteligentes.html">Investimentos Inteligentes</a></li>
+                        <li><a href="monetize-habilidades.html">Monetize suas Habilidades</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Ferramentas &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="gerador-validador-cpf-cnpj.html">Gerador / Validador de CPF / CNPJ</a></li>
+                        <li><a href="gerador-numero-aleatorio.html">Gerador de número aleatório</a></li>
+                        <li><a href="sorteador-numero.html">Sorteador de número</a></li>
+                        <li><a href="calculo-rescisao-trabalhista.html">Cálculo de Rescisão Trabalhista</a></li>
+                        <li><a href="numero-bancos.html">Consultar numero de Banco</a></li>
+                    </ul>
+                </li>
+                <li><a href="empregos.html">Empregos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main-wrapper"> 
+        <aside id="adsense-left" class="adsense-vertical">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                    style="display:block;width:160px;height:600px;"
+                    data-ad-client="ca-pub-9170718554447056"
+                    data-ad-slot="SEU_SLOT_VERTICAL_AQUI_1"></ins> 
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block;width:160px;height:600px;margin-top:15px;" 
+                 data-ad-client="ca-pub-9170718554447056"
+                 data-ad-slot="4808234819"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+
+        <div class="container"> 
+            <h1>Consulte o Código do Seu Banco</h1>
+            <p>Digite o nome do banco que você procura para encontrar o código de compensação (COMPE).</p>
+
+            <div id="bankSearchContainer">
+                <input type="text" id="bankSearchInput" placeholder="Digite o nome do banco...">
+                <button id="findBankButton">Localizar Número</button>
+                <div id="bankSuggestions"></div>
+            </div>
+
+            <div id="bankResult" style="display:none;">
+                </div>
+
+            <div id="adsense-top" class="adsense-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                       crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9170718554447056"
+                     data-ad-slot="3533530217"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <div id="allBanksListContainer" style="display:none;">
+                <h2>Lista de Códigos de Bancos Brasileiros</h2>
+                <table id="allBanksTable">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome do Banco</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+
+
+            <div id="adsense-middle" class="adsense-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                       crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9170718554447056"
+                     data-ad-slot="3533530217" 
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <div id="adsense-bottom" class="adsense-slot">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                       crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-9170718554447056"
+                     data-ad-slot="3533530217" 
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div> 
+
+        <aside id="adsense-right" class="adsense-vertical">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                    style="display:block;width:160px;height:600px;"
+                    data-ad-client="ca-pub-9170718554447056"
+                    data-ad-slot="SEU_SLOT_VERTICAL_AQUI_2"></ins> 
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+                    crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block;width:160px;height:600px;margin-top:15px;"
+                 data-ad-client="ca-pub-9170718554447056"
+                 data-ad-slot="4808234819"></ins> <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </aside>
+    </div> 
+
+    <div id="adPopupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeBankPopup()">&times;</span>
+            <h4>Aguarde um momento...</h4>
+            <p>O resultado será exibido em breve.</p>
+            <div id="popup-ad-slot" class="popup-ad-slot"> 
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+      crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                      style="display:block"
+                      data-ad-client="ca-pub-9170718554447056"
+                      data-ad-slot="1769098387"
+                      data-ad-format="auto"
+                      data-full-width-responsive="true"></ins>
+                <script>
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <p id="popupCountdown"></p> 
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Renda Extra .App. Todos os direitos reservados.</p>
+        <p><a href="contato.html">Entre em contato</a></p>
+    </footer>
+
+    <script>
+        // Bank data (to be populated from search results)
+        // Source 1.1, 1.5, 1.6 give good lists
+        const banks = [
+            { code: "001", name: "Banco do Brasil S.A." },
+            { code: "003", name: "Banco da Amazônia S.A." },
+            { code: "004", name: "Banco do Nordeste do Brasil S.A." },
+            { code: "007", name: "Banco Nacional de Desenvolvimento Econômico e Social - BNDES" },
+            { code: "012", name: "Banco Inbursa S.A." },
+            { code: "021", name: "BANESTES S.A. Banco do Estado do Espírito Santo" },
+            { code: "024", name: "Banco BANDEPE S.A." },
+            { code: "025", name: "Banco Alfa S.A." },
+            { code: "029", name: "Banco Itaú Consignado S.A." },
+            { code: "033", name: "Banco Santander (Brasil) S.A." },
+            { code: "036", name: "Banco Bradesco BBI S.A." },
+            { code: "037", name: "Banco do Estado do Pará S.A." },
+            { code: "040", name: "Banco Cargill S.A." },
+            { code: "041", name: "Banco do Estado do Rio Grande do Sul S.A." },
+            { code: "047", name: "Banco do Estado de Sergipe S.A." },
+            { code: "063", name: "Banco Bradescard S.A." },
+            { code: "065", name: "Banco Andbank (Brasil) S.A." },
+            { code: "066", name: "Banco Morgan Stanley S.A." },
+            { code: "069", name: "Banco Crefisa S.A." },
+            { code: "070", name: "BRB - Banco de Brasília S.A." },
+            { code: "074", name: "Banco J. Safra S.A." },
+            { code: "075", name: "Banco ABN AMRO S.A." },
+            { code: "077", name: "Banco Inter S.A." },
+            { code: "083", name: "Banco da China Brasil S.A." },
+            { code: "096", name: "Banco B3 S.A." },
+            { code: "104", name: "Caixa Econômica Federal" },
+            { code: "107", name: "Banco BOCOM BBM S.A." },
+            { code: "120", name: "Banco Rodobens S.A." },
+            { code: "121", name: "Banco Agibank S.A." },
+            { code: "125", name: "Banco Genial S.A." },
+            { code: "184", name: "Banco Itaú BBA S.A." },
+            { code: "208", name: "Banco BTG Pactual S.A." },
+            { code: "212", name: "Banco Original S.A." },
+            { code: "217", name: "Banco John Deere S.A." },
+            { code: "218", name: "Banco BS2 S.A." },
+            { code: "222", name: "Banco Credit Agricole Brasil S.A." },
+            { code: "224", name: "Banco Fibra S.A." },
+            { code: "233", name: "Banco Cifra S.A." },
+            { code: "237", name: "Banco Bradesco S.A." },
+            { code: "241", name: "Banco Clássico S.A." },
+            { code: "243", name: "Banco Master S.A." },
+            { code: "246", name: "Banco ABC Brasil S.A." },
+            { code: "249", name: "Banco Investcred Unibanco S.A." },
+            { code: "269", name: "Banco HSBC S.A." }, // Note: HSBC operations in Brazil were largely acquired by Bradesco, but code might still be referenced.
+            { code: "299", name: "Banco Afinz S.A. Banco Múltiplo" },
+            { code: "300", name: "Banco de La Nacion Argentina" },
+            { code: "318", name: "Banco BMG S.A." },
+            { code: "335", name: "Banco Digio S.A." },
+            { code: "336", name: "Banco C6 S.A." },
+            { code: "341", name: "Itaú Unibanco S.A." },
+            { code: "368", name: "Banco CSF S.A." },
+            { code: "370", name: "Banco Mizuho do Brasil S.A." },
+            { code: "376", name: "Banco J. P. Morgan S.A." },
+            { code: "380", name: "PicPay Bank - Banco Múltiplo S.A" },
+            { code: "389", name: "Banco Mercantil do Brasil S.A." },
+            { code: "394", name: "Banco Bradesco Financiamentos S.A." },
+            { code: "412", name: "Banco Capital S.A." },
+            { code: "422", name: "Banco Safra S.A." },
+            { code: "456", name: "Banco MUFG Brasil S.A." },
+            { code: "473", name: "Banco Caixa Geral - Brasil S.A." },
+            { code: "479", name: "Banco ItauBank S.A" }, // Often listed as Banco ItaúBank S.A. (formerly Citibank)
+            { code: "505", name: "Banco Credit Suisse (Brasil) S.A." },
+            { code: "600", name: "Banco Luso Brasileiro S.A." },
+            { code: "604", name: "Banco Industrial do Brasil S.A." },
+            { code: "611", name: "Banco Paulista S.A." },
+            { code: "612", name: "Banco Guanabara S.A." },
+            { code: "623", name: "Banco PAN S.A." },
+            { code: "626", name: "Banco C6 Consignado S.A." },
+            { code: "630", name: "Banco Letsbank S.A." },
+            { code: "633", name: "Banco Rendimento S.A." },
+            { code: "643", name: "Banco Pine S.A." },
+            { code: "654", name: "Banco Digimais S.A." },
+            { code: "707", name: "Banco Daycoval S.A." },
+            { code: "712", name: "Banco Ourinvest S.A." },
+            { code: "739", name: "Banco Cetelem S.A." },
+            { code: "745", name: "Banco Citibank S.A." }, // Operations largely moved to Itaú, but code might appear.
+            { code: "746", name: "Banco Modal S.A." },
+            { code: "747", name: "Banco Rabobank International Brasil S.A." },
+            { code: "748", name: "Banco Cooperativo Sicredi S.A." },
+            { code: "752", name: "Banco BNP Paribas Brasil S.A." },
+            { code: "756", name: "Banco Cooperativo Sicoob S.A. - BANCOOB" }
+            // Add more banks as needed from the search results. This is a sample.
+        ];
+
+        // Sort banks by name for easier lookup in suggestions
+        banks.sort((a, b) => a.name.localeCompare(b.name));
+
+        const bankSearchInput = document.getElementById('bankSearchInput');
+        const bankSuggestions = document.getElementById('bankSuggestions');
+        const findBankButton = document.getElementById('findBankButton');
+        const bankResultDiv = document.getElementById('bankResult');
+        const adPopupOverlay = document.getElementById('adPopupOverlay');
+        const popupCloseButton = document.querySelector('.popup-close');
+        const popupCountdown = document.getElementById('popupCountdown');
+        const allBanksListContainer = document.getElementById('allBanksListContainer');
+        const allBanksTableBody = document.querySelector('#allBanksTable tbody');
+
+        let popupClosable = false;
+        let countdownInterval;
+        let selectedBankForPopup = null;
+
+        bankSearchInput.addEventListener('input', () => {
+            const query = bankSearchInput.value.toLowerCase();
+            bankSuggestions.innerHTML = '';
+            if (query.length < 2) { // Start suggesting after 2 characters
+                bankSuggestions.style.display = 'none';
+                return;
+            }
+
+            const filteredBanks = banks.filter(bank => bank.name.toLowerCase().includes(query) || bank.code.startsWith(query));
+            
+            if (filteredBanks.length > 0) {
+                filteredBanks.forEach(bank => {
+                    const div = document.createElement('div');
+                    div.textContent = `${bank.name} (${bank.code})`;
+                    div.addEventListener('click', () => {
+                        bankSearchInput.value = bank.name;
+                        selectedBankForPopup = bank; // Store selected bank
+                        bankSuggestions.innerHTML = '';
+                        bankSuggestions.style.display = 'none';
+                    });
+                    bankSuggestions.appendChild(div);
+                });
+                bankSuggestions.style.display = 'block';
+            } else {
+                bankSuggestions.style.display = 'none';
+            }
+        });
+
+        // Hide suggestions if clicked outside
+        document.addEventListener('click', function(event) {
+            if (!bankSearchInput.contains(event.target) && !bankSuggestions.contains(event.target)) {
+                bankSuggestions.style.display = 'none';
+            }
+        });
+
+        findBankButton.addEventListener('click', () => {
+            const searchTerm = bankSearchInput.value.trim();
+            if (!searchTerm) {
+                alert("Por favor, digite o nome ou código do banco.");
+                return;
+            }
+
+            // Try to find the bank directly if no suggestion was clicked, or use the selected one
+            let foundBank = selectedBankForPopup;
+            if (!foundBank) {
+                 foundBank = banks.find(bank => bank.name.toLowerCase() === searchTerm.toLowerCase() || bank.code === searchTerm);
+            }
+            
+            if (foundBank) {
+                selectedBankForPopup = foundBank; // Ensure it's set for popup
+                showBankPopup();
+            } else {
+                bankResultDiv.innerHTML = `<p>Banco não encontrado. Verifique o nome ou tente a lista abaixo.</p>`;
+                bankResultDiv.style.display = 'block';
+                selectedBankForPopup = null; // Reset
+                populateAllBanksList(); // Show all banks if specific not found
+            }
+        });
+        
+        function showBankPopup() {
+            adPopupOverlay.classList.add('active');
+            popupCloseButton.style.pointerEvents = 'none';
+            popupCloseButton.style.opacity = '0.5';
+            popupCloseButton.style.cursor = 'not-allowed';
+            popupClosable = false;
+
+            let timeLeft = 5; 
+            popupCountdown.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+                popupCountdown.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    popupClosable = true;
+                    popupCloseButton.style.pointerEvents = 'auto';
+                    popupCloseButton.style.opacity = '1';
+                    popupCloseButton.style.cursor = 'pointer';
+                    popupCountdown.textContent = 'Você já pode fechar!';
+                }
+            }, 1000);
+        }
+
+        window.closeBankPopup = function() { // Make it globally accessible for onclick
+            if (popupClosable) {
+                adPopupOverlay.classList.remove('active');
+                clearInterval(countdownInterval);
+                
+                if (selectedBankForPopup) {
+                    bankResultDiv.innerHTML = `<strong>${selectedBankForPopup.name}</strong> <br> Código: <strong>${selectedBankForPopup.code}</strong>`;
+                    bankResultDiv.style.display = 'block';
+                }
+                populateAllBanksList(); // Show all banks after popup
+                selectedBankForPopup = null; // Reset for next search
+            }
+        }
+
+        function populateAllBanksList() {
+            allBanksTableBody.innerHTML = ''; // Clear previous list
+            banks.forEach(bank => {
+                const row = allBanksTableBody.insertRow();
+                const cellCode = row.insertCell();
+                const cellName = row.insertCell();
+                cellCode.textContent = bank.code;
+                cellName.textContent = bank.name;
+            });
+            allBanksListContainer.style.display = 'block';
+        }
+
+
+        // --- Script from modelo.html ---
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        window.onload = function() {
+            const header = document.getElementById('header-fixed');
+            const sideAds = document.querySelectorAll('.adsense-vertical');
+            if (header && sideAds.length > 0 && window.innerWidth > 768) { 
+                const headerHeight = header.offsetHeight;
+                sideAds.forEach(ad => {
+                    ad.style.top = (headerHeight + 20) + 'px'; 
+                });
+            }
+             // Pre-populate the list of all banks on page load, if desired, or wait for first search.
+            // For now, it populates after the first search interaction.
+            // To load on page start: populateAllBanksList();
+        };
+    </script>
+</body>
+</html>
