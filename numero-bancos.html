@@ -5,15 +5,57 @@
       crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta Número de Bancos | Renda Extra .App</title>
+    <title>Código do Banco: Consulte o Número de Compensação (COMPE) | Renda Extra .App</title>
 
-    <meta name="description" content="Consulte facilmente o número dos bancos brasileiros. Encontre o código do seu banco de forma rápida e prática.">
-    <meta name="keywords" content="número banco, código banco, consulta banco, bancos brasil, renda extra app">
+    <meta name="description" content="Encontre rapidamente o código COMPE do seu banco. Ferramenta de consulta fácil para o número de compensação de todos os bancos brasileiros. Lista atualizada.">
+    <meta name="keywords" content="código banco, número banco, COMPE, ISPB, consultar código banco, lista bancos brasil, número compensação banco, renda extra app">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Renda Extra .App">
-    <link rel="canonical" href="https://www.rendaextra.app.br/consulta-numero-bancos.html">
+    <link rel="canonical" href="https://www.rendaextra.app.br/numero-bancos.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O que é o código do banco (COMPE)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O COMPE, ou Código de Compensação, é um número de três dígitos que identifica cada banco no Brasil. Ele é essencial para realizar transferências como TED e DOC, e para o processamento de cheques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre COMPE e ISPB?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "COMPE é o código de 3 dígitos para compensação. ISPB (Identificador do Sistema de Pagamentos Brasileiro) é um código de 8 dígitos, mais detalhado, também usado para identificar instituições financeiras no sistema de pagamentos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como encontrar o código do meu banco?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode usar nossa ferramenta de busca nesta página digitando o nome do banco. O código também pode ser encontrado no seu talão de cheques, no internet banking ou no aplicativo do seu banco."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Esta lista de códigos de bancos está atualizada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nós nos esforçamos para manter a lista de códigos dos bancos brasileiros o mais atualizada possível, baseando-nos em informações públicas e de fontes confiáveis. No entanto, recomendamos sempre confirmar com seu banco em caso de transações críticas."
+          }
+        }
+      ]
+    }
+    </script>
 
     <style>
+    /* Estilos CSS do modelo.html permanecem os mesmos */
     body {
         font-family: 'Arial', sans-serif;
         line-height: 1.6;
@@ -52,20 +94,28 @@
         color: #264653;
         text-align: center;
     }
+    /* SEO: Ajuste para H1 ser mais proeminente e H2 para seções principais */
+    h1 {
+        font-size: 2.2em; /* Um pouco maior para destaque */
+        margin-bottom: 25px;
+    }
     h2 {
         margin-top: 30px;
         border-bottom: 2px solid #aec6cf;
         padding-bottom: 10px;
+        font-size: 1.8em; /* Ajuste para hierarquia */
     }
     h3 {
         text-align: left;
         color: #2a6a82;
         margin-top: 25px;
         margin-bottom: 15px;
+        font-size: 1.4em; /* Ajuste para hierarquia */
     }
     ul {
         list-style-type: disc;
         margin-left: 20px;
+        padding-left: 0; /* Removendo padding default para melhor controle */
     }
     li {
         margin-bottom: 10px;
@@ -126,9 +176,9 @@
         font-size: 0.9em;
         color: #777;
         display: flex;
-        flex-direction: column; /* Allow multiple ads to stack */
+        flex-direction: column;
         align-items: center;
-        justify-content: flex-start; /* Align ads to the top */
+        justify-content: flex-start;
         flex-shrink: 0;
         position: -webkit-sticky;
         position: sticky;
@@ -136,10 +186,10 @@
         align-self: flex-start;
         z-index: 5;
     }
-     .adsense-vertical .adsbygoogle { /* Ensure ads take available width */
+     .adsense-vertical .adsbygoogle {
         width: 100% !important;
-        max-width: 160px; /* As per original adsense-vertical width */
-        margin-bottom: 15px; /* Space between stacked ads */
+        max-width: 160px;
+        margin-bottom: 15px;
     }
 
 
@@ -219,7 +269,7 @@
         text-decoration: none;
         margin-right: 10px;
     }
-    #logo {
+    #logo { /* SEO: Alt text já está no HTML do body */
         display: block;
         width: 100%;
         height: auto;
@@ -312,41 +362,12 @@
         transition: 0.4s;
     }
 
-    .section-title {
-        text-align: left;
-    }
-
-    .categories-container {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-top: 20px;
-        margin-bottom: 25px;
-    }
-
-    .image-placeholder {
-        flex-shrink: 0;
-        width: 200px;
-    }
-
-    .image-placeholder img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .categories-text {
-        flex-grow: 1;
-    }
-
     .footer {
         background-color: #264653;
         color: #f4f4f4;
         text-align: center;
         padding: 20px;
-        margin-top: 0; /* Changed from auto to 0 to avoid double margin with main-wrapper */
+        margin-top: 0;
         border-top: 1px solid #aec6cf;
         border-radius: 8px 8px 0 0;
         z-index: 10;
@@ -387,7 +408,7 @@
     #findBankButton:hover {
         background-color: #217c7e;
     }
-    #bankSuggestions {
+    #bankSuggestions { /* SEO/A11Y: Adicionar aria-live no JS para acessibilidade */
         max-height: 200px;
         overflow-y: auto;
         border: 1px solid #ddd;
@@ -398,6 +419,8 @@
         margin: 0 auto;
         text-align: left;
         border-radius: 0 0 4px 4px;
+        z-index: 100; /* Para garantir que apareça sobre outros elementos */
+        position: relative; /* Para o z-index ter efeito */
     }
     #bankSuggestions div {
         padding: 10px;
@@ -417,7 +440,7 @@
     #allBanksListContainer {
         margin-top: 30px;
     }
-    #allBanksListContainer h2 {
+    #allBanksListContainer h2 { /* SEO: Título descritivo para a lista */
       text-align: left;
       margin-bottom: 15px;
     }
@@ -435,6 +458,27 @@
         background-color: #f2f2f2;
         color: #333;
     }
+    .faq-section {
+        margin-top: 40px;
+        text-align: left;
+    }
+    .faq-section h2 {
+        text-align: center; /* Centralizar o título da FAQ */
+        margin-bottom: 20px;
+    }
+    .faq-item {
+        margin-bottom: 20px;
+    }
+    .faq-item h3 { /* SEO: H3 para perguntas da FAQ */
+        color: #2a6a82;
+        margin-bottom: 5px;
+        font-size: 1.2em;
+    }
+    .faq-item p {
+        margin-left: 15px;
+        color: #555;
+    }
+
 
     @media (max-width: 1200px) {
         .adsense-vertical {
@@ -509,17 +553,20 @@
             padding: 10px 5px;
         }
         #bankSuggestions {
-             width: calc(95% - 0px); /* Adjust based on input and button */
+             width: calc(95% - 0px);
         }
+         h1 { font-size: 2em; }
+         h2 { font-size: 1.6em; }
+         h3 { font-size: 1.3em; }
     }
 
     @media (max-width: 600px) {
-        .categories-container {
+        .categories-container { /* Mantido do modelo, pode ser removido se não usado nesta página específica */
             flex-direction: column;
             text-align: center;
             gap: 20px;
         }
-        .image-placeholder {
+        .image-placeholder { /* Mantido do modelo */
             width: 80%;
             max-width: 300px;
             margin: 0 auto 15px;
@@ -531,7 +578,7 @@
         h2 {
             font-size: 1.5em;
         }
-        h3 {
+        h3 { /* Ajuste para consistência de FAQ */
             font-size: 1.2em;
         }
         .container {
@@ -599,13 +646,16 @@
         #bankSuggestions {
             width: 90%;
         }
+        .faq-section h3 {
+            font-size: 1.1em; /* Ajuste de fonte para FAQ em mobile */
+        }
     }
     </style>
 </head>
 <body>
     <header id="header-fixed">
         <a id="logo-link" href="index.html">
-            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
+            <img id="logo" src="images/logo1.png" alt="Logo Renda Extra .App - Ferramentas e Dicas Financeiras">
         </a>
 
         <nav class="navbar">
@@ -666,16 +716,17 @@
         </aside>
 
         <div class="container"> 
-            <h1>Consulte o Código do Seu Banco</h1>
-            <p>Digite o nome do banco que você procura para encontrar o código de compensação (COMPE).</p>
+            <h1>Consulte o Código do Seu Banco (COMPE) Facilmente</h1>
+            <p>Precisa fazer uma transferência (TED ou DOC) e não sabe o <strong>código do banco</strong>? Utilize nossa ferramenta de consulta rápida para encontrar o <strong>número de compensação (COMPE)</strong> de qualquer banco brasileiro. Basta digitar o nome da instituição financeira abaixo.</p>
+            <p>O código COMPE é essencial para garantir que suas transações financeiras sejam direcionadas corretamente. Facilite suas operações bancárias encontrando o código certo aqui.</p>
 
             <div id="bankSearchContainer">
-                <input type="text" id="bankSearchInput" placeholder="Digite o nome do banco...">
+                <input type="text" id="bankSearchInput" placeholder="Digite o nome do banco..." aria-label="Nome do Banco para Pesquisa">
                 <button id="findBankButton">Localizar Número</button>
-                <div id="bankSuggestions"></div>
+                <div id="bankSuggestions" role="listbox"></div>
             </div>
 
-            <div id="bankResult" style="display:none;">
+            <div id="bankResult" style="display:none;" aria-live="polite">
                 </div>
 
             <div id="adsense-top" class="adsense-slot">
@@ -693,12 +744,13 @@
             </div>
             
             <div id="allBanksListContainer" style="display:none;">
-                <h2>Lista de Códigos de Bancos Brasileiros</h2>
+                 <h2>Lista Completa de Códigos de Bancos Brasileiros (COMPE)</h2>
+                <p>Abaixo você encontra uma lista abrangente com os códigos de compensação dos principais bancos e instituições financeiras atuantes no Brasil.</p>
                 <table id="allBanksTable">
                     <thead>
                         <tr>
-                            <th>Código</th>
-                            <th>Nome do Banco</th>
+                            <th>Código (COMPE)</th>
+                            <th>Nome do Banco / Instituição Financeira</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -706,6 +758,33 @@
                 </table>
             </div>
 
+            <section class="faq-section">
+                <h2>Perguntas Frequentes sobre Códigos de Bancos</h2>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">O que é o código do banco (COMPE)?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">O COMPE, ou Código de Compensação, é um número de três dígitos que identifica cada banco no Brasil. Ele é essencial para realizar transferências como TED e DOC, e para o processamento de cheques.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Qual a diferença entre COMPE e ISPB?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">COMPE é o código de 3 dígitos para compensação. ISPB (Identificador do Sistema de Pagamentos Brasileiro) é um código de 8 dígitos, mais detalhado, também usado para identificar instituições financeiras no sistema de pagamentos. Para a maioria das transações de varejo (TED, DOC), o COMPE é o mais utilizado.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Como encontrar o código do meu banco?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Você pode usar nossa ferramenta de busca nesta página digitando o nome do banco. O código também pode ser encontrado no seu talão de cheques, no internet banking, no aplicativo do seu banco, ou em extratos bancários.</p>
+                    </div>
+                </div>
+                 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Esta lista de códigos de bancos está atualizada?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Nós nos esforçamos para manter a lista de códigos dos bancos brasileiros o mais atualizada possível, baseando-nos em informações públicas e de fontes confiáveis como o Banco Central do Brasil. No entanto, devido a possíveis fusões ou alterações, recomendamos sempre confirmar com seu banco ou no site oficial do BACEN para transações críticas.</p>
+                    </div>
+                </div>
+            </section>
 
             <div id="adsense-middle" class="adsense-slot">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
@@ -746,12 +825,13 @@
             <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
-             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
                     crossorigin="anonymous"></script>
             <ins class="adsbygoogle"
                  style="display:block;width:160px;height:600px;margin-top:15px;"
                  data-ad-client="ca-pub-9170718554447056"
-                 data-ad-slot="4808234819"></ins> <script>
+                 data-ad-slot="4808234819"></ins>
+            <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </aside>
@@ -761,7 +841,7 @@
         <div class="popup-content">
             <span class="popup-close" onclick="closeBankPopup()">&times;</span>
             <h4>Aguarde um momento...</h4>
-            <p>O resultado será exibido em breve.</p>
+            <p>O código do banco será exibido em breve.</p>
             <div id="popup-ad-slot" class="popup-ad-slot"> 
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9170718554447056"
       crossorigin="anonymous"></script>
@@ -781,13 +861,13 @@
     
     <footer class="footer">
         <p>&copy; 2025 Renda Extra .App. Todos os direitos reservados.</p>
-        <p><a href="contato.html">Entre em contato</a></p>
+        <p><a href="contato.html">Entre em contato</a> | <a href="politica-privacidade.html">Política de Privacidade</a> | <a href="termos-uso.html">Termos de Uso</a></p>
     </footer>
 
     <script>
-        // Bank data (to be populated from search results)
-        // Source 1.1, 1.5, 1.6 give good lists
+        // Bank data (lista de exemplo, idealmente mais completa e atualizada)
         const banks = [
+            // ... (manter a lista de bancos previamente fornecida e atualizada) ...
             { code: "001", name: "Banco do Brasil S.A." },
             { code: "003", name: "Banco da Amazônia S.A." },
             { code: "004", name: "Banco do Nordeste do Brasil S.A." },
@@ -831,12 +911,15 @@
             { code: "243", name: "Banco Master S.A." },
             { code: "246", name: "Banco ABC Brasil S.A." },
             { code: "249", name: "Banco Investcred Unibanco S.A." },
-            { code: "269", name: "Banco HSBC S.A." }, // Note: HSBC operations in Brazil were largely acquired by Bradesco, but code might still be referenced.
+            { code: "260", name: "Nu Pagamentos S.A. - Instituição de Pagamento (Nubank)" }, // Adicionado Nubank
+            { code: "269", name: "Banco HSBC S.A." },
+            { code: "290", name: "PagSeguro Internet Instituição de Pagamento S.A." }, // Adicionado PagSeguro
             { code: "299", name: "Banco Afinz S.A. Banco Múltiplo" },
             { code: "300", name: "Banco de La Nacion Argentina" },
             { code: "318", name: "Banco BMG S.A." },
+            { code: "323", name: "Mercado Pago – Conta do Mercado Livre Instituição de Pagamento S.A." }, // Adicionado Mercado Pago
             { code: "335", name: "Banco Digio S.A." },
-            { code: "336", name: "Banco C6 S.A." },
+            { code: "336", name: "Banco C6 S.A. / C6 Consignado" }, // Consolidado C6
             { code: "341", name: "Itaú Unibanco S.A." },
             { code: "368", name: "Banco CSF S.A." },
             { code: "370", name: "Banco Mizuho do Brasil S.A." },
@@ -848,14 +931,14 @@
             { code: "422", name: "Banco Safra S.A." },
             { code: "456", name: "Banco MUFG Brasil S.A." },
             { code: "473", name: "Banco Caixa Geral - Brasil S.A." },
-            { code: "479", name: "Banco ItauBank S.A" }, // Often listed as Banco ItaúBank S.A. (formerly Citibank)
+            { code: "479", name: "Banco ItauBank S.A" },
             { code: "505", name: "Banco Credit Suisse (Brasil) S.A." },
             { code: "600", name: "Banco Luso Brasileiro S.A." },
             { code: "604", name: "Banco Industrial do Brasil S.A." },
             { code: "611", name: "Banco Paulista S.A." },
             { code: "612", name: "Banco Guanabara S.A." },
             { code: "623", name: "Banco PAN S.A." },
-            { code: "626", name: "Banco C6 Consignado S.A." },
+            { code: "626", name: "Banco C6 Consignado S.A." }, // Pode ser redundante se C6 já cobre
             { code: "630", name: "Banco Letsbank S.A." },
             { code: "633", name: "Banco Rendimento S.A." },
             { code: "643", name: "Banco Pine S.A." },
@@ -863,16 +946,14 @@
             { code: "707", name: "Banco Daycoval S.A." },
             { code: "712", name: "Banco Ourinvest S.A." },
             { code: "739", name: "Banco Cetelem S.A." },
-            { code: "745", name: "Banco Citibank S.A." }, // Operations largely moved to Itaú, but code might appear.
+            { code: "745", name: "Banco Citibank S.A." },
             { code: "746", name: "Banco Modal S.A." },
             { code: "747", name: "Banco Rabobank International Brasil S.A." },
             { code: "748", name: "Banco Cooperativo Sicredi S.A." },
             { code: "752", name: "Banco BNP Paribas Brasil S.A." },
             { code: "756", name: "Banco Cooperativo Sicoob S.A. - BANCOOB" }
-            // Add more banks as needed from the search results. This is a sample.
         ];
 
-        // Sort banks by name for easier lookup in suggestions
         banks.sort((a, b) => a.name.localeCompare(b.name));
 
         const bankSearchInput = document.getElementById('bankSearchInput');
@@ -889,25 +970,37 @@
         let countdownInterval;
         let selectedBankForPopup = null;
 
+        // SEO/A11Y: Adicionar atributo aria-live para anunciar mudanças nas sugestões
+        bankSuggestions.setAttribute('aria-live', 'polite');
+
+
         bankSearchInput.addEventListener('input', () => {
-            const query = bankSearchInput.value.toLowerCase();
+            const query = bankSearchInput.value.toLowerCase().trim();
             bankSuggestions.innerHTML = '';
-            if (query.length < 2) { // Start suggesting after 2 characters
+            if (query.length < 2) {
                 bankSuggestions.style.display = 'none';
                 return;
             }
 
-            const filteredBanks = banks.filter(bank => bank.name.toLowerCase().includes(query) || bank.code.startsWith(query));
+            const filteredBanks = banks.filter(bank => 
+                bank.name.toLowerCase().includes(query) || 
+                bank.code.startsWith(query) ||
+                (bank.alternativeNames && bank.alternativeNames.some(altName => altName.toLowerCase().includes(query))) // Para nomes alternativos
+            );
             
             if (filteredBanks.length > 0) {
-                filteredBanks.forEach(bank => {
+                // Limitar o número de sugestões para não sobrecarregar
+                const suggestionsToShow = filteredBanks.slice(0, 7);
+                suggestionsToShow.forEach(bank => {
                     const div = document.createElement('div');
+                    div.setAttribute('role', 'option'); // A11Y
                     div.textContent = `${bank.name} (${bank.code})`;
                     div.addEventListener('click', () => {
                         bankSearchInput.value = bank.name;
-                        selectedBankForPopup = bank; // Store selected bank
+                        selectedBankForPopup = bank;
                         bankSuggestions.innerHTML = '';
                         bankSuggestions.style.display = 'none';
+                        bankSearchInput.focus(); // Devolver foco ao input
                     });
                     bankSuggestions.appendChild(div);
                 });
@@ -917,7 +1010,6 @@
             }
         });
 
-        // Hide suggestions if clicked outside
         document.addEventListener('click', function(event) {
             if (!bankSearchInput.contains(event.target) && !bankSuggestions.contains(event.target)) {
                 bankSuggestions.style.display = 'none';
@@ -927,24 +1019,30 @@
         findBankButton.addEventListener('click', () => {
             const searchTerm = bankSearchInput.value.trim();
             if (!searchTerm) {
-                alert("Por favor, digite o nome ou código do banco.");
+                // SEO: Melhorar mensagem de alerta
+                bankResultDiv.innerHTML = `<p class="warning">Por favor, digite o nome ou código do banco para realizar a busca.</p>`;
+                bankResultDiv.style.display = 'block';
+                allBanksListContainer.style.display = 'none'; // Esconder lista se a busca for vazia
                 return;
             }
 
-            // Try to find the bank directly if no suggestion was clicked, or use the selected one
             let foundBank = selectedBankForPopup;
-            if (!foundBank) {
-                 foundBank = banks.find(bank => bank.name.toLowerCase() === searchTerm.toLowerCase() || bank.code === searchTerm);
+            if (!foundBank || bankSearchInput.value !== foundBank.name) { // Se o input foi alterado após selecionar sugestão
+                 foundBank = banks.find(bank => 
+                    bank.name.toLowerCase() === searchTerm.toLowerCase() || 
+                    bank.code === searchTerm ||
+                    (bank.alternativeNames && bank.alternativeNames.some(altName => altName.toLowerCase() === searchTerm.toLowerCase()))
+                );
             }
             
             if (foundBank) {
-                selectedBankForPopup = foundBank; // Ensure it's set for popup
+                selectedBankForPopup = foundBank;
                 showBankPopup();
             } else {
-                bankResultDiv.innerHTML = `<p>Banco não encontrado. Verifique o nome ou tente a lista abaixo.</p>`;
+                bankResultDiv.innerHTML = `<p class="warning">Nenhum banco encontrado para "${searchTerm}". Verifique o nome digitado ou consulte a lista completa abaixo.</p>`;
                 bankResultDiv.style.display = 'block';
-                selectedBankForPopup = null; // Reset
-                populateAllBanksList(); // Show all banks if specific not found
+                selectedBankForPopup = null;
+                populateAllBanksList();
             }
         });
         
@@ -956,38 +1054,40 @@
             popupClosable = false;
 
             let timeLeft = 5; 
-            popupCountdown.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+            popupCountdown.textContent = `O resultado será exibido em ${timeLeft} segundos...`;
 
             countdownInterval = setInterval(() => {
                 timeLeft--;
-                popupCountdown.textContent = `Você poderá fechar em ${timeLeft} segundos...`;
+                popupCountdown.textContent = `O resultado será exibido em ${timeLeft} segundos...`;
                 if (timeLeft <= 0) {
                     clearInterval(countdownInterval);
                     popupClosable = true;
                     popupCloseButton.style.pointerEvents = 'auto';
                     popupCloseButton.style.opacity = '1';
                     popupCloseButton.style.cursor = 'pointer';
-                    popupCountdown.textContent = 'Você já pode fechar!';
+                    popupCountdown.textContent = 'Você já pode fechar para ver o resultado!';
                 }
             }, 1000);
         }
 
-        window.closeBankPopup = function() { // Make it globally accessible for onclick
+        window.closeBankPopup = function() {
             if (popupClosable) {
                 adPopupOverlay.classList.remove('active');
                 clearInterval(countdownInterval);
                 
                 if (selectedBankForPopup) {
-                    bankResultDiv.innerHTML = `<strong>${selectedBankForPopup.name}</strong> <br> Código: <strong>${selectedBankForPopup.code}</strong>`;
+                    bankResultDiv.innerHTML = `<h3>Resultado da Busca:</h3><p>O código do banco <strong>${selectedBankForPopup.name}</strong> é: <strong>${selectedBankForPopup.code}</strong></p>`;
                     bankResultDiv.style.display = 'block';
                 }
-                populateAllBanksList(); // Show all banks after popup
-                selectedBankForPopup = null; // Reset for next search
+                populateAllBanksList();
+                selectedBankForPopup = null;
+                 // Scroll para o resultado para melhor UX
+                bankResultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
         function populateAllBanksList() {
-            allBanksTableBody.innerHTML = ''; // Clear previous list
+            allBanksTableBody.innerHTML = ''; 
             banks.forEach(bank => {
                 const row = allBanksTableBody.insertRow();
                 const cellCode = row.insertCell();
@@ -998,8 +1098,6 @@
             allBanksListContainer.style.display = 'block';
         }
 
-
-        // --- Script from modelo.html ---
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
@@ -1014,9 +1112,8 @@
                     ad.style.top = (headerHeight + 20) + 'px'; 
                 });
             }
-             // Pre-populate the list of all banks on page load, if desired, or wait for first search.
-            // For now, it populates after the first search interaction.
-            // To load on page start: populateAllBanksList();
+            // Opcional: Carregar a lista completa de bancos ao iniciar a página, se desejar.
+            // populateAllBanksList(); 
         };
     </script>
 </body>
