@@ -571,31 +571,42 @@
 <body>
     <!-- Header Fixo -->
     <header id="header-fixed">
-        <a href="https://www.rendaextra.app.br/" id="logo-link" aria-label="Página inicial Renda Extra App">
-            <img src="images/logo.png" alt="Renda Extra .App Logo" id="logo" width="150" height="50">
+        <a id="logo-link" href="index.html">
+            <img id="logo" src="images/logo1.png" alt="Logo do Site - Renda Extra .App">
         </a>
-        
-        <nav class="navbar" aria-label="Navegação principal">
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li>
-                    <a href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
-                    <ul class="submenu" aria-label="Submenu de categorias">
-                        <li><a href="empregos.html">Empregos</a></li>
-                        <li><a href="freelancer.html">Freelancer</a></li>
-                        <li><a href="negocios-online.html">Negócios Online</a></li>
-                        <li><a href="investimentos.html">Investimentos</a></li>
-                    </ul>
-                </li>
-                <li><a href="ferramentas.html">Ferramentas</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-            <div class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+
+        <nav class="navbar">
+            <div class="menu-toggle" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Renda Extra &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="como-ganhar-dinheiro-respondendo-pesquisas-online-sites-confiaveis-e-dicas-de-renda-extra.html">Ganhe dinheiro Respondendo pesquisas</a></li>
+                        <li><a href="trabalho-freelancer.html">Trabalho Freelancer</a></li>
+                        <li><a href="vendas-online.html">Vendas Online</a></li>
+                        <li><a href="investimentos-inteligentes.html">Investimentos Inteligentes</a></li>
+                        <li><a href="monetize-habilidades.html">Monetize suas Habilidades</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Ferramentas &#9662;</a> 
+                    <ul class="submenu">
+                        <li><a href="gerador-validador-cpf-cnpj.html">Gerador / Validador de CPF / CNPJ</a></li>
+                        <li><a href="gerador-numero-aleatorio.html">Gerador de número aleatório</a></li>
+                        <li><a href="sorteador-numero.html">Sorteador de número</a></li>
+                        <li><a href="calculo-rescisao-trabalhista.html">Cálculo de Rescisão Trabalhista</a></li>
+                        <li><a href="numero-bancos.html">Consultar numero de Banco</a></li>
+                    </ul>
+                </li>
+                <li><a href="empregos.html">Empregos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -803,9 +814,7 @@
     <!-- Rodapé -->
     <footer class="footer">
         <p>&copy; 2025 Renda Extra App. Todos os direitos reservados.</p>
-        <p><a href="https://www.rendaextra.app.br/politica-de-privacidade.html">Política de Privacidade</a> | <a href="https://www.rendaextra.app.br/termos-de-uso.html">Termos de Uso</a></p>
-    </footer>
-
+        
     <!-- Pop-up de Anúncio -->
     <div class="popup-overlay" id="adPopup" aria-hidden="true" role="dialog" aria-labelledby="popupTitle">
         <div class="popup-content">
